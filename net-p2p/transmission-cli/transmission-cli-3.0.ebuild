@@ -2,7 +2,6 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
-inherit multilib
 
 DESCRIPTION="A Fast, Easy and Free BitTorrent client - command line (CLI) version"
 HOMEPAGE="http://www.transmissionbt.com/"
@@ -10,18 +9,18 @@ MY_PN="transmission"
 MY_P="${MY_PN}-${PV}"
 LICENSE="|| ( GPL-2 GPL-3 Transmission-OpenSSL-exception ) GPL-2 MIT"
 
-SRC_URI="http://download.transmissionbt.com/${MY_PN}/files/${MY_P}.tar.xz"
+SRC_URI="https://github.com/transmission/transmission-releases/raw/master/${MY_P}.tar.xz"
 
-KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~x86 ~amd64-linux"
+KEYWORDS="~amd64 -arm -mips -ppc -ppc64 -x86 ~amd64-linux"
 IUSE=""
 
 RDEPEND="
-	>=dev-libs/libevent-2.0.10:=
-	>=net-misc/curl-7.16.3[ssl]
+	dev-libs/libevent:=
+	net-misc/curl[ssl]
 	sys-libs/zlib:=
 "
 DEPEND="${RDEPEND}
-	>=dev-libs/glib-2.32
+	dev-libs/glib
 	dev-util/intltool
 	sys-devel/gettext
 	virtual/os-headers
@@ -46,3 +45,4 @@ src_install() {
 	dobin cli/transmission-cli
 	doman cli/transmission-cli.1
 }
+
