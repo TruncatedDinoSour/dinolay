@@ -5,19 +5,13 @@ EAPI=6
 
 inherit toolchain-funcs
 
-if [[ ${PV} == 9999 ]]; then
-	inherit git-r3
-	EGIT_REPO_URI="https://github.com/andmarti1424/sc-im.git"
-	EGIT_CHECKOUT_DIR="${WORKDIR}/${P}"
-	EGIT_BRANCH="freeze"
-	SRC_URI=""
-	KEYWORDS=""
-	S="${WORKDIR}/${P}"
-else
-	SRC_URI="https://github.com/andmarti1424/sc-im/archive/v${PV}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
-	S="${WORKDIR}/${P}"
-fi
+inherit git-r3
+EGIT_REPO_URI="https://github.com/andmarti1424/sc-im.git"
+EGIT_CHECKOUT_DIR="${WORKDIR}/${P}"
+EGIT_BRANCH="freeze"
+SRC_URI=""
+KEYWORDS=""
+S="${WORKDIR}/${P}"
 
 DESCRIPTION="Spreadsheet Calculator Improvised"
 HOMEPAGE="https://github.com/andmarti1424/sc-im"
