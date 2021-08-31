@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd">
+<repositories xmlns="" version="1.0">
+  <repo quality="experimental" status="unofficial">
+    <name>dinolay</name>
+    <description>My gentoo overlay for me to not need to use multiple ones</description>
+    <homepage>https://github.com/TruncatedDinosour/dinolay</homepage>
+    <owner type="project">
+      <email>asnojus039@gmail.com</email>
+      <name>dinolay</name>
+    </owner>
+    <source type="git">https://github.com/TruncatedDinosour/dinolay.git</source>
+  </repo>
+</repositories>
