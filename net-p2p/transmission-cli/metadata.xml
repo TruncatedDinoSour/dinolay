@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer type="person">
-    <email>mva@gentoo.org</email>
+    <email>asnojus039@gmail.com</email>
 	<description>A small torrent client in the CLI</description>
     <name>Vadim A. Misbakh-Soloviov</name>
   </maintainer>
