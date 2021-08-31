@@ -3,8 +3,8 @@
 <pkgmetadata>
   <maintainer type="person">
     <email>asnojus039@gmail.com</email>
-	<description>A small torrent client in the CLI</description>
+	<description>isc-im - Spreadsheet Calculator Improvised -- An ncurses spreadsheet program for terminal</description>
     <name>Ari Archer</name>
   </maintainer>
-  <longdescription>Transmission - the cli</longdescription>
+  <longdescription>sc-im - Spreadsheet Calculator Improvised -- An ncurses spreadsheet program for terminal</longdescription>
 </pkgmetadata>
