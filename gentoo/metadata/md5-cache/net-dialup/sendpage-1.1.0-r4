@@ -1,0 +1,13 @@
+BDEPEND=dev-lang/perl
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=acct-group/sms acct-user/sendpage dev-perl/DBI dev-perl/Device-SerialPort dev-perl/MailTools dev-perl/Net-SNPP virtual/perl-libnet dev-lang/perl
+DESCRIPTION=Dialup alphapaging software
+EAPI=7
+HOMEPAGE=https://www.sendpage.org/
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-2
+RDEPEND=acct-group/sms acct-user/sendpage dev-perl/DBI dev-perl/Device-SerialPort dev-perl/MailTools dev-perl/Net-SNPP virtual/perl-libnet dev-lang/perl:=
+SLOT=0
+SRC_URI=https://www.sendpage.org/download/sendpage-1.001.tar.gz
+_eclasses_=multiprocessing	61c959fc55c15c00bbb1079d6a71370b	perl-functions	fea344a91ebf37efadf172c6a3de5a72	perl-module	0ee2b2b92175720c966a5608c62b458d
+_md5_=737b01ffb5a06c93c495827f681f4661

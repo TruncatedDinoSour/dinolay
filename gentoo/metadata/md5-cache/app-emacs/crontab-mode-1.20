@@ -1,0 +1,12 @@
+BDEPEND=>=app-editors/emacs-23.1:*
+DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
+DESCRIPTION=Mode for editing crontab files
+EAPI=7
+HOMEPAGE=http://www.mahalito.net/~harley/elisp/
+KEYWORDS=amd64 ~ppc x86
+LICENSE=GPL-2
+RDEPEND=>=app-editors/emacs-23.1:*
+SLOT=0
+SRC_URI=mirror://gentoo/crontab-mode-1.20.tar.bz2
+_eclasses_=elisp	b165dc0288d12ab26e86f41c56f03914	elisp-common	cf4fd1b0835b9f3e638724840468064a
+_md5_=de782acfe893333788d350de966286ad

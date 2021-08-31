@@ -1,0 +1,11 @@
+DEFINED_PHASES=install prepare
+DEPEND=media-tv/gentoo-vdr-scripts
+DESCRIPTION=mplayer wrapper script as backend for vdr-mplayer
+EAPI=7
+HOMEPAGE=https://www.vdr-portal.de/board/thread.php?threadid=62306
+KEYWORDS=~amd64 x86
+LICENSE=GPL-2
+RDEPEND=media-tv/gentoo-vdr-scripts >=media-video/mplayer-0.90_rc4
+SLOT=0
+SRC_URI=mirror://gentoo/mplay-0.5.3.tgz https://dev.gentoo.org/~zzam/distfiles/mplay-0.5.3.tgz
+_md5_=648cdab8542e20a725172913cbd4967d

@@ -1,0 +1,15 @@
+BDEPEND=virtual/pkgconfig nls? ( sys-devel/gettext )
+DEFINED_PHASES=configure install postinst postrm prepare
+DEPEND=media-sound/pulseaudio x11-libs/gtk+:2 sndfile? ( media-libs/libsndfile )
+DESCRIPTION=Metronome application supporting different meters and speeds ranging
+EAPI=7
+HOMEPAGE=https://www.antcom.de/gtick
+IUSE=nls sndfile
+KEYWORDS=amd64 ~ppc ~sparc x86
+LICENSE=GPL-3+
+RDEPEND=media-sound/pulseaudio x11-libs/gtk+:2 sndfile? ( media-libs/libsndfile )
+RESTRICT=test
+SLOT=0
+SRC_URI=https://www.antcom.de/gtick/download/gtick-0.5.5.tar.gz
+_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	xdg-utils	27f9a2f19502b925ac117bd657aa2979
+_md5_=7ccbce3181c94a4da9c7e7518a9fa4c0

@@ -1,0 +1,15 @@
+BDEPEND=app-arch/unzip
+DEFINED_PHASES=compile install postinst postrm prepare
+DEPEND=dev-lang/erlang doc? ( app-text/pandoc )
+DESCRIPTION=Lisp-flavoured Erlang
+EAPI=7
+HOMEPAGE=http://lfe.github.io/
+IUSE=doc emacs
+KEYWORDS=~amd64 ~x86
+LICENSE=Apache-2.0
+RDEPEND=dev-lang/erlang
+RESTRICT=mirror test
+SLOT=0
+SRC_URI=https://github.com/rvirding/lfe/archive/refs/tags/2.0.tar.gz -> lfe-2.0.tar.gz
+_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	multilib	97566c1a256d07b00848aa767e38a352	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
+_md5_=998b9c5bfc40e0be2c3cf60a57fc0d74

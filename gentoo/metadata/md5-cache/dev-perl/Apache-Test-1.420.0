@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst prepare setup test
+DEPEND=virtual/perl-ExtUtils-MakeMaker =www-servers/apache-2* dev-lang/perl
+DESCRIPTION=Test.pm wrapper with helpers for testing Apache
+EAPI=6
+HOMEPAGE=https://metacpan.org/release/Apache-Test
+IUSE=test
+KEYWORDS=amd64 ~arm ~ia64 ~mips ppc ppc64 sparc x86
+LICENSE=Apache-2.0
+RDEPEND==www-servers/apache-2* dev-lang/perl:=
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=mirror://cpan/authors/id/S/SH/SHAY/Apache-Test-1.42.tar.gz
+_eclasses_=depend.apache	d54e0d0bd6b36c476594edc2cee2e332	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	perl-functions	fea344a91ebf37efadf172c6a3de5a72	perl-module	0ee2b2b92175720c966a5608c62b458d
+_md5_=f460a99a8e9d1b6cd1f4e5c853aa73bf

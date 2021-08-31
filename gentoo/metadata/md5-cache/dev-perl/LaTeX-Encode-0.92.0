@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=virtual/perl-Getopt-Long dev-perl/HTML-Parser dev-perl/Pod-LaTeX dev-perl/Readonly virtual/perl-ExtUtils-MakeMaker test? ( virtual/perl-Test-Simple dev-perl/Carp-Always ) dev-lang/perl
+DESCRIPTION=Encode characters for LaTeX formatting
+EAPI=6
+HOMEPAGE=https://metacpan.org/release/LaTeX-Encode
+IUSE=test
+KEYWORDS=amd64 ~arm arm64 ppc ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
+LICENSE=|| ( Artistic GPL-1+ )
+RDEPEND=virtual/perl-Getopt-Long dev-perl/HTML-Parser dev-perl/Pod-LaTeX dev-perl/Readonly dev-lang/perl:=
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=mirror://cpan/authors/id/E/EI/EINHVERFR/LaTeX-Encode-0.092.0.tar.gz
+_eclasses_=multiprocessing	61c959fc55c15c00bbb1079d6a71370b	perl-functions	fea344a91ebf37efadf172c6a3de5a72	perl-module	0ee2b2b92175720c966a5608c62b458d
+_md5_=298c5d3c9e4ba5d9f1cc79d33132393d

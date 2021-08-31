@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst
+DESCRIPTION=Modular widget library for x11-wm/awesome
+EAPI=7
+HOMEPAGE=https://github.com/vicious-widgets/vicious
+IUSE=contrib
+KEYWORDS=amd64 ~arm x86
+LICENSE=GPL-2+
+RDEPEND=x11-wm/awesome
+SLOT=0
+SRC_URI=https://github.com/vicious-widgets/vicious/archive/v2.5.0.tar.gz -> vicious-2.5.0.tar.gz
+_eclasses_=optfeature	30ce9dec2b8943338c9b015bd32bac6a
+_md5_=87fe59b3f0fc3520bc8bae6cb85b8f1c

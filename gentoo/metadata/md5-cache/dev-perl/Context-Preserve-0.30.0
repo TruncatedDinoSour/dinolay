@@ -1,0 +1,15 @@
+BDEPEND=virtual/perl-Carp virtual/perl-Exporter virtual/perl-ExtUtils-MakeMaker test? ( >=virtual/perl-CPAN-Meta-2.120.900 virtual/perl-File-Spec dev-perl/Test-Exception virtual/perl-Test-Simple ) dev-lang/perl
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-lang/perl
+DESCRIPTION=Return chained, modified values from subs, without losing context
+EAPI=7
+HOMEPAGE=https://metacpan.org/release/Context-Preserve
+IUSE=test
+KEYWORDS=~amd64 ~x86 ~x86-solaris
+LICENSE=|| ( Artistic GPL-1+ )
+RDEPEND=virtual/perl-Carp virtual/perl-Exporter dev-lang/perl:=
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=mirror://cpan/authors/id/E/ET/ETHER/Context-Preserve-0.03.tar.gz
+_eclasses_=multiprocessing	61c959fc55c15c00bbb1079d6a71370b	perl-functions	fea344a91ebf37efadf172c6a3de5a72	perl-module	0ee2b2b92175720c966a5608c62b458d
+_md5_=29bf1e994c87cd5b39d4a1b5653adf8d

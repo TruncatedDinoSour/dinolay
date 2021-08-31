@@ -1,0 +1,10 @@
+DEFINED_PHASES=configure
+DESCRIPTION=Public-domain version of lzip compressor
+EAPI=6
+HOMEPAGE=https://www.nongnu.org/lzip/pdlzip.html
+KEYWORDS=~amd64 ~mips ~x86
+LICENSE=public-domain
+SLOT=0
+SRC_URI=https://download.savannah.gnu.org/releases/lzip/pdlzip/pdlzip-1.10.tar.gz
+_eclasses_=multilib	97566c1a256d07b00848aa767e38a352	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
+_md5_=58b39538c28984e9095baae9c2c083fa

@@ -1,0 +1,13 @@
+BDEPEND=>=dev-lang/go-1.13 filecaps? ( sys-libs/libcap ) >=dev-lang/go-1.12 app-arch/unzip virtual/pkgconfig >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile install postinst test unpack
+DESCRIPTION=A flexible DNS proxy, with support for encrypted DNS protocols
+EAPI=7
+HOMEPAGE=https://github.com/DNSCrypt/dnscrypt-proxy
+IUSE=pie +filecaps
+LICENSE=Apache-2.0 BSD ISC MIT MPL-2.0
+PROPERTIES=live
+RDEPEND=acct-group/dnscrypt-proxy acct-user/dnscrypt-proxy filecaps? ( sys-libs/libcap )
+RESTRICT=strip
+SLOT=0
+_eclasses_=fcaps	ac252c3cc67b265cd7ea456f8d58e150	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	go-module	8aabf8812bab7a6f07e7a32958c505ef	multilib	97566c1a256d07b00848aa767e38a352	systemd	c846b9e02ac8293bfc9ca38a195c2a18	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
+_md5_=5e147cf6d62f563ed248504a99375674

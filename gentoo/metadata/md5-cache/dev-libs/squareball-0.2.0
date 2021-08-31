@@ -1,0 +1,13 @@
+BDEPEND=virtual/pkgconfig doc? ( app-doc/doxygen )
+DEFINED_PHASES=compile configure install prepare
+DEPEND=test? ( dev-util/cmocka )
+DESCRIPTION=A general-purpose library for C99
+EAPI=7
+HOMEPAGE=https://github.com/rafaelmartins/squareball
+IUSE=doc test static-libs
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://github.com/rafaelmartins/squareball/releases/download/v0.2.0/squareball-0.2.0.tar.xz
+_md5_=86efb22f888a7aa14da55fd702a954e1

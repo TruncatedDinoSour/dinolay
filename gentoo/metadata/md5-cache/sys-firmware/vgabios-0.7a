@@ -1,0 +1,11 @@
+BDEPEND=amd64? ( sys-devel/dev86 ) x86? ( sys-devel/dev86 )
+DEFINED_PHASES=compile install prepare
+DESCRIPTION=VGA BIOS implementation
+EAPI=7
+HOMEPAGE=http://www.nongnu.org/vgabios/
+IUSE=debug
+KEYWORDS=amd64 x86
+LICENSE=LGPL-2.1
+SLOT=0
+SRC_URI=https://savannah.gnu.org/download/vgabios/vgabios-0.7a.tgz https://dev.gentoo.org/~cardoe/distfiles/vgabios-0.7a-fixes-1.tar.bz2
+_md5_=de8d1e79ce0df15113c12625e7855cfe

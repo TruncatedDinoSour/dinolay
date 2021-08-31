@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst prepare pretend setup test unpack
+DEPEND=dev-libs/gmp:* bootstrap-smlnj? ( dev-lang/smlnj ) !bootstrap-smlnj? ( !amd64? ( dev-lang/smlnj ) ) pax-kernel? ( sys-apps/elfix ) doc? ( virtual/latex-base )
+DESCRIPTION=Standard ML optimizing compiler and libraries
+EAPI=7
+HOMEPAGE=http://www.mlton.org
+IUSE=binary bootstrap-smlnj stage3 doc pax-kernel
+KEYWORDS=~amd64 ~x86
+LICENSE=HPND MIT
+RDEPEND=dev-libs/gmp:*
+SLOT=0/20180207
+SRC_URI=!binary? ( mirror://sourceforge/mlton/mlton-20180207.src.tgz ) !bootstrap-smlnj? ( amd64? ( mirror://sourceforge/mlton/mlton-20180207-1.amd64-linux.tgz ) )
+_eclasses_=check-reqs	bfb51de63b0462097e40436214dd43c8	multibuild	05a584848db4901c97fcd94ae7cc3a97	pax-utils	fce6ad998516159787b92e8043167889
+_md5_=8b77f08003e305274e9aafdaabf2ffe0

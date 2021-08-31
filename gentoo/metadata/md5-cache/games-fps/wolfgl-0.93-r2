@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install postinst
+DEPEND=virtual/opengl app-arch/unzip x11-base/xorg-proto
+DESCRIPTION=Wolfenstein and Spear of Destiny port using OpenGL
+EAPI=6
+HOMEPAGE=http://wolfgl.sourceforge.net/
+KEYWORDS=~x86
+LICENSE=GPL-2
+RDEPEND=virtual/opengl
+SLOT=0
+SRC_URI=mirror://gentoo/wolfgl-0.93.tbz2 mirror://sourceforge/wolfgl/wolfdata.zip mirror://sourceforge/wolfgl/sdmdata.zip
+_md5_=bca751fecc6a233fadacc82d8f664e3f

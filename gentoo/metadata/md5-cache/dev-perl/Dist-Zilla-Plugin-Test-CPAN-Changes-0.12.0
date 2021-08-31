@@ -1,0 +1,15 @@
+BDEPEND=dev-perl/Data-Section >=dev-perl/Dist-Zilla-4 dev-perl/Moose >=dev-perl/CPAN-Changes-0.190.0 virtual/perl-ExtUtils-MakeMaker test? ( virtual/perl-File-Path virtual/perl-File-Spec virtual/perl-IO >=virtual/perl-Test-Simple-0.940.0 virtual/perl-autodie ) dev-lang/perl
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-lang/perl
+DESCRIPTION=release tests for your changelog
+EAPI=7
+HOMEPAGE=https://metacpan.org/release/Dist-Zilla-Plugin-Test-CPAN-Changes
+IUSE=test
+KEYWORDS=~amd64 ~x86
+LICENSE=|| ( Artistic GPL-1+ )
+RDEPEND=dev-perl/Data-Section >=dev-perl/Dist-Zilla-4 dev-perl/Moose >=dev-perl/CPAN-Changes-0.190.0 dev-lang/perl:=
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=mirror://cpan/authors/id/D/DO/DOHERTY/Dist-Zilla-Plugin-Test-CPAN-Changes-0.012.tar.gz
+_eclasses_=multiprocessing	61c959fc55c15c00bbb1079d6a71370b	perl-functions	fea344a91ebf37efadf172c6a3de5a72	perl-module	0ee2b2b92175720c966a5608c62b458d
+_md5_=19df7cfeca7f5ff3aefceabb8a04e6ca

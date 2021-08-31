@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile install test
+DEPEND=lua_targets_luajit? ( dev-lang/luajit:= ) lua_targets_lua5-1? ( dev-lang/lua:5.1 )
+DESCRIPTION=Backported Lua bit manipulation library
+EAPI=7
+HOMEPAGE=https://github.com/keplerproject/lua-compat-5.3
+IUSE=test lua_targets_luajit lua_targets_lua5-1
+KEYWORDS=amd64 arm arm64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux
+LICENSE=MIT
+RDEPEND=lua_targets_luajit? ( dev-lang/luajit:= ) lua_targets_lua5-1? ( dev-lang/lua:5.1 )
+REQUIRED_USE=|| ( lua_targets_luajit lua_targets_lua5-1 )
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://github.com/keplerproject/lua-compat-5.3/archive/v0.10.tar.gz -> lua-compat53-0.10.tar.gz
+_eclasses_=lua	2aa7f5f6eca451aaa06358247d3b3f10	lua-utils	7b7cd623ac8b9dd4a7a6ee27219cada6	multibuild	05a584848db4901c97fcd94ae7cc3a97	multilib	97566c1a256d07b00848aa767e38a352	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
+_md5_=be9b245942058cb3d9afd5e384c073b1

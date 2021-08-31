@@ -1,0 +1,14 @@
+BDEPEND=dev-util/intltool virtual/pkgconfig nls? ( sys-devel/gettext )
+DEFINED_PHASES=configure install postinst postrm
+DEPEND=dev-libs/glib:2 dev-libs/libxml2:2 media-libs/libmpdclient net-misc/curl x11-libs/gtk+:3 dbus? ( dev-libs/dbus-glib ) taglib? ( media-libs/taglib ) zeroconf? ( net-dns/avahi )
+DESCRIPTION=GTK client for MPD inspired by Rhythmbox but much lighter and faster
+EAPI=7
+HOMEPAGE=http://ario-player.sourceforge.net
+IUSE=dbus debug +idle nls taglib zeroconf
+KEYWORDS=amd64 x86
+LICENSE=GPL-2+
+RDEPEND=dev-libs/glib:2 dev-libs/libxml2:2 media-libs/libmpdclient net-misc/curl x11-libs/gtk+:3 dbus? ( dev-libs/dbus-glib ) taglib? ( media-libs/taglib ) zeroconf? ( net-dns/avahi )
+SLOT=0
+SRC_URI=mirror://sourceforge/ario-player/ario-1.6.tar.gz
+_eclasses_=xdg-utils	27f9a2f19502b925ac117bd657aa2979
+_md5_=330665fd44e1598bfc8aab55d2329b1e

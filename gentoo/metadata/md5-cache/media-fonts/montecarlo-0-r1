@@ -1,0 +1,12 @@
+BDEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DEFINED_PHASES=install postinst postrm setup
+DESCRIPTION=Monospace font, created by programmers, for programmers
+EAPI=7
+HOMEPAGE=https://www.bok.net/MonteCarlo/
+IUSE=bdf X
+KEYWORDS=~amd64 ~x86
+LICENSE=public-domain
+SLOT=0
+SRC_URI=https://www.bok.net/MonteCarlo/downloads/MonteCarlo-PCF.tgz bdf? ( https://www.bok.net/MonteCarlo/downloads/MonteCarlo-BDF.tgz )
+_eclasses_=font	0667878c2b594871023dd1833d05996f
+_md5_=8aec8eceaa25296a9cc42d1a37fcc318

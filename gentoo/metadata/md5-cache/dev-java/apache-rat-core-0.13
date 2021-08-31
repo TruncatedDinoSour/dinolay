@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install preinst prepare setup test
+DEPEND=>=virtual/jdk-1.8:* >=dev-java/commons-cli-1.3.1:1 >=dev-java/commons-compress-1.20:0 dev-java/commons-collections:0 >=dev-java/commons-io-2.8.0:1 dev-java/commons-lang:3.6 >=dev-java/java-config-2.2.0-r3 source? ( app-arch/zip ) test? ( dev-java/junit:4 )
+DESCRIPTION=The core functionality, shared by the Ant tasks and the Maven plugin.
+EAPI=7
+HOMEPAGE=https://creadur.apache.org/rat/apache-rat-core/
+IUSE=elibc_FreeBSD doc source test
+KEYWORDS=amd64 x86
+LICENSE=Apache-2.0
+RDEPEND=>=virtual/jre-1.8:* >=dev-java/commons-cli-1.3.1:1 >=dev-java/commons-compress-1.20:0 dev-java/commons-collections:0 >=dev-java/commons-io-2.8.0:1 dev-java/commons-lang:3.6 >=dev-java/java-config-2.2.0-r3 source? ( app-arch/zip )
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=mirror://apache//creadur/apache-rat-0.13/apache-rat-0.13-src.tar.bz2
+_eclasses_=java-pkg-2	37e38ed0662a78bfde9cb4f6d11ed6dc	java-pkg-simple	f54286e86669dd9944a492f8586e744c	java-utils-2	ac9fb9efa5413c5fb85a4203fe930e88
+_md5_=aff32376fcc5bd64d5aea60e4ae57d59

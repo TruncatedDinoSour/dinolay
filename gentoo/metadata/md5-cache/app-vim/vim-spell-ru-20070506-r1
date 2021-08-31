@@ -1,0 +1,10 @@
+DEFINED_PHASES=install postinst
+DESCRIPTION=vim spell files: Russian (ru)
+EAPI=6
+HOMEPAGE=https://wiki.gentoo.org/wiki/No_homepage
+KEYWORDS=amd64 ppc sparc x86
+LICENSE=myspell-ru_RU-AlexanderLebedev
+SLOT=0
+SRC_URI=mirror://gentoo/vim-spell-ru-20070506.tar.bz2
+_eclasses_=vim-spell	bdde100c123e6a086e09d93a1c89c2df
+_md5_=6257fea729e58a7076ff8186856d8985

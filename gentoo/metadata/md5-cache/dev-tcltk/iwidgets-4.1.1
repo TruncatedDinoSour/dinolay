@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=>=dev-tcltk/itcl-4.1.1 >=dev-tcltk/itk-4.1.0 test? ( x11-base/xorg-server[xvfb] x11-apps/xhost )
+DESCRIPTION=Widget collection for incrTcl/incrTk
+EAPI=6
+HOMEPAGE=http://incrtcl.sourceforge.net/itcl/
+IUSE=test
+KEYWORDS=amd64 ~ia64 ppc sparc x86 ~amd64-linux ~x86-linux
+LICENSE=HPND Old-MIT tcltk
+RDEPEND=>=dev-tcltk/itcl-4.1.1 >=dev-tcltk/itk-4.1.0
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=mirror://sourceforge/incrtcl/%5BIncr%20Widgets%5D/4.1.1/iwidgets-4.1.1.tar.gz mirror://sourceforge/incrtcl/%5BIncr%20Tcl_Tk%5D-4-source/itcl%204.1.1/itcl4.1.1.tar.gz mirror://sourceforge/incrtcl/%5BIncr%20Tcl_Tk%5D-4-source/itk%204.1.0/itk4.1.0.tar.gz
+_eclasses_=multilib	97566c1a256d07b00848aa767e38a352	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	virtualx	fa024aa649b6bd544144bf94893d402c
+_md5_=0ae5f8b832ba9a9fbdaa2473cf0e9267

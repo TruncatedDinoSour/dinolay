@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst prepare unpack
+DEPEND=alevt? ( !media-video/alevt media-libs/libpng:0= media-libs/zvbi[v4l] sys-libs/zlib x11-libs/libX11 ) usb? ( virtual/libusb:0 ) dev-lang/perl virtual/linuxtv-dvb-headers
+DESCRIPTION=Small utils for DVB to scan, zap, view signal strength
+EAPI=7
+HOMEPAGE=https://www.linuxtv.org/
+IUSE=alevt usb
+KEYWORDS=amd64 ~arm arm64 ppc x86
+LICENSE=GPL-2
+RDEPEND=alevt? ( !media-video/alevt media-libs/libpng:0= media-libs/zvbi[v4l] sys-libs/zlib x11-libs/libX11 ) usb? ( virtual/libusb:0 ) media-tv/dtv-scan-tables
+SLOT=0
+SRC_URI=https://www.linuxtv.org/hg/dvb-apps/archive/3d43b280298c.tar.bz2 -> linuxtv-dvb-apps-1.1.1.20140321.tar.bz2
+_eclasses_=multilib	97566c1a256d07b00848aa767e38a352	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	vcs-snapshot	b1abf460a493fc59ebb25de0df3f09dd
+_md5_=8b6af56187ff5eb4a9df16b1a5144091

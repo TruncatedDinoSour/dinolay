@@ -1,0 +1,14 @@
+BDEPEND=sys-devel/gnuconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.2-r1:1.16 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=configure install prepare test unpack
+DEPEND=boost? ( dev-libs/boost:0= ) mpi? ( sys-cluster/ampi:0= ) sparse? ( sci-libs/colpack:0= )
+DESCRIPTION=Automatic differentiation system for C/C++
+EAPI=7
+HOMEPAGE=https://projects.coin-or.org/ADOL-C/
+IUSE=+boost mpi sparse
+LICENSE=|| ( EPL-1.0 GPL-2 )
+PROPERTIES=live
+RDEPEND=boost? ( dev-libs/boost:0= ) mpi? ( sys-cluster/ampi:0= ) sparse? ( sci-libs/colpack:0= )
+SLOT=0/2
+SRC_URI=https://dev.gentoo.org/~sam/distfiles/sci-libs/adolc/adolc-2.7.2-patches.tar.bz2
+_eclasses_=autotools	c7052b276346587968d52ea8eaf5aca1	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	gnuconfig	262062cef0ba4f22b397193da514a350	libtool	241a8f577b9781a42a7421e53448a44e	multilib	97566c1a256d07b00848aa767e38a352	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
+_md5_=838264c177743b5d0d2e8467d794fc29

@@ -1,0 +1,14 @@
+BDEPEND=virtual/pkgconfig filecaps? ( sys-libs/libcap ) sys-devel/gnuconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.2-r1:1.16 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEFINED_PHASES=compile configure install postinst prepare
+DEPEND=>=dev-libs/yajl-2.0.2 dev-libs/confuse:= dev-libs/libnl:3 media-libs/alsa-lib pulseaudio? ( || ( media-sound/pulseaudio media-sound/apulse[sdk] ) ) app-text/asciidoc app-text/xmlto
+DESCRIPTION=generates a status bar for dzen2, xmobar or similar
+EAPI=7
+HOMEPAGE=https://i3wm.org/i3status/
+IUSE=pulseaudio +filecaps
+KEYWORDS=amd64 ~arm x86
+LICENSE=BSD
+RDEPEND=>=dev-libs/yajl-2.0.2 dev-libs/confuse:= dev-libs/libnl:3 media-libs/alsa-lib pulseaudio? ( || ( media-sound/pulseaudio media-sound/apulse[sdk] ) ) filecaps? ( sys-libs/libcap )
+SLOT=0
+SRC_URI=https://i3wm.org/i3status/i3status-2.13.tar.bz2
+_eclasses_=autotools	c7052b276346587968d52ea8eaf5aca1	fcaps	ac252c3cc67b265cd7ea456f8d58e150	gnuconfig	262062cef0ba4f22b397193da514a350	libtool	241a8f577b9781a42a7421e53448a44e	multilib	97566c1a256d07b00848aa767e38a352	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
+_md5_=c0c3c4a3a6086cfc41c4cb3047a80d80

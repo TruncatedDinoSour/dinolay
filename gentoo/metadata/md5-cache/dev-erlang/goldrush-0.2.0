@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install prepare test
+DEPEND=>=dev-lang/erlang-17.1 dev-lang/erlang:= dev-util/rebar >=sys-apps/gawk-4.1
+DESCRIPTION=Small Erlang app that provides fast event stream processing
+EAPI=6
+HOMEPAGE=https://github.com/DeadZen/goldrush
+KEYWORDS=amd64 ~arm ~ia64 ~ppc ~sparc x86
+LICENSE=ISC
+RDEPEND=>=dev-lang/erlang-17.1 dev-lang/erlang:=
+SLOT=0
+SRC_URI=https://github.com/DeadZen/goldrush/archive/0.2.0.tar.gz -> goldrush-0.2.0.tar.gz
+_eclasses_=rebar	f13843e18f4ec00f45f7158bd3f3d3bb
+_md5_=064b9b0a338574231dd1634e886dcaef

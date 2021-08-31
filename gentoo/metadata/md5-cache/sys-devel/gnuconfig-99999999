@@ -1,0 +1,10 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile install prepare test unpack
+DESCRIPTION=Updated config.sub and config.guess file from GNU
+EAPI=7
+HOMEPAGE=https://savannah.gnu.org/projects/config
+LICENSE=GPL-3+-with-autoconf-exception
+PROPERTIES=live
+SLOT=0
+_eclasses_=git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
+_md5_=3fc44da62f8c474c8cdc792f7c7c2c2e

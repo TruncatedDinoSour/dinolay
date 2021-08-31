@@ -1,0 +1,11 @@
+DEFINED_PHASES=configure install
+DESCRIPTION=Protein secondary structure assignment from atomic coordinates
+EAPI=7
+HOMEPAGE=http://webclu.bio.wzw.tum.de/stride/
+KEYWORDS=amd64 ppc x86 ~amd64-linux ~x86-linux
+LICENSE=STRIDE
+RESTRICT=mirror bindist
+SLOT=0
+SRC_URI=ftp://ftp.ebi.ac.uk/pub/software/unix/stride/src/stride.tar.gz -> stride-20011129.tar.gz https://dev.gentoo.org/~pacho/stride/stride-20060723-update.patch.bz2
+_eclasses_=multilib	97566c1a256d07b00848aa767e38a352	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
+_md5_=817435dd944977478aa2ef74ff4b3971

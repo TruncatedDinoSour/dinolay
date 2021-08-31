@@ -1,0 +1,14 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=compile configure install prepare
+DEPEND=gtk? ( dev-libs/glib:2 x11-libs/gdk-pixbuf:2 x11-libs/gtk+:2 ) pud? ( sci-geosciences/gpsd )
+DESCRIPTION=An implementation of the Optimized Link State Routing protocol
+EAPI=7
+HOMEPAGE=http://www.olsr.org/
+IUSE=gtk pud
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD LGPL-2.1
+RDEPEND=gtk? ( dev-libs/glib:2 x11-libs/gdk-pixbuf:2 x11-libs/gtk+:2 ) pud? ( sci-geosciences/gpsd )
+SLOT=0
+SRC_URI=https://github.com/OLSR/olsrd/archive/v0.9.8.tar.gz -> olsrd-0.9.8.tar.gz
+_eclasses_=multilib	97566c1a256d07b00848aa767e38a352	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
+_md5_=81a70b7dea53280d10527c087415e70d

@@ -1,0 +1,13 @@
+BDEPEND=sys-devel/gnuconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.2-r1:1.16 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEFINED_PHASES=prepare
+DEPEND=>=dev-libs/glib-2.56:2 app-accessibility/at-spi2-atk dev-libs/atk sys-devel/gettext x11-libs/gdk-pixbuf x11-libs/gtk+:3[X] x11-libs/gtksourceview:3.0 x11-libs/libICE x11-libs/libSM x11-libs/pango >=dev-util/intltool-0.31 sys-devel/gettext virtual/pkgconfig
+DESCRIPTION=a sticky note application for jotting down things to remember
+EAPI=7
+HOMEPAGE=https://launchpad.net/xpad
+KEYWORDS=amd64 ~arm ppc x86
+LICENSE=GPL-3
+RDEPEND=>=dev-libs/glib-2.56:2 app-accessibility/at-spi2-atk dev-libs/atk sys-devel/gettext x11-libs/gdk-pixbuf x11-libs/gtk+:3[X] x11-libs/gtksourceview:3.0 x11-libs/libICE x11-libs/libSM x11-libs/pango
+SLOT=0
+SRC_URI=https://launchpad.net/xpad/trunk/5.4.0/+download/xpad-5.4.0.tar.bz2
+_eclasses_=autotools	c7052b276346587968d52ea8eaf5aca1	gnuconfig	262062cef0ba4f22b397193da514a350	libtool	241a8f577b9781a42a7421e53448a44e	multilib	97566c1a256d07b00848aa767e38a352	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
+_md5_=ab8196ddae09d93f4814a9546cc13c31

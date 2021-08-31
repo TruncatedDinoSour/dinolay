@@ -1,0 +1,11 @@
+DEFINED_PHASES=install unpack
+DEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DESCRIPTION=Gentoo specific zsh completion support (includes emerge and ebuild commands)
+EAPI=6
+HOMEPAGE=https://github.com/gentoo/gentoo-zsh-completions
+LICENSE=ZSH
+PROPERTIES=live
+RDEPEND=>=app-shells/zsh-4.3.5
+SLOT=0
+_eclasses_=git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
+_md5_=6e4e238e603bcd42ed2962c5ce90f367

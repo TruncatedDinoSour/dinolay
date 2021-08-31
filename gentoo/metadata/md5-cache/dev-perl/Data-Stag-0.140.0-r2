@@ -1,0 +1,13 @@
+BDEPEND=dev-perl/IO-String virtual/perl-ExtUtils-MakeMaker dev-lang/perl
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-lang/perl
+DESCRIPTION=Structured Tags datastructures
+EAPI=7
+HOMEPAGE=http://stag.sourceforge.net/ https://metacpan.org/release/Data-Stag
+KEYWORDS=amd64 x86
+LICENSE=|| ( Artistic GPL-1+ )
+RDEPEND=dev-perl/IO-String dev-lang/perl:=
+SLOT=0
+SRC_URI=mirror://cpan/authors/id/C/CM/CMUNGALL/Data-Stag-0.14.tar.gz
+_eclasses_=multiprocessing	61c959fc55c15c00bbb1079d6a71370b	perl-functions	fea344a91ebf37efadf172c6a3de5a72	perl-module	0ee2b2b92175720c966a5608c62b458d
+_md5_=0059104a42dbcee964d7a7635934cb5c

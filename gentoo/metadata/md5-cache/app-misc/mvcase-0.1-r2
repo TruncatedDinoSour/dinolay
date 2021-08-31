@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install
+DEPEND=dev-libs/shhopt
+DESCRIPTION=A modified version of mv, used to convert filenames to lower/upper case
+EAPI=6
+HOMEPAGE=https://www.ibiblio.org/pub/Linux/utils/file
+KEYWORDS=amd64 ppc x86
+LICENSE=GPL-2
+RDEPEND=dev-libs/shhopt
+SLOT=0
+SRC_URI=https://www.ibiblio.org/pub/Linux/utils/file/mvcase-0.1.tar.gz
+_eclasses_=multilib	97566c1a256d07b00848aa767e38a352	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
+_md5_=a09c17d720147df50a582781d4ba4b0b

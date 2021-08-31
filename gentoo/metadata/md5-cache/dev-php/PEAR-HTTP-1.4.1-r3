@@ -1,0 +1,14 @@
+DEFINED_PHASES=install postinst postrm prepare test
+DEPEND=test? ( dev-php/PEAR-PEAR )
+DESCRIPTION=Miscellaneous HTTP utilities
+EAPI=6
+HOMEPAGE=https://pear.php.net/package/HTTP
+IUSE=test
+KEYWORDS=~alpha amd64 ~hppa ~ia64 ppc ppc64 sparc x86
+LICENSE=BSD
+RDEPEND=>=dev-php/pear-1.8.1
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://pear.php.net/get/HTTP-1.4.1.tgz
+_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	php-pear-r2	4a7c293febeea04349068d5716ad29ff
+_md5_=ecc5ef04ab025548faa370aa69b48be9

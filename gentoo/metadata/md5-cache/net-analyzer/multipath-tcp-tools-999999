@@ -1,0 +1,12 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile install prepare unpack
+DEPEND=dev-libs/openssl:= net-libs/libpcap
+DESCRIPTION=Analysis tools for Multipath Transmission Control Protocol (MPTCP)
+EAPI=7
+HOMEPAGE=https://github.com/nasa/multipath-tcp-tools
+LICENSE=NOSA
+PROPERTIES=live
+RDEPEND=dev-libs/openssl:= net-libs/libpcap
+SLOT=0
+_eclasses_=git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	multilib	97566c1a256d07b00848aa767e38a352	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
+_md5_=93a45d86959d27a224b18eea0560b3ea

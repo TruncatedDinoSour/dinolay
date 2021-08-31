@@ -1,0 +1,12 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install setup unpack
+DESCRIPTION=Gentoo LiveCD tools for autoconfiguration of hardware
+EAPI=7
+HOMEPAGE=https://gitweb.gentoo.org/proj/livecd-tools.git/
+IUSE=kernel_linux
+LICENSE=GPL-2
+PROPERTIES=live
+RDEPEND=dev-util/dialog media-sound/alsa-utils net-dialup/mingetty sys-apps/openrc sys-apps/pciutils
+SLOT=0
+_eclasses_=git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	linux-info	a99e3ead651192b4866986c9640612da	multilib	97566c1a256d07b00848aa767e38a352	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
+_md5_=cd73d8a5c345b19ee189f1fce95007c0

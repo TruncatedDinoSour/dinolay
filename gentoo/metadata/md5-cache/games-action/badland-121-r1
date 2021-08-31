@@ -1,0 +1,14 @@
+BDEPEND=app-admin/chrpath
+DEFINED_PHASES=install nofetch postinst postrm preinst prepare
+DEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
+DESCRIPTION=Atmospheric side-scrolling action adventure platformer set in a gorgeous forest
+EAPI=7
+HOMEPAGE=http://badlandgame.com
+KEYWORDS=-* ~amd64 ~x86
+LICENSE=all-rights-reserved
+RDEPEND=dev-db/sqlite:3[abi_x86_32] media-libs/fontconfig:1.0[abi_x86_32] media-libs/freetype:2[abi_x86_32] media-libs/libpng-compat:1.2[abi_x86_32] media-libs/libsdl2[abi_x86_32,joystick,opengl,sound,threads,video] net-misc/curl[abi_x86_32] >=sys-devel/gcc-4.6[cxx] >=sys-libs/glibc-2.14 virtual/opengl[abi_x86_32] x11-libs/libX11[abi_x86_32]
+RESTRICT=bindist fetch mirror splitdebug
+SLOT=0
+SRC_URI=Badland_GotY_121.tar https://dev.gentoo.org/~chewi/distfiles/badland.png
+_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	wrapper	4251d4c84c25f59094fd557e0063a974	xdg	e73b9df80596ab8f9c542c01196dec23	xdg-utils	27f9a2f19502b925ac117bd657aa2979
+_md5_=4ff2f233a7a42bb410030a85e4e21bf7

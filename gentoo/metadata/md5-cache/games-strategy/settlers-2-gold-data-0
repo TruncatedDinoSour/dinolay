@@ -1,0 +1,15 @@
+BDEPEND=!cdinstall? ( >=app-arch/innoextract-1.8 )
+DEFINED_PHASES=install nofetch unpack
+DESCRIPTION=Data files for The Settlers II: Gold Edition
+EAPI=7
+HOMEPAGE=https://www.gog.com/game/the_settlers_2_gold_edition
+IUSE=cdinstall
+KEYWORDS=~amd64 ~x86
+LICENSE=!cdinstall? ( GOG-EULA ) cdinstall? ( all-rights-reserved )
+PROPERTIES=cdinstall? ( interactive )
+RDEPEND=games-strategy/s25rttr
+RESTRICT=bindist !cdinstall? ( fetch )
+SLOT=0
+SRC_URI=!cdinstall? ( setup_the_settlers_2_gold_1.5.1_(30319).exe )
+_eclasses_=cdrom	96bb9b81542ce6da0c28603f1b5a98b7	estack	055c42df72f76a4f45ec92b35e83cd56	portability	d1186f1e621de7b27ddcae82e6253259
+_md5_=b45b77dfb4e47ea737939c798a642ced

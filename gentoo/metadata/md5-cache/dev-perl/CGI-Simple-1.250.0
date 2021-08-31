@@ -1,0 +1,15 @@
+BDEPEND=dev-perl/Module-Build test? ( dev-perl/libwww-perl dev-perl/IO-stringy virtual/perl-File-Temp dev-perl/Test-Exception dev-perl/Test-NoWarnings ) dev-lang/perl
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-perl/Module-Build dev-lang/perl
+DESCRIPTION=A Simple totally OO CGI interface that is CGI.pm compliant
+EAPI=7
+HOMEPAGE=https://metacpan.org/release/CGI-Simple
+IUSE=test
+KEYWORDS=~alpha amd64 ~hppa ~ia64 ppc ppc64 sparc x86
+LICENSE=Artistic
+RDEPEND=dev-lang/perl:=
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=mirror://cpan/authors/id/M/MA/MANWAR/CGI-Simple-1.25.tar.gz
+_eclasses_=multiprocessing	61c959fc55c15c00bbb1079d6a71370b	perl-functions	fea344a91ebf37efadf172c6a3de5a72	perl-module	0ee2b2b92175720c966a5608c62b458d
+_md5_=40a6df3bea40f0331466c3fb38b6c02b

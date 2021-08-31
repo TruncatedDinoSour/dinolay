@@ -1,0 +1,11 @@
+DEFINED_PHASES=configure install postinst postrm preinst prepare prerm pretend test
+DESCRIPTION=A stand alone memory test for x86 computers
+EAPI=7
+HOMEPAGE=https://www.memtest86.com/
+IUSE=serial
+KEYWORDS=-* amd64 x86
+LICENSE=GPL-2
+SLOT=0
+SRC_URI=https://www.memtest86.com/downloads/memtest86-4.3.7-src.tar.gz
+_eclasses_=mount-boot	060ced4c5e0fd737db17cbb609bbf557	multilib	97566c1a256d07b00848aa767e38a352	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
+_md5_=ee38aad56f074b3474c61dd8ea143fcb

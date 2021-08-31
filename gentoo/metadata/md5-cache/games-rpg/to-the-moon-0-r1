@@ -1,0 +1,13 @@
+DEFINED_PHASES=install nofetch unpack
+DESCRIPTION=Two doctors traversing the memories of a dying man to fulfill his last wish
+EAPI=7
+HOMEPAGE=http://freebirdgames.com/games/to-the-moon
+IUSE=bundled-libs
+KEYWORDS=~amd64 ~x86
+LICENSE=all-rights-reserved bundled-libs? ( LGPL-2 LGPL-2.1 ZLIB )
+RDEPEND=sys-libs/zlib virtual/opengl !bundled-libs? ( dev-libs/libsigc++:2 >=media-libs/libsdl2-2.0.1[X,joystick,opengl,sound,threads,video] media-libs/openal media-libs/sdl2-image[png] media-libs/sdl2-ttf )
+RESTRICT=bindist fetch
+SLOT=0
+SRC_URI=ToTheMoon_linux_1389114090.sh
+_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	multilib	97566c1a256d07b00848aa767e38a352	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	unpacker	2eeba54233fa41bdb15dcddcb63fba3a	wrapper	4251d4c84c25f59094fd557e0063a974
+_md5_=1cf58113bd0e03f650096bf4a3ac757e

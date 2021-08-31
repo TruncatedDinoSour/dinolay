@@ -1,0 +1,12 @@
+DEFINED_PHASES=configure install
+DEPEND=X? ( dev-lang/tcl:0 dev-lang/tk:0 x11-libs/libX11 )
+DESCRIPTION=LVS tool (layout versus schematic comparison)
+EAPI=7
+HOMEPAGE=http://www.opencircuitdesign.com/netgen/index.html
+IUSE=X
+KEYWORDS=~amd64
+LICENSE=GPL-1
+RDEPEND=X? ( dev-lang/tcl:0 dev-lang/tk:0 x11-libs/libX11 )
+SLOT=0
+SRC_URI=http://www.opencircuitdesign.com/netgen/archive/netgen-1.4.52.tgz
+_md5_=1f57edd197dfbad1d2168f9ba25d43ce

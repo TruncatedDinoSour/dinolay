@@ -1,0 +1,13 @@
+BDEPEND=dev-lang/perl
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-lang/perl
+DESCRIPTION=This module is a simple supplement to other option handling modules
+EAPI=7
+HOMEPAGE=https://metacpan.org/release/Getopt-ArgvFile
+KEYWORDS=amd64 ~ia64 ppc ~ppc64 sparc x86
+LICENSE=|| ( Artistic Artistic-2 )
+RDEPEND=dev-lang/perl:=
+SLOT=0
+SRC_URI=mirror://cpan/authors/id/J/JS/JSTENZEL/Getopt-ArgvFile-1.11.tar.gz
+_eclasses_=multiprocessing	61c959fc55c15c00bbb1079d6a71370b	perl-functions	fea344a91ebf37efadf172c6a3de5a72	perl-module	0ee2b2b92175720c966a5608c62b458d
+_md5_=06fe9c4f807b7591fa00f467f5908a46

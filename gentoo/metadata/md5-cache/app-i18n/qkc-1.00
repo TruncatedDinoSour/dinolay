@@ -1,0 +1,11 @@
+BDEPEND=app-arch/unzip
+DEFINED_PHASES=configure install
+DESCRIPTION=Quick KANJI code Converter
+EAPI=7
+HOMEPAGE=http://hp.vector.co.jp/authors/VA000501/
+KEYWORDS=~alpha amd64 ppc ppc64 sparc x86
+LICENSE=freedist
+SLOT=0
+SRC_URI=http://hp.vector.co.jp/authors/VA000501/qkcc100.zip
+_eclasses_=multilib	97566c1a256d07b00848aa767e38a352	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
+_md5_=77129fd88add5ad1b83487511e5243b9

@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install prepare unpack
+DEPEND=dev-libs/libxml2 media-libs/libsdl[sound,video] media-libs/sdl-mixer[timidity] app-arch/unzip
+DESCRIPTION=A remake of the computer game Ultima IV
+EAPI=6
+HOMEPAGE=http://xu4.sourceforge.net/
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=dev-libs/libxml2 media-libs/libsdl[sound,video] media-libs/sdl-mixer[timidity]
+SLOT=0
+SRC_URI=mirror://sourceforge/xu4/xu4-0.9.tar.gz mirror://sourceforge/xu4/ultima4-1.01.zip mirror://sourceforge/xu4/u4upgrad.zip
+_md5_=e1121209bea3548407b5c029732a716a

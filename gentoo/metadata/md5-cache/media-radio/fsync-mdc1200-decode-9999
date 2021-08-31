@@ -1,0 +1,12 @@
+BDEPEND=virtual/pkgconfig >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile install unpack
+DEPEND=media-sound/pulseaudio:=
+DESCRIPTION=Linux Fleetsync / MDC1200 decoder
+EAPI=7
+HOMEPAGE=https://github.com/russinnes/fsync-mdc1200-decode
+LICENSE=GPL-2+
+PROPERTIES=live
+RDEPEND=media-sound/pulseaudio:=
+SLOT=0
+_eclasses_=git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	multilib	97566c1a256d07b00848aa767e38a352	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
+_md5_=cd01aa455cf0f7030db61c4923ad96bf

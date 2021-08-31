@@ -1,0 +1,11 @@
+DEFINED_PHASES=install
+DEPEND=acct-group/nagios acct-user/nagios
+DESCRIPTION=Nagios check script for GLSAs (Gentoo Linux Security Advisories)
+EAPI=7
+HOMEPAGE=https://github.com/craig/check_glsa2
+KEYWORDS=amd64
+LICENSE=GPL-2 BSD-2
+RDEPEND=acct-group/nagios acct-user/nagios app-portage/gentoolkit
+SLOT=0
+SRC_URI=https://dev.gentoo.org/~flameeyes/check_glsa2/check_glsa2-20120930.tar.xz
+_md5_=e5bec19ccbaf8f01981542595241d05b

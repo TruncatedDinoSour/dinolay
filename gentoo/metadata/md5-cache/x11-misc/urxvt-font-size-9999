@@ -1,0 +1,11 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install unpack
+DESCRIPTION=Perl extension for rxvt-unicode to change the font size on the fly
+EAPI=7
+HOMEPAGE=https://github.com/majutsushi/urxvt-font-size/
+LICENSE=MIT
+PROPERTIES=live
+RDEPEND=x11-apps/xlsfonts x11-terms/rxvt-unicode[perl]
+SLOT=0
+_eclasses_=git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
+_md5_=c08c2442cd9191c9b2cb24dda6f7abc6

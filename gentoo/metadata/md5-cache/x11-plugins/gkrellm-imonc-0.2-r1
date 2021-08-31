@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install
+DEPEND=app-admin/gkrellm:2[X] virtual/pkgconfig virtual/pkgconfig
+DESCRIPTION=A GKrellM2 plugin to control a fli4l router
+EAPI=6
+HOMEPAGE=http://gkrellm-imonc.sourceforge.net/
+KEYWORDS=~amd64 x86
+LICENSE=GPL-2+
+RDEPEND=app-admin/gkrellm:2[X]
+SLOT=0
+SRC_URI=mirror://sourceforge/gkrellm-imonc/gkrellm-imonc-src-0.2.tar.bz2
+_eclasses_=gkrellm-plugin	30f870080cadcd60810a1fb1bbb33d9f	multilib	97566c1a256d07b00848aa767e38a352	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
+_md5_=bd7ae86a8f9f85078cca1766cef9f9bf

@@ -1,0 +1,12 @@
+BDEPEND=>=app-editors/emacs-23.1:*
+DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
+DESCRIPTION=Blogging in Emacs
+EAPI=7
+HOMEPAGE=https://billstclair.com/blogmax/index.html
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-1+
+RDEPEND=>=app-editors/emacs-23.1:*
+SLOT=0
+SRC_URI=https://dev.gentoo.org/~ulm/distfiles/blogmax-20170321.tar.xz
+_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	elisp	b165dc0288d12ab26e86f41c56f03914	elisp-common	cf4fd1b0835b9f3e638724840468064a	readme.gentoo-r1	c9646d622541c023f5159b86a14e930c
+_md5_=075344a425db39cf3b846fd1641cc561

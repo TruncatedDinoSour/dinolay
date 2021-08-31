@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst postrm setup test
+DEPEND=>=dev-haskell/attoparsec-0.10.0.2:=[profile?] dev-haskell/hashable:=[profile?] >=dev-haskell/text-0.11.1.0:=[profile?] dev-haskell/unix-compat:=[profile?] dev-haskell/unordered-containers:=[profile?] >=dev-lang/ghc-7.4.1:= >=dev-haskell/cabal-1.8 test? ( dev-haskell/hunit dev-haskell/test-framework dev-haskell/test-framework-hunit ) hscolour? ( dev-haskell/hscolour )
+DESCRIPTION=Configuration management
+EAPI=8
+HOMEPAGE=https://github.com/bos/configurator
+IUSE=doc hscolour profile test
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+RDEPEND=>=dev-haskell/attoparsec-0.10.0.2:=[profile?] dev-haskell/hashable:=[profile?] >=dev-haskell/text-0.11.1.0:=[profile?] dev-haskell/unix-compat:=[profile?] dev-haskell/unordered-containers:=[profile?] >=dev-lang/ghc-7.4.1:=
+RESTRICT=!test? ( test )
+SLOT=0/0.3.0.0
+SRC_URI=https://hackage.haskell.org/package/configurator-0.3.0.0/configurator-0.3.0.0.tar.gz
+_eclasses_=ghc-package	6344fef4405bc9a6cca6a0a39eee4a32	haskell-cabal	c532267df7d5d305ca17c3d0c5f81bb2	multilib	97566c1a256d07b00848aa767e38a352	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
+_md5_=ca45f893009a7d5c58c0d27e1fb8223f

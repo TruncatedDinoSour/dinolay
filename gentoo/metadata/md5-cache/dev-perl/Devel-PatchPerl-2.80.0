@@ -1,0 +1,15 @@
+BDEPEND=>=dev-perl/File-pushd-1.0.0 virtual/perl-Getopt-Long virtual/perl-IO virtual/perl-MIME-Base64 dev-perl/Module-Pluggable virtual/perl-ExtUtils-MakeMaker test? ( virtual/perl-Test-Simple ) dev-lang/perl
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-lang/perl
+DESCRIPTION=Patch perl source a la Devel::PPPort's buildperl.pl
+EAPI=7
+HOMEPAGE=https://metacpan.org/release/Devel-PatchPerl
+IUSE=test
+KEYWORDS=amd64 x86
+LICENSE=|| ( Artistic GPL-1+ )
+RDEPEND=>=dev-perl/File-pushd-1.0.0 virtual/perl-Getopt-Long virtual/perl-IO virtual/perl-MIME-Base64 dev-perl/Module-Pluggable dev-lang/perl:=
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=mirror://cpan/authors/id/B/BI/BINGOS/Devel-PatchPerl-2.08.tar.gz
+_eclasses_=multiprocessing	61c959fc55c15c00bbb1079d6a71370b	perl-functions	fea344a91ebf37efadf172c6a3de5a72	perl-module	0ee2b2b92175720c966a5608c62b458d
+_md5_=abe1c76288e768e9fba8d9c6afb588f6

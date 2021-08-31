@@ -1,0 +1,13 @@
+BDEPEND=dev-lang/perl virtual/fortran
+DEFINED_PHASES=compile install setup
+DEPEND=virtual/fortran
+DESCRIPTION=Additional utils for profphd
+EAPI=8
+HOMEPAGE=https://rostlab.org/
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=GPL-3
+RDEPEND=virtual/fortran
+SLOT=0
+SRC_URI=ftp://rostlab.org/profphd-utils/profphd-utils-1.0.10.tar.gz
+_eclasses_=fortran-2	7e39eb204d37699d5f1eaf9f4d61888a	multilib	97566c1a256d07b00848aa767e38a352	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
+_md5_=428e4f0fb5dae339936e0195cc7ccec7

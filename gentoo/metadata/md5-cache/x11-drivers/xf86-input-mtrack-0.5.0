@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install postinst unpack
+DEPEND=>=sys-libs/mtdev-1.0 x11-base/xorg-server:= x11-base/xorg-proto
+DESCRIPTION=Xorg Driver for Multitouch Trackpads
+EAPI=6
+HOMEPAGE=https://github.com/p2rkw/xf86-input-mtrack
+IUSE=debug
+KEYWORDS=amd64 ~arm x86
+LICENSE=GPL-2
+RDEPEND=>=sys-libs/mtdev-1.0 x11-base/xorg-server:=
+SLOT=0
+SRC_URI=https://github.com/p2rkw/xf86-input-mtrack/archive/v0.5.0.tar.gz -> xf86-input-mtrack-0.5.0.tar.gz
+_eclasses_=vcs-snapshot	b1abf460a493fc59ebb25de0df3f09dd
+_md5_=9707882dae557affed8c9f4795416c4b

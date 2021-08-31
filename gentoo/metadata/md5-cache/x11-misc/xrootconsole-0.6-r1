@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install
+DEPEND=x11-libs/libX11 x11-base/xorg-proto virtual/pkgconfig
+DESCRIPTION=A utility that displays its input in a text box on your root window
+EAPI=6
+HOMEPAGE=https://sourceforge.net/projects/xrootconsole/
+KEYWORDS=amd64 ppc x86
+LICENSE=GPL-2
+RDEPEND=x11-libs/libX11
+SLOT=0
+SRC_URI=mirror://sourceforge/xrootconsole/xrootconsole-0.6.tar.gz
+_eclasses_=multilib	97566c1a256d07b00848aa767e38a352	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
+_md5_=77decaa6b899380a61ab228d36277e42

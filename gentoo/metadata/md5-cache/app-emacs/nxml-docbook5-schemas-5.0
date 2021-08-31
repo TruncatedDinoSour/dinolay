@@ -1,0 +1,12 @@
+BDEPEND=>=app-editors/emacs-23.1:*
+DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
+DESCRIPTION=Add support for DocBook 5 schemas to NXML
+EAPI=7
+HOMEPAGE=https://docbook.org/schemas/5x.html
+KEYWORDS=amd64 x86
+LICENSE=HPND
+RDEPEND=>=app-editors/emacs-23.1:*
+SLOT=0
+SRC_URI=https://docbook.org/xml/5.0/rng/docbookxi.rnc -> docbookxi-5.0.rnc
+_eclasses_=elisp	b165dc0288d12ab26e86f41c56f03914	elisp-common	cf4fd1b0835b9f3e638724840468064a
+_md5_=719e1af9bd0b431db9e5af672913bd04

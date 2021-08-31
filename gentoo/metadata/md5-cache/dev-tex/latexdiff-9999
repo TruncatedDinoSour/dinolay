@@ -1,0 +1,14 @@
+BDEPEND=test? ( app-shells/tcsh ) >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile install test unpack
+DEPEND=>=dev-lang/perl-5.8 virtual/latex-base dev-texlive/texlive-plaingeneric dev-perl/Algorithm-Diff dev-perl/Pod-LaTeX
+DESCRIPTION=Compare two latex files and mark up significant differences
+EAPI=7
+HOMEPAGE=https://www.ctan.org/tex-archive/support/latexdiff/ https://github.com/ftilmann/latexdiff/
+IUSE=test
+LICENSE=GPL-3
+PROPERTIES=live
+RDEPEND=>=dev-lang/perl-5.8 virtual/latex-base dev-texlive/texlive-plaingeneric dev-perl/Algorithm-Diff
+RESTRICT=!test? ( test )
+SLOT=0
+_eclasses_=git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
+_md5_=ab541d318861d87a63c26970d157a5c0

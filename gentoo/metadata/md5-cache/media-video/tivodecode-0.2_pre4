@@ -1,0 +1,9 @@
+DEFINED_PHASES=-
+DESCRIPTION=TiVo File Decoder
+EAPI=7
+HOMEPAGE=http://tivodecode.sourceforge.net/
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+SLOT=0
+SRC_URI=mirror://sourceforge/tivodecode/tivodecode-0.2pre4.tar.gz
+_md5_=62a88358febb8b9fc58a15ec5f3552ad

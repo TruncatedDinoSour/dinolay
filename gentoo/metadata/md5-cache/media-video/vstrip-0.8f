@@ -1,0 +1,11 @@
+BDEPEND=app-arch/unzip
+DEFINED_PHASES=compile install prepare
+DESCRIPTION=A program to split non-css dvd vobs into individual chapters
+EAPI=7
+HOMEPAGE=http://www.maven.de/code
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-2
+SLOT=0
+SRC_URI=http://files.digital-digest.com/downloads/files/encode/vStrip_08f.zip
+_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	multilib	97566c1a256d07b00848aa767e38a352	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
+_md5_=38da79bbace737c87be93411bb48f867

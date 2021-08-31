@@ -1,0 +1,11 @@
+BDEPEND=app-arch/unzip
+DEFINED_PHASES=install postinst
+DESCRIPTION=Arduino hardware definitions for freaklabs boards
+EAPI=7
+HOMEPAGE=https://freaklabs.org/chibiarduino/
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+PDEPEND=dev-embedded/arduino
+SLOT=0
+SRC_URI=https://freaklabs.org/pub/chibiArduino/boards/freaklabs-v1.0.0-manual%20install.zip -> freaklabs-v1.0.0-manual-install.zip
+_md5_=61c5ad4997f401df5877b95832d4f4c3

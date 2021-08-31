@@ -1,0 +1,13 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=compile configure install prepare
+DEPEND=media-libs/libsdl media-libs/libpng:0= media-libs/libvorbis virtual/jpeg:0 media-libs/freetype:2
+DESCRIPTION=Hover hockey
+EAPI=7
+HOMEPAGE=http://home.no.net/munsuun/tuxpuck/
+KEYWORDS=~alpha ~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=media-libs/libsdl media-libs/libpng:0= media-libs/libvorbis virtual/jpeg:0
+SLOT=0
+SRC_URI=http://home.no.net/munsuun/tuxpuck/files/tuxpuck-0.8.2.tar.gz
+_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	multilib	97566c1a256d07b00848aa767e38a352	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
+_md5_=eba235e1f4fe0cdc4999683f736337c7

@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile
+DEPEND=x11-libs/libX11 x11-libs/libXext x11-libs/libXpm virtual/os-headers x11-base/xorg-proto
+DESCRIPTION=mixer_app has volume controllers that can be configured to handle sound sources
+EAPI=7
+HOMEPAGE=http://www.fukt.bsnet.se/~per/mixer/
+KEYWORDS=amd64 ppc ~sparc x86
+LICENSE=GPL-2
+RDEPEND=x11-libs/libX11 x11-libs/libXext x11-libs/libXpm
+SLOT=0
+SRC_URI=http://www.fukt.bsnet.se/~per/mixer/Mixer.app-1.8.0.tar.gz
+_eclasses_=multilib	97566c1a256d07b00848aa767e38a352	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
+_md5_=849bd0255a55a68c195891f752aae2aa
