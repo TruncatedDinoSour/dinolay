@@ -14,7 +14,11 @@ src_prepare() {
 	default
 }
 
+src_compile() {
+	make
+}
+
 src_install() {
-	emake DESTDIR="${D}" PREFIX="${EPREFIX}/usr" all install
+	emake DESTDIR="${D}" PREFIX="${EPREFIX}/usr" install
 }
 
