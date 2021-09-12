@@ -19,7 +19,7 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 
-src_compile() {
-	make RUNAS= PREFIX=/usr full
+src_install() {
+	make PREFIX=/usr full
 }
 
