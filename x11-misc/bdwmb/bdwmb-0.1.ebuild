@@ -20,6 +20,6 @@ BDEPEND=""
 
 
 src_install() {
-	emake DESTDIR="${D}" PREFIX="${EPREFIX}/usr" install
+	emake DESTDIR="${D}" PREFIX="/usr" install
 }
 
