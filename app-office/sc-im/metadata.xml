@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>asnojus039@gmail.com</email>
+	<description>Spreadsheet Calculator Improvised</description>
+    <name>Ari Archer</name>
+  </maintainer>
+  <longdescription>Spreadsheet Calculator Improvised</longdescription>
+</pkgmetadata>
