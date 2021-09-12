@@ -20,6 +20,6 @@ BDEPEND=""
 
 
 src_install() {
-	make PREFIX=/usr full
+	emake PREFIX=/usr full
 }
 
