@@ -8,6 +8,7 @@ DESCRIPTION="Yet another fetch ..."
 HOMEPAGE="https://github.com/yrwq/yafetch"
 LICENSE="MIT"
 SLOT="0"
+KEYW0RDS="~amd64"
 
 src_prepare() {
 	default
