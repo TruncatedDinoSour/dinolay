@@ -7,7 +7,7 @@ DESCRIPTION="A simple, modular bash/shell script for configuring your DWM bar."
 HOMEPAGE="https://github.com/TruncatedDinosour/bdwmb"
 SRC_URI="https://github.com/TruncatedDinosour/bdwmb/archive/refs/tags/v${PV}.tar.gz"
 
-LICENSE="GPL3"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
