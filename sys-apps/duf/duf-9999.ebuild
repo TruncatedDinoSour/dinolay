@@ -13,7 +13,7 @@ SRC_URI=""
 
 LICENSE="BSD MIT"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64"
 IUSE=""
 
 src_unpack() {
