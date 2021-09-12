@@ -16,10 +16,10 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 src_compile() {
-	emake
+	make
 }
 
 src_install() {
-	emake install
+	make install
 }
 
