@@ -48,6 +48,6 @@ src_install() {
 	doicon -s scalable usr/share/icons/hicolor/scalable/apps/freetube.svg
 	fperms 4755 /opt/FreeTube/chrome-sandbox || die
 	fperms +x  /opt/FreeTube/freetube || die
-	dosym ../../opt/FreeTube/freetube /usr/bin/freetube-bin
+	dosym ../../opt/FreeTube/freetube /usr/bin/freetube
 }
 
