@@ -7,7 +7,7 @@ if [[ -z ${PV%%*9999} ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/FreeTubeApp/FreeTube.git"
 	S="${WORKDIR}/${P}"
-	KEYWORDS=""
+	KEYWORDS="~amd64"
 else
 	SRC_URI="https://github.com/FreeTubeApp/FreeTube/archive/v${PV/_beta/-beta}.tar.gz -> ${P}.tar.gz"
 	RESTRICT="primaryuri"
