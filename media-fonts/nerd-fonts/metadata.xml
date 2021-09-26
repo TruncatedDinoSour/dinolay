@@ -2,8 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer type="person">
-		<email>OriPoin@outlook.com</email>
-		<name>Yachen Wang</name>
+		<email>truncateddinosour@gmail.com</email>
+		<name>Ari Archer</name>
 	</maintainer>
 <use>
 	<flag name="3270">Install Nerd-fonts-patched 3270 fonts</flag>

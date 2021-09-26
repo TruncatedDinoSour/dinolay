@@ -6,7 +6,7 @@
     <description>My gentoo overlay for me to not need to use multiple ones</description>
     <homepage>https://github.com/TruncatedDinosour/dinolay</homepage>
     <owner type="project">
-      <email>asnojus039@gmail.com</email>
+      <email>truncateddinosour@gmail.com</email>
       <name>Ari Archer</name>
     </owner>
     <source type="git">https://github.com/TruncatedDinosour/dinolay.git</source>
