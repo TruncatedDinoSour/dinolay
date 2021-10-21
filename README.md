@@ -1,5 +1,8 @@
 # dinolay
 
+## Depricated ebuilds overlay
+https://github.com/TruncatedDinosour/deaddino
+
 ## Installation
 ```bash
 $ sudo emerge --ask --quiet app-eselect/eselect-repository
