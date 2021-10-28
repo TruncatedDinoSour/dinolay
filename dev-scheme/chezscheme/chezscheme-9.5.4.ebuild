@@ -23,6 +23,11 @@ PATCHES=(
 
 S="${WORKDIR}/${CSV}"
 
+src_prepare() {
+	default
+	rm -r README*
+}
+
 src_configure() {
 	local myconf=(
 		--64
