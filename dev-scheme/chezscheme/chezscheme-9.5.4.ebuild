@@ -18,7 +18,7 @@ KEYWORDS="~amd64"
 IUSE=""
 
 PATCHES=(
-	"${FILESDIR}/chezscheme-tinfo.patch"
+	"${FILESDIR}/chezscheme-tinfo-${PV}.patch"
 )
 
 S="${WORKDIR}/${CSV}"
@@ -50,3 +50,4 @@ src_install() {
 	make_wrapper "petite" "${chez_dir}/petite"
 	make_wrapper "scheme-script" "${chez_dir}/scheme-script"
 }
+
