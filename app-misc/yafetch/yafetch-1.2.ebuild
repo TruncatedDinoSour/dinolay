@@ -16,17 +16,17 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 src_compile() {
-	emake
+	emake DESTDIR="${D}" PREFIX="${EPREFIX}/usr"
 }
 
 src_install() {
 	default
 
 	if use config; then
-		emake config
+		emake config DESTDIR="${D}" PREFIX="${EPREFIX}/usr"
 	fi
 
-	emake install
+	emake DESTDIR="${D}" PREFIX="${EPREFIX}/usr"
 }
 
 pkg_postinst() {
