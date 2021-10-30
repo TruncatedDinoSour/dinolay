@@ -30,6 +30,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "If you don't have ~/.config/yafetch/init.lua please add USE=config and reemerge the package"
+	einfo "If you don't have ~/.config/yafetch/init.lua please add USE=config and reemerge the package and copy /usr/share/yafetch/init.lua to your config"
 }
 
