@@ -14,6 +14,7 @@ KEYWORDS="~amd64 ~x86"
 DEPEND="=dev-lang/lua-5.4.2-r1"
 RDEPEND="${DEPEND}"
 BDEPEND=""
+IUSE="config"
 
 src_compile() {
 	emake DESTDIR="${D}" PREFIX="${EPREFIX}/usr"
