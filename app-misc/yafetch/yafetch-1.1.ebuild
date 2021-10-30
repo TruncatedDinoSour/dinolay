@@ -5,7 +5,7 @@ EAPI=8
 
 DESCRIPTION="Yet another fetch ..."
 HOMEPAGE="https://github.com/yrwq/yafetch"
-SRC_URI="https://github.com/TruncatedDinosour/yafetch/archive/refs/tags/v${PV}.tar.gz -> ${PN}.tar.gz"
+SRC_URI="https://github.com/TruncatedDinosour/yafetch/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT-with-advertising"
 SLOT="0"
