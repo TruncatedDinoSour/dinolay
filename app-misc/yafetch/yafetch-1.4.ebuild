@@ -21,8 +21,6 @@ src_compile() {
 }
 
 src_install() {
-	default
-
 	if use config; then
 		emake DESTDIR="${D}" PREFIX="${EPREFIX}/usr" config || die "Copying config file failed"
 	fi
