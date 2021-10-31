@@ -17,17 +17,17 @@ BDEPEND=""
 IUSE="config"
 
 src_compile() {
-	emake DESTDIR="${D}" PREFIX="${EPREFIX}/usr"
+	emake DESTDIR="${D}" PREFIX="${EPREFIX}/usr" || die "Build failed"
 }
 
 src_install() {
 	default
 
 	if use config; then
-		emake config DESTDIR="${D}" PREFIX="${EPREFIX}/usr"
+		emake config DESTDIR="${D}" PREFIX="${EPREFIX}/usr" || die "Copying config file failed"
 	fi
 
-	emake DESTDIR="${D}" PREFIX="${EPREFIX}/usr"
+	emake DESTDIR="${D}" PREFIX="${EPREFIX}/usr" install || die "Installing failed"
 }
 
 pkg_postinst() {
