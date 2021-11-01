@@ -16,7 +16,7 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 src_install() {
-	make full DESTDIR="${D}" PREFIX="${EPREFIX}/usr" CONF="${EPREFIX}/usr" || die "Installation failed"
+	make full DESTDIR="${D}" PREFIX="${EPREFIX}/usr" CONF="${EPREFIX}/usr/share/bdwmb" || die "Installation failed"
 }
 
 pkg_postinst() {
