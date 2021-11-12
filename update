@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+export FZF_DEFAULT_OPTS="--layout=reverse --height=20 --no-mouse -i"
+export FZF_TMUX_HEIGHT=20
+export ACTIONS=("u update" "c create" "m manifest" "r remove" "U utility" "o other")
+
+main() {
+    local atom
+    atom="$(find . -mindepth 2 -maxdepth 2 -type d -not -path './.git/*' -printf "%P\n" | fzf --prompt 'Atom: ' || echo '')"
+
+    local action
+    action="$(printf "%s\n" "${ACTIONS[@]}" | fzf | awk '{ print $1 }')"
+
+    [[ "$action" == 'o' ]] && read -p "Enter action: " action
+
+    git add -A
+    git commit -S -m "${action} ${atom}"
+    git push -u origin main
+}
+
+main "$@"
+
