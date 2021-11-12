@@ -11,7 +11,7 @@ main() {
     local action
     action="$(printf "%s\n" "${ACTIONS[@]}" | fzf | awk '{ print $1 }')"
 
-    [[ "$action" == 'o' ]] && read -p "Enter action: " action
+    ([[ "$action" == 'o' ]] || [[ ! "$action" ]]) && read -p "Enter action: " action
 
     git add -A
     git commit -S -m "${action} ${atom}"
