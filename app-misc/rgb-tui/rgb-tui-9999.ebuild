@@ -9,6 +9,7 @@ DESCRIPTION="Create and get colors code from the terminal using a nice interface
 HOMEPAGE="https://github.com/ArthurSonzogni/rgb-tui"
 
 EGIT_REPO_URI="https://github.com/ArthurSonzogni/rgb-tui"
+EGIT_REPO_URI_FTXUI="https://github.com/ArthurSonzogni/ftxui"
 
 LICENSE="MIT-with-advertising"
 SLOT="0"
