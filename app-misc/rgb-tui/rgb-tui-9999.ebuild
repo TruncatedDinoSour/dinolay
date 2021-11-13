@@ -27,12 +27,11 @@ src_unpack() {
 }
 
 src_compile() {
-    cmake .
-    cmake --build .
+    cmake . || die 'CMake failed'
+    cmake --build . || die 'Build failed'
 }
 
 src_install() {
-    mkdir "${D}/usr/bin"
-    install -Dm755 "rgb-tui" "${D}/${EPREFIX}/usr/bin"
+    dobin rgb-tui
 }
 
