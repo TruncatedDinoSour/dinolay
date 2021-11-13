@@ -22,6 +22,6 @@ src_compile() {
 
 src_install() {
     mkdir "${D}/usr/bin"
-    install -Dm755 "rgb-tui" "${D}/usr/bin"
+    einstall -Dm755 "rgb-tui" "${D}/${EPREFIX}/usr/bin"
 }
 
