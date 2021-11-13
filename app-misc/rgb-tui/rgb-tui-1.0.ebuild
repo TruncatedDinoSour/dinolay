@@ -3,6 +3,8 @@
 
 EAPI=8
 
+inherit git-r3
+
 DESCRIPTION="Create and get colors code from the terminal using a nice interface."
 HOMEPAGE="https://github.com/ArthurSonzogni/rgb-tui"
 SRC_URI="https://github.com/ArthurSonzogni/rgb-tui/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
