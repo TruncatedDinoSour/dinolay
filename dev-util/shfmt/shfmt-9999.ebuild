@@ -18,26 +18,28 @@ SLOT="0"
 IUSE="man"
 RESTRICT="test network-sandbox"
 
+KEYWORDS="~amd64 ~x86"
+
 DEPEND="
-	dev-lang/go
+    dev-lang/go
 "
 BDEPEND="
-	man? (
-		app-text/scdoc
-	)
+    man? (
+        app-text/scdoc
+    )
 "
 RDEPEND="
-	$DEPEND
-	!dev-util/$PN-bin
+    $DEPEND
+    !dev-util/$PN-bin
 "
 
 src_compile() {
-	go build -v -o "$PN" "./cmd/$PN"
-	use man && scdoc < ./cmd/"$PN"/"$PN".1.scd > "$PN".1
+    go build -v -o "$PN" "./cmd/$PN"
+    use man && scdoc < ./cmd/"$PN"/"$PN".1.scd > "$PN".1
 }
 
 src_install() {
-	use man && doman "$PN".1
+    use man && doman "$PN".1
 
-	dobin "$PN"
+    dobin "$PN"
 }

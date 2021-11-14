@@ -5,4 +5,7 @@
         <email>truncateddinosour@gmail.com</email>
         <name>Ari Archer</name>
     </maintainer>
+    <use>
+        <flag name="man">Include a man page for shfmt</flag>
+    </use>
 </pkgmetadata>
