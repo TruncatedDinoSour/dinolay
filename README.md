@@ -5,9 +5,7 @@ https://github.com/TruncatedDinosour/deaddino
 
 ## Installation
 ```bash
-$ sudo emerge --ask --quiet app-eselect/eselect-repository
-$ sudo eselect repository add 'dinolay' 'git' 'https://github.com/TruncatedDinosour/dinolay.git'
-$ sudo eselect repository enable dinolay
-$ sudo emerge --sync
+$ sudo mkdir -p /etc/portage/repos.conf/dinolay.conf
+$ sudo curl -Fl 'https://raw.githubusercontent.com/TruncatedDinosour/dinolay/main/dinolay.conf' -o /etc/portage/repos.conf/dinolay.conf
+$ sudo emerge --sync dinolay
 ```
-
