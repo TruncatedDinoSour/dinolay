@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+    <maintainer type="person">
+        <email>truncateddinosour@gmail.com</email>
+        <name>Ari Archer</name>
+    </maintainer>
+    <use>
+        <flag name="lua">Enable lua support</flag>
+        <flag name="json">Enable json-c support</flag>
+        <flag name="libressl">Enable libressl support</flag>
+    </use>
+</pkgmetadata>
