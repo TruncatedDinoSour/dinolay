@@ -20,10 +20,10 @@ SRC_URI="
 DEPEND="sys-libs/zlib
 	sys-libs/readline
 	dev-libs/libconfig
-	!libressl? ( dev-libs/openssl:0 )
+	!libressl? ( dev-libs/openssl )
 	libressl? ( dev-libs/libressl )
 	dev-libs/libevent
-	lua? ( dev-lang/lua:0 )
+	lua? ( dev-lang/lua )
 	json? ( dev-libs/jansson )"
 
 RDEPEND="${DEPEND}"
