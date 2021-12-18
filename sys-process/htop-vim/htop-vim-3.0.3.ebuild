@@ -9,7 +9,7 @@ inherit autotools linux-info python-any-r1 xdg-utils
 
 DESCRIPTION="interactive process viewer"
 HOMEPAGE="https://github.com/KoffeinFlummi/htop-vim"
-SRC_URI="https://github.com/KoffeinFlummi/${PN}/archive/refs/tags/${PV}vim.tar.gz"
+SRC_URI="https://github.com/KoffeinFlummi/${PN}/archive/refs/tags/${PV}vim.tar.gz -> ${P}"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos"
 
 LICENSE="BSD GPL-2+"
