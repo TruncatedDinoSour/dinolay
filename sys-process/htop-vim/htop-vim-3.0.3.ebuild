@@ -9,7 +9,7 @@ inherit autotools linux-info python-any-r1 xdg-utils
 
 DESCRIPTION="interactive process viewer"
 HOMEPAGE="https://github.com/KoffeinFlummi/htop-vim"
-SRC_URI="https://github.com/KoffeinFlummi/${PN}/archive/refs/tags/${PV}vim.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/KoffeinFlummi/${PN}/archive/refs/tags/${PV}vim.tar.gz"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos"
 
 LICENSE="BSD GPL-2+"
@@ -37,7 +37,7 @@ DOCS=( ChangeLog README )
 
 CONFIG_CHECK="~TASKSTATS ~TASK_XACCT ~TASK_IO_ACCOUNTING ~CGROUPS"
 
-S="${WORKDIR}/${P/_}"
+S="${WORKDIR}/${P}vim"
 
 pkg_setup() {
   if ! has_version sys-process/lsof; then
