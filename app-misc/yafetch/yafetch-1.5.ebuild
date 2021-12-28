@@ -11,7 +11,7 @@ LICENSE="MIT-with-advertising"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND=">=dev-lang/lua-5.4.2-r1"
+DEPEND="=dev-lang/lua-5.1.5-r106"  # TODO: port to lua 5.4
 RDEPEND="${DEPEND}"
 BDEPEND=""
 IUSE="config"
