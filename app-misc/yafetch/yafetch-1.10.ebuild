@@ -18,7 +18,7 @@ IUSE="config"
 
 src_compile() {
   emake DESTDIR="${D}/" PREFIX="${EPREFIX}/usr" || die "Build failed"
-  emake DESTDIR="${D}/" strip || die "Stripping failed"
+  emake strip || die "Stripping failed"
 }
 
 src_install() {
