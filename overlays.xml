@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd">
+<repositories xmlns="" version="1.0">
+  <repo quality="experimental" status="unofficial">
+    <name><![CDATA[dinolay]]></name>
+    <description lang="en"><![CDATA[My gentoo overlay for me to not need to use multiple ones]]></description>
+    <homepage>https://github.com/TruncatedDinosour/dinolay.git</homepage>
+    <owner type="person">
+      <email>truncateddinosour@gmail.com</email>
+      <name><![CDATA[Ari Archer]]></name>
+    </owner>
+    <source type="git">git://github.com/TruncatedDinosour/dinolay.git</source>
+    <feed>https://github.com/TruncatedDinosour/dinolay/commits/main.atom</feed>
+  </repo>
+</repositories>
