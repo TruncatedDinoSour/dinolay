@@ -27,7 +27,7 @@ src_compile() {
     emake DESTDIR="${D}/" PREFIX="${EPREFIX}/usr" || die "Build failed"
 
     if use aggressive-pre-strip; then
-        STRIPFLAGS='--strip-all -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line --remove-section=.eh_frame --remove-section=.eh_frame_ptr --remove-section=.note.gnu.gold-version --remove-section=.note.gnu.build-id --remove-section=.note.ABI-tag --remove-section=.note --remove-section=.gnu.version --remove-section=.comment --strip-debug --strip-unneeded' emake strip || die "Stripping failed"
+        STRIPFLAGS='--strip-all -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line --remove-section=.eh_frame --remove-section=.eh_frame_hdr --remove-section=.gnu.hash --remove-section=.eh_frame_hdr --remove-section=.eh_frame_ptr --remove-section=.note.gnu.gold-version --remove-section=.note.gnu.build-id --remove-section=.note.ABI-tag --remove-section=.note --remove-section=.gnu.version --remove-section=.comment --strip-debug --strip-unneeded' emake strip || die "Stripping failed"
     fi
 }
 
