@@ -12,16 +12,16 @@ KEYWORDS="~amd64 -arm -mips -ppc -ppc64 -x86 ~amd64-linux"
 IUSE=""
 
 RDEPEND="
-	dev-libs/libevent:=
-	net-misc/curl[ssl]
-	sys-libs/zlib:=
+    dev-libs/libevent:=
+    net-misc/curl[ssl]
+    sys-libs/zlib:=
 "
 DEPEND="${RDEPEND}
-	dev-libs/glib
-	dev-util/intltool
-	sys-devel/gettext
-	virtual/os-headers
-	virtual/pkgconfig
+    dev-libs/glib
+    dev-util/intltool
+    sys-devel/gettext
+    virtual/os-headers
+    virtual/pkgconfig
 "
 
 SLOT=0
@@ -29,17 +29,17 @@ SLOT=0
 S="${WORKDIR}/${MY_P}"
 
 src_configure() {
-	econfargs+=(
-		--enable-cli
-		--disable-daemon
-		--without-gtk
-		--without-systemd-daemon
-	)
-	econf "${econfargs[@]}"
+    econfargs+=(
+        --enable-cli
+        --disable-daemon
+        --without-gtk
+        --without-systemd-daemon
+    )
+    econf "${econfargs[@]}"
 }
 
 src_install() {
-	dobin cli/transmission-cli
-	doman cli/transmission-cli.1
+    dobin cli/transmission-cli
+    doman cli/transmission-cli.1
 }
 

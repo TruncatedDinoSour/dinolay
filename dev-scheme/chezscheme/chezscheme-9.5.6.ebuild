@@ -18,36 +18,36 @@ KEYWORDS="~amd64"
 IUSE=""
 
 PATCHES=(
-	"${FILESDIR}/chezscheme-tinfo-${PV}.patch"
+    "${FILESDIR}/chezscheme-tinfo-${PV}.patch"
 )
 
 S="${WORKDIR}/${CSV}"
 
 src_prepare() {
-	default
-	rm -r README*
+    default
+    rm -r README*
 }
 
 src_configure() {
-	local myconf=(
-		--64
-		--threads
-		--installbin="/usr/$(get_libdir)/${CSV}"
-		--installlib="/usr/$(get_libdir)"
-		--installman="/usr/share/man"
-		--installprefix="/usr"
-		--temproot="${D}"
-	)
-	sh ./configure "${myconf[@]}"
+    local myconf=(
+        --64
+        --threads
+        --installbin="/usr/$(get_libdir)/${CSV}"
+        --installlib="/usr/$(get_libdir)"
+        --installman="/usr/share/man"
+        --installprefix="/usr"
+        --temproot="${D}"
+    )
+    sh ./configure "${myconf[@]}"
 }
 
 src_install() {
-	default
+    default
 
-	local chez_dir="${EPREFIX}/usr/$(get_libdir)/${CSV}"
-	make_wrapper "${PN}" "${chez_dir}/scheme"
-	make_wrapper "chez" "${chez_dir}/scheme"
-	make_wrapper "petite" "${chez_dir}/petite"
-	make_wrapper "scheme-script" "${chez_dir}/scheme-script"
+    local chez_dir="${EPREFIX}/usr/$(get_libdir)/${CSV}"
+    make_wrapper "${PN}" "${chez_dir}/scheme"
+    make_wrapper "chez" "${chez_dir}/scheme"
+    make_wrapper "petite" "${chez_dir}/petite"
+    make_wrapper "scheme-script" "${chez_dir}/scheme-script"
 }
 

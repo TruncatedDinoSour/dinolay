@@ -17,16 +17,16 @@ BDEPEND=""
 IUSE="config"
 
 src_install() {
-	emake -j1 full DESTDIR="${D}" PREFIX="${EPREFIX}/usr" CONF="${EPREFIX}/usr/share/bdwmb" || die "Installation failed"
-	if use config; then
-		emake -j1 config DESTDIR="${D}" CONF="${EPREFIX}/usr/share/bdwmb" || die "Installing configuration failed"
-	fi
+    emake -j1 full DESTDIR="${D}" PREFIX="${EPREFIX}/usr" CONF="${EPREFIX}/usr/share/bdwmb" || die "Installation failed"
+    if use config; then
+        emake -j1 config DESTDIR="${D}" CONF="${EPREFIX}/usr/share/bdwmb" || die "Installing configuration failed"
+    fi
 }
 
 pkg_postinst() {
-	if ! use config; then
-		elog "If you don't have ~/.config/bdwmb please add USE=config"
-		elog "reemerge the package and take it from /usr/share/bdwmb/config.sh"
-	fi
+    if ! use config; then
+        elog "If you don't have ~/.config/bdwmb please add USE=config"
+        elog "reemerge the package and take it from /usr/share/bdwmb/config.sh"
+    fi
 }
 

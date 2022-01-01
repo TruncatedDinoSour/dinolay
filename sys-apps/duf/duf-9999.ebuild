@@ -17,16 +17,16 @@ KEYWORDS="~amd64"
 IUSE=""
 
 src_unpack() {
-	git-r3_src_unpack
-	go-module_live_vendor
+    git-r3_src_unpack
+    go-module_live_vendor
 }
 
 src_compile() {
-	go build || die "build failed"
+    go build || die "build failed"
 }
 
 src_install() {
-	einstalldocs
-	dobin duf
+    einstalldocs
+    dobin duf
 }
 

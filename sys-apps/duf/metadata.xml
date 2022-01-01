@@ -3,7 +3,7 @@
 <pkgmetadata>
   <maintainer type="person">
     <email>truncateddinosour@gmail.com</email>
-	<description>a better df alternative</description>
+    <description>a better df alternative</description>
     <name>Ari Archer</name>
   </maintainer>
   <longdescription>Disk Usage/Free Utility - a better df alternative</longdescription>

@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer type="person">
-		<email>truncateddinosour@gmail.com</email>
-		<name>Ari Archer</name>
-	</maintainer>
-	<use>
-		<flag name="config">Add a config file</flag>
-	</use>
+    <maintainer type="person">
+        <email>truncateddinosour@gmail.com</email>
+        <name>Ari Archer</name>
+    </maintainer>
+    <use>
+        <flag name="config">Add a config file</flag>
+        <flag name="clang">Use clang the the C compiler</flag>
+        <flag name="aggresive-pre-strip">Aggresively strip the binary after compiling</flag>
+    </use>
 </pkgmetadata>
