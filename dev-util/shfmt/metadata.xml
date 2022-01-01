@@ -8,4 +8,9 @@
     <use>
         <flag name="man">Include a man page for shfmt</flag>
     </use>
+    <description>A shellscript formatter</description>
+    <longdescription>
+        A shell parser, formatter, and interpreter with bash support; includes shfmt
+    </longdescription>
 </pkgmetadata>
+

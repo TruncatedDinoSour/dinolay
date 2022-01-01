@@ -5,4 +5,9 @@
         <email>truncateddinosour@gmail.com</email>
         <name>Ari Archer</name>
     </maintainer>
+    <description>Chez Scheme</description>
+    <longdescription>
+        Open-source Chez Scheme implementation from Cisco
+    </longdescription>
 </pkgmetadata>
+

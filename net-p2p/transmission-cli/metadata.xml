@@ -3,8 +3,9 @@
 <pkgmetadata>
     <maintainer type="person">
         <email>truncateddinosour@gmail.com</email>
-    <description>A small torrent client in the CLI</description>
         <name>Ari Archer</name>
     </maintainer>
-    <longdescription>Transmission - the cli</longdescription>
+    <description>Transmission - the cli</description>
+    <longdescription>A small torrent client in the CLI</longdescription>
 </pkgmetadata>
+

@@ -8,4 +8,9 @@
     <use>
         <flag name="config">Add a config file</flag>
     </use>
+    <description>A modular shellscript for DWM bar</description>
+    <longdescription>
+        A simple, modular bash/shell script for configuring your DWM bar.
+    </longdescription>
 </pkgmetadata>
+
