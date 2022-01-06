@@ -5,6 +5,9 @@
         <email>truncateddinosour@gmail.com</email>
         <name>Ari Archer</name>
     </maintainer>
+    <use>
+        <flag name="pie">Force external linking</flag>
+    </use>
     <description>A better df alternative</description>
     <longdescription>Disk Usage/Free Utility - a better df alternative</longdescription>
 </pkgmetadata>
