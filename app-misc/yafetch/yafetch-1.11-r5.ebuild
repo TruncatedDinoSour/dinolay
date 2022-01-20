@@ -21,22 +21,13 @@ BDEPEND=""
 IUSE="config clang +aggressive-pre-strip +fonts"
 
 src_compile() {
-    if use clang; then
-        export CC='clang'
-    fi
-
+    use clang && export CC='clang'
     emake DESTDIR="${D}/" PREFIX="${EPREFIX}/usr" || die "Build failed"
-
-    if use aggressive-pre-strip; then
-        STRIPFLAGS='--strip-all -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line --remove-section=.eh_frame --remove-section=.eh_frame_hdr --remove-section=.gnu.hash --remove-section=.eh_frame_hdr --remove-section=.eh_frame_ptr --remove-section=.note.gnu.gold-version --remove-section=.note.gnu.build-id --remove-section=.note.ABI-tag --remove-section=.note --remove-section=.gnu.version --remove-section=.comment --strip-debug --strip-unneeded' emake strip || die "Stripping failed"
-    fi
+    use aggressive-pre-strip && (STRIPFLAGS='--strip-all -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line --remove-section=.eh_frame --remove-section=.eh_frame_hdr --remove-section=.gnu.hash --remove-section=.eh_frame_hdr --remove-section=.eh_frame_ptr --remove-section=.note.gnu.gold-version --remove-section=.note.gnu.build-id --remove-section=.note.ABI-tag --remove-section=.note --remove-section=.gnu.version --remove-section=.comment --strip-debug --strip-unneeded' emake strip || die "Stripping failed")
 }
 
 src_install() {
-    if use config; then
-        emake DESTDIR="${D}/" PREFIX="${EPREFIX}/usr" config || die "Copying config file failed"
-    fi
-
+    use config && (emake DESTDIR="${D}/" PREFIX="${EPREFIX}/usr" config || die "Copying config file failed")
     emake DESTDIR="${D}/" PREFIX="${EPREFIX}/usr" install || die "Installing failed"
 }
 
