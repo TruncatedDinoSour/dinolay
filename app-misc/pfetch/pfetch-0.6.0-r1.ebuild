@@ -16,6 +16,6 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 src_install() {
-    install -Dm755 pfetch "${D}/${EPREFIX}/usr/bin/pfetch"
+    dobin pfetch
 }
 

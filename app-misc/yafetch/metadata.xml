@@ -6,9 +6,10 @@
         <name>Ari Archer</name>
     </maintainer>
     <use>
-        <flag name="config">Add a config file</flag>
-        <flag name="clang">Use clang the the C compiler</flag>
         <flag name="aggresive-pre-strip">Aggresively strip the binary after compiling</flag>
+        <flag name="clang">Use clang the the C compiler</flag>
+        <flag name="config">Add a config file</flag>
+        <flag name="fonts">Include fonts as a dependency</flag>
     </use>
     <decription>Yet another fetch ...</decsription>
     <longdescription>

@@ -14,10 +14,11 @@ KEYWORDS="~amd64 ~x86"
 DEPEND="
 dev-lang/lua:5.4
 clang? ( sys-devel/clang )
+fonts? ( media-fonts/nerd-fonts )
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
-IUSE="config clang +aggressive-pre-strip"
+IUSE="config clang +aggressive-pre-strip +fonts"
 
 src_compile() {
     if use clang; then
