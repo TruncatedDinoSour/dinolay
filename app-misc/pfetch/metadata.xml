@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+    <maintainer type="person">
+        <email>truncateddinosour@gmail.com</email>
+        <name>Ari Archer</name>
+    </maintainer>
+    <decription>A pretty system information tool written in POSIX sh<decsription>
+    <longdescription>
+        A pretty system information tool written in POSIX sh
+    </longdescription>
+</pkgmetadata>
+
