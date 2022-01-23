@@ -31,7 +31,7 @@ src_configure() {
     use hardened && config_flags+=" --use-harden"
     use lto && config_flags+=" --use-lto"
     use optimised && config_flags+=" --use-optimise"
-    use errors && config_flags+="--use-pedantic --use-werror"
+    use errors && config_flags+=" --use-pedantic --use-werror"
     use aggressive-pre-strip && config_flags+=" --use-strip --use-extreme-strip"
 
     ./configure $config_flags || die './config failed'
