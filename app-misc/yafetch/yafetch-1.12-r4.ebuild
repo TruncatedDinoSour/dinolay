@@ -38,11 +38,12 @@ src_configure() {
 }
 
 src_compile() {
-    DESTDIR="${D}/" emake || die 'Compilation failed'
+    DESTDIR="${D}" emake || die 'Compilation failed'
 }
 
 src_install() {
     dobin yafetch
+    use config && DESTDIR="${D}" emake y_config || die 'Cannot install configuration to /usr/share/yafetch/init.lua'
 }
 
 pkg_postinst() {
