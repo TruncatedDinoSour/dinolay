@@ -21,7 +21,7 @@ fonts? ( media-fonts/nerd-fonts )
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
-IUSE="config clang hardened lto optimised +aggressive-pre-strip +fonts"
+IUSE="config clang hardened lto optimised errors +aggressive-pre-strip +fonts"
 
 src_configure() {
     local config_flags='--use-warnings'
@@ -31,6 +31,7 @@ src_configure() {
     use hardened && config_flags+=" --use-harden"
     use lto && config_flags+=" --use-lto"
     use optimised && config_flags+=" --use-optimise"
+    use errors && config_flags+="--use-pedantic --use-werror"
     use aggressive-pre-strip && config_flags+=" --use-strip --use-extreme-strip"
 
     ./configure $config_flags || die './config failed'
