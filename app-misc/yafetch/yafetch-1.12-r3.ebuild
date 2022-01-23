@@ -38,7 +38,7 @@ src_configure() {
 }
 
 src_compile() {
-    emake || die 'Compilation failed'
+    DESTDIR="${D}/" emake || die 'Compilation failed'
 }
 
 src_install() {
