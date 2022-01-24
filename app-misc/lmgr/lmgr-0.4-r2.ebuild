@@ -7,7 +7,7 @@ DESCRIPTION="Manage, switch and template licenses"
 HOMEPAGE="https://ari-web.xyz/gh/lmgr"
 SRC_URI="https://github.com/TruncatedDinosour/lmgr/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="ArAr2"
+LICENSE="ArAr2_lmgr"
 SLOT="0"
 KEYWORDS="~amd64"
 
