@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
     <maintainer type="person">
-        <email>truncateddinosour@gmail.com</email>
+        <email>ari@mail.ari-web.xyz</email>
         <name>Ari Archer</name>
     </maintainer>
     <description>Transmission - the cli</description>
