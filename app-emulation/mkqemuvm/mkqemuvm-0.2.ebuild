@@ -16,10 +16,14 @@ DEPEND="
 >=app-shells/fzf-0.27.2
 >=app-emulation/qemu-6.2.0
 >=sys-firmware/edk2-ovmf-202105-r2
+>=app-shells/bash-5.1
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
+DOCS=(README.md)
+
 src_install() {
     dobin mkqemuvm
+    einstalldocs
 }
