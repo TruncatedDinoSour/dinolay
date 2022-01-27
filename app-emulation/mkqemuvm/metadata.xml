@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+    <maintainer type="person">
+        <email>ari@mail.ari-web.xyz</email>
+        <name>Ari Archer</name>
+    </maintainer>
+    <decription>A simple wrapper around qemu to make virtual machines<decsription>
+    <longdescription>
+        A simple wrapper around qemu to make virtual machines
+    </longdescription>
+</pkgmetadata>
+
