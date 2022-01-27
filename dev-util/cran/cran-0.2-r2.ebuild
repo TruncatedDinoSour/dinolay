@@ -3,7 +3,7 @@
 
 EAPI=8
 
-DESCRIPTION="Manage, make and use char-sets"
+DESCRIPTION="An easy R package manager written in bash"
 HOMEPAGE="https://ari-web.xyz/gh/cran"
 SRC_URI="https://github.com/TruncatedDinosour/cran/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 
