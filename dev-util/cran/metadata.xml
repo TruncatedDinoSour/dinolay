@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+    <maintainer type="person">
+        <email>ari@mail.ari-web.xyz</email>
+        <name>Ari Archer</name>
+    </maintainer>
+    <use>
+        <flag name="man">Install the manual page and documentation</flag>
+    </use>
+    <decription>An easy R package manager written in bash</decsription>
+    <longdescription>
+        An easy R package manager written in bash
+    </longdescription>
+</pkgmetadata>
+
