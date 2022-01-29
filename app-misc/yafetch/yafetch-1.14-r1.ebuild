@@ -15,6 +15,7 @@ DEPEND="
 dev-lang/lua:5.4
 dev-util/pkgconf
 sys-devel/make
+sys-apps/coreutils
 clang? ( sys-devel/clang )
 !clang? ( sys-devel/gcc )
 fonts? ( media-fonts/nerd-fonts )
@@ -34,6 +35,7 @@ src_configure() {
     use errors && config_flags+=" --use-pedantic --use-werror"
     use aggressive-pre-strip && config_flags+=" --use-strip --use-extreme-strip"
 
+    chmod a+rx ./configure
     ./configure $config_flags || die './config failed'
 }
 

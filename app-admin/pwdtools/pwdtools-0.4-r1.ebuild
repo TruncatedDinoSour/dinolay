@@ -17,6 +17,7 @@ dev-python/password-strength
 dev-python/pyfzf
 dev-python/pyperclip
 dev-python/pandas
+sys-apps/coreutils
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
