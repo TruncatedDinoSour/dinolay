@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+    <maintainer type="person">
+        <email>ari@mail.ari-web.xyz</email>
+        <name>Ari Archer</name>
+    </maintainer>
+    <decription>A (fetch?) tool to display the colours of your terminal emulator written in bash</decsription>
+    <longdescription>
+        A (fetch?) tool to display the colours of your terminal emulator written in bash
+    </longdescription>
+</pkgmetadata>
+
