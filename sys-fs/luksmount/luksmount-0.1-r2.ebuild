@@ -13,8 +13,8 @@ KEYWORDS="~amd64"
 
 DEPEND="
 >=app-shells/bash-5.1_p8
+>=sys-fs/cryptsetup-2.4.3
 >=sys-apps/coreutils-8.32-r1
->ys-apps/coreutils-8.32-r1
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
