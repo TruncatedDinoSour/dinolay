@@ -5,13 +5,9 @@
         <email>ari@mail.ari-web.xyz</email>
         <name>Ari Archer</name>
     </maintainer>
-    <use>
-        <flag name="man">Install man pages</flag>
-        <flag name="doc">Install extra documentation</flag>
-    </use>
-    <decription>Password tools for generating, checking and rating password</decsription>
+    <decription>A simple and safe wrapper around cryptsetup written in bash</decsription>
     <longdescription>
-        Password tools for generating, checking and rating password
+        A simple and safe wrapper around cryptsetup written in bash
     </longdescription>
 </pkgmetadata>
 
