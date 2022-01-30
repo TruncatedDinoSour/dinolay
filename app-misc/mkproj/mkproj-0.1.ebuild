@@ -12,7 +12,10 @@ LICENSE="ArAr2"
 SLOT="0"
 KEYWORDS="~amd64"
 
-DEPEND=">=dev-lang/python-3.8.12_p1-r1"
+DEPEND="
+>=dev-lang/python-3.8.12_p1-r1
+man? ( sys-apps/man-db )
+"
 RDEPEND="${DEPEND}"
 BDEPEND=""
 IUSE="+man"
@@ -21,5 +24,5 @@ DOCS=(README.md)
 
 src_install() {
     dobin mkproj
-    use man && (einstalldocs && doman mkproj.1)
+    use man && (doman mkproj.1 && einstalldocs)
 }
