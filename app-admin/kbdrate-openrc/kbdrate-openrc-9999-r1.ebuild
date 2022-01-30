@@ -20,6 +20,10 @@ DEPEND="
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
+src_configure() {
+    true
+}
+
 src_install() {
     newconfd openrc/kbdrate.confd kbdrate
     newinitd openrc/kbdrate.rc kbdrate
