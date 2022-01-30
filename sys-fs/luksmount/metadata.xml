@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+    <maintainer type="person">
+        <email>ari@mail.ari-web.xyz</email>
+        <name>Ari Archer</name>
+    </maintainer>
+    <use>
+        <flag name="man">Install man pages</flag>
+        <flag name="doc">Install extra documentation</flag>
+    </use>
+    <decription>Password tools for generating, checking and rating password</decsription>
+    <longdescription>
+        Password tools for generating, checking and rating password
+    </longdescription>
+</pkgmetadata>
+
