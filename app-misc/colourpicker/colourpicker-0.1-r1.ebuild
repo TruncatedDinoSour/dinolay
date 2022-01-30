@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 DEPEND="
-dev-lang/python:3[tk]
+dev-lang/python[tk]
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
