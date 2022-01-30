@@ -18,7 +18,7 @@ dev-python/pyfzf
 dev-python/pyperclip
 dev-python/pandas
 sys-apps/coreutils
-man? ( sys-apps/man )
+man? ( sys-apps/man-db )
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
