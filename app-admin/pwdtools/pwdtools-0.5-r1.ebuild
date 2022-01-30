@@ -18,12 +18,18 @@ dev-python/pyfzf
 dev-python/pyperclip
 dev-python/pandas
 sys-apps/coreutils
+man? ( sys-apps/man )
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
+IUSE="+man doc"
+
+DOCS=(README.md)
 
 src_install() {
     chmod a+rx ./setup.sh
     DESTDIR="${D}/" PREFIX="${EPREFIX}/usr" ./setup.sh || die 'Installing failed'
+
+    use doc && einstalldocs
 }
 
