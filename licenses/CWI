@@ -1,0 +1,11 @@
+--2022-02-01 00:43:39--  https://raw.githubusercontent.com/python/typing/master/LICENSE
+Resolving raw.githubusercontent.com... 185.199.110.133, 185.199.109.133, 185.199.108.133, ...
+Connecting to raw.githubusercontent.com|185.199.110.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 12755 (12K) [text/plain]
+Saving to: ‘LICENSE’
+
+     0K .......... ..                                         100% 11.0M=0.001s
+
+2022-02-01 00:43:39 (11.0 MB/s) - ‘LICENSE’ saved [12755/12755]
+
