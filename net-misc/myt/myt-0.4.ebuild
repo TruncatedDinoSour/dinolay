@@ -38,8 +38,7 @@ test? (
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-IUSE="+man doc test"
-DOCS=(README.md doc/myt.1.md doc/myt.html)
+IUSE="+man test"
 
 src_test() {
     if use test; then
@@ -50,6 +49,5 @@ src_test() {
 src_install() {
     dobin src/myt
     use man && (doman doc/myt.1 || die 'Failed to install man page')
-    use doc && (einstalldocs || die 'Failed to install documentation')
 }
 
