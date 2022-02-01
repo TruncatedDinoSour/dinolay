@@ -38,7 +38,7 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 IUSE="+man doc test"
-DOCS=(README.md)
+DOCS=(README.md doc/myt.1.md)
 
 src_test() {
     if use test; then
