@@ -50,6 +50,6 @@ src_test() {
 src_install() {
     dobin src/myt
     use man && (doman doc/myt.1 || die 'Failed to install man page')
-    use doc && ((sh scripts/doc.sh && einstalldocs) || die 'Failed to install documentation')
+    use doc && (einstalldocs || die 'Failed to install documentation')
 }
 
