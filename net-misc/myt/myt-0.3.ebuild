@@ -32,13 +32,14 @@ test? (
 >=dev-python/black-21.12_beta0
 >=dev-python/flake8-4.0.1-r1
 >=dev-python/pylint-2.12.2
+>=app-misc/man-to-md-0.14.1
 )
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
 IUSE="+man doc test"
-DOCS=(README.md doc/myt.1.md)
+DOCS=(README.md doc/myt.1.md doc/myt.html)
 
 src_test() {
     if use test; then
@@ -48,7 +49,7 @@ src_test() {
 
 src_install() {
     dobin src/myt
-    use man && doman doc/myt.1
-    use doc && einstalldocs
+    use man && (doman doc/myt.1 || die 'Failed to install man page')
+    use doc && ((sh scripts/doc.sh && einstalldocs) || die 'Failed to install documentation')
 }
 
