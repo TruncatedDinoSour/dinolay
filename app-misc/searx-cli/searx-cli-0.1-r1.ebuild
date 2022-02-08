@@ -30,5 +30,5 @@ src_install() {
 }
 
 pkg_postinst() {
-    einfo 'Installed searx-cli, run `sxcl config` to generate new config'
+    elog 'Installed searx-cli, run `sxcl config` to generate new config'
 }
