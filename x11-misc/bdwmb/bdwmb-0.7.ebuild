@@ -7,11 +7,15 @@ DESCRIPTION="A simple, modular bash/shell script for configuring your DWM bar."
 HOMEPAGE="https://ari-web.xyz/gh/bdwmb"
 SRC_URI="https://github.com/TruncatedDinosour/bdwmb/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="GPL-3"
+LICENSE="ArAr2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND=">=x11-apps/xsetroot-1.1.2-r1"
+DEPEND="
+>=x11-apps/xsetroot-1.1.2-r1
+>=app-shells/bash-5.1_p16
+>=sys-apps/coreutils-8.32-r1
+"
 RDEPEND="${DEPEND}"
 BDEPEND=""
 IUSE="config"
