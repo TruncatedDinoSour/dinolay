@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 DEPEND="
-dev-lang/python[tk]
+dev-lang/python[tk,readline]
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
