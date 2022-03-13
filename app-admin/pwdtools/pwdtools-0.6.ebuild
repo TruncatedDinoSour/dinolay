@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-PYTHON_COMPAT=( python3_{8..10} )
+PYTHON_COMPAT=( python3_{9..10} )
 
 DESCRIPTION="Password tools for generating, checking and rating passwords"
 HOMEPAGE="https://ari-web.xyz/gh/pwdtools"
@@ -16,7 +16,6 @@ DEPEND="
 dev-python/password-strength
 dev-python/pyfzf
 dev-python/pyperclip
-dev-python/pandas
 sys-apps/coreutils
 man? ( sys-apps/man-db )
 "
