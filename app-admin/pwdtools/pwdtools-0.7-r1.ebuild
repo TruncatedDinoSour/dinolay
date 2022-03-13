@@ -17,6 +17,7 @@ dev-python/password-strength
 dev-python/pyfzf
 dev-python/pyperclip
 sys-apps/coreutils
+dev-python/plumbum
 man? ( sys-apps/man-db )
 "
 RDEPEND="${DEPEND}"
