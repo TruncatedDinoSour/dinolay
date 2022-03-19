@@ -14,7 +14,6 @@ KEYWORDS="~amd64"
 DEPEND="
 >=dev-lang/python-3.9.9-r1[readline]
 >=dev-python/configparser-5.2.0
-dev-python/typing
 >=dev-python/requests-2.26.0
 >=dev-python/colorama-0.4.4
 >=dev-python/python-mpv-0.5.2
