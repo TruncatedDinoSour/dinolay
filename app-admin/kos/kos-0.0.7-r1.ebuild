@@ -18,12 +18,15 @@ DEPEND="
 >=dev-util/pkgconf-1.8.0-r1
 acct-group/kos
 man? ( sys-apps/man-db )
-gcc? ( sys-devel/gcc ) || ( sys-devel/clang )
+gcc? ( sys-devel/gcc )
+clang? ( sys-devel/clang )
 bash-completion? ( app-shells/bash-completion )
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
-IUSE="gcc strip man bash-completion doc"
+
+IUSE="gcc strip man bash-completion doc clang"
+REQUIRED_USE="?? ( clang gcc )"
 
 DOCS=(README.md TODO.md)
 

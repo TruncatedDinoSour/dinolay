@@ -8,6 +8,7 @@
     <use>
         <flag name="man">Install man pages</flag>
         <flag name="gcc">Use GCC instead of clang</flag>
+        <flag name="clang">Use Clang instead of GCC</flag>
         <flag name="strip">Strip output binary</flag>
         <flag name="bash-completion">Install bash completions</flag>
         <flag name="doc">Install extra documentation</flag>
