@@ -37,5 +37,5 @@ src_install() {
     fperms 4711 /usr/bin/kos
 
     use man && doman kos.1
-    use bash-completion && newbashcomp completions/kos ${PN}
+    use bash-completion && newbashcomp completions/kos.bash ${PN}
 }
