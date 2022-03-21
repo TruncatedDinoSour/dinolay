@@ -23,16 +23,16 @@ IUSE="gcc strip man"
 
 src_compile() {
     use gcc && export CXX=g++
-    DESTDIR="$D/" sh ./scripts/build.sh
+    sh ./scripts/build.sh
 
-    use strip && sh ./scripts/strip.sh "$D/kos"
+    use strip && sh ./scripts/strip.sh kos
 }
 
 src_install() {
-    fperms 4711 "$D/kos"
+    fperms 4711 kos
     insinto /usr/bin
-    doins "$D/kos"
-    fperms 4711 "/usr/bin/kos"
+    doins kos
+    fperms 4711 /usr/bin/kos
 
-    use man && doman "kos.1"
+    use man && doman kos.1
 }
