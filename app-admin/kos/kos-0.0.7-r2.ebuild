@@ -26,7 +26,7 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 IUSE="gcc strip man bash-completion doc clang"
-REQUIRED_USE="?? ( clang gcc )"
+REQUIRED_USE="^^ ( clang gcc )"
 
 DOCS=(README.md TODO.md)
 
