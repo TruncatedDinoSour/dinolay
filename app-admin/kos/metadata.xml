@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+    <maintainer type="person">
+        <email>ari.web.xyz@gmail.com</email>
+        <name>Ari Archer</name>
+    </maintainer>
+    <use>
+        <flag name="man">Install man pages</flag>
+        <flag name="gcc">Use GCC instead of clang</flag>
+        <flag name="strip">Strip output binary</flag>
+    </use>
+    <decription>A simple SUID tool written in C++</decsription>
+    <longdescription>
+        A simple SUID tool written in C++
+    </longdescription>
+</pkgmetadata>
+
