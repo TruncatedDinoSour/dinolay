@@ -16,6 +16,7 @@ KEYWORDS="~amd64"
 DEPEND="
 >=sys-libs/libxcrypt-4.4.27
 >=dev-util/pkgconf-1.8.0-r1
+acct-group/kos
 man? ( sys-apps/man-db )
 gcc? ( sys-devel/gcc ) || ( sys-devel/clang )
 bash-completion? ( app-shells/bash-completion )
@@ -38,4 +39,15 @@ src_install() {
 
     use man && doman kos.1
     use bash-completion && newbashcomp completions/kos.bash ${PN}
+}
+
+pkg_postinst() {
+    ewarn 'Make sure to add yourself and other members to the'
+    ewarn '`kos` group to be able to use kos, it might not exist'
+    ewarn 'so you might need to create it:'
+    ewarn '    $ su'
+    ewarn '    # groupadd kos'
+    ewarn
+    ewarn 'And to add yourself to the group:'
+    ewarn '    # usermod -aG kos some_system_user'
 }
