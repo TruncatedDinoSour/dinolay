@@ -3,6 +3,8 @@
 
 EAPI=8
 
+inherit bash-completion-r1
+
 DESCRIPTION="A simple SUID tool written in C++"
 HOMEPAGE="https://ari-web.xyz/gh/kos"
 SRC_URI="https://github.com/TruncatedDinosour/kos/archive/refs/tags/v$PV.tar.gz -> ${P}.tar.gz"
@@ -16,10 +18,11 @@ DEPEND="
 >=dev-util/pkgconf-1.8.0-r1
 man? ( sys-apps/man-db )
 gcc? ( sys-devel/gcc ) || ( sys-devel/clang )
+bash-completion? ( app-shells/bash-completion )
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
-IUSE="gcc strip man"
+IUSE="gcc strip man bash-completion"
 
 src_compile() {
     use gcc && export CXX=g++
@@ -29,10 +32,10 @@ src_compile() {
 }
 
 src_install() {
-    fperms 4711 kos
     insinto /usr/bin
     doins kos
     fperms 4711 /usr/bin/kos
 
     use man && doman kos.1
+    use bash-completion && newbashcomp completions/kos ${PN}
 }

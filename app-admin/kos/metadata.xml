@@ -9,6 +9,7 @@
         <flag name="man">Install man pages</flag>
         <flag name="gcc">Use GCC instead of clang</flag>
         <flag name="strip">Strip output binary</flag>
+        <flag name="bash-completion">Install bash completions</flag>
     </use>
     <decription>A simple SUID tool written in C++</decsription>
     <longdescription>
