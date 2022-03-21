@@ -23,7 +23,9 @@ bash-completion? ( app-shells/bash-completion )
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
-IUSE="gcc strip man bash-completion"
+IUSE="gcc strip man bash-completion doc"
+
+DOCS=(README.md TODO.md)
 
 src_compile() {
     use gcc && export CXX=g++
@@ -39,6 +41,7 @@ src_install() {
 
     use man && doman kos.1
     use bash-completion && newbashcomp completions/kos.bash ${PN}
+    use doc && einstalldocs
 }
 
 pkg_postinst() {
