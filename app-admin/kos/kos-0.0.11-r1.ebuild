@@ -29,9 +29,16 @@ IUSE="gcc strip +man bash-completion doc
       +clang +size debug +group-inherit +setenv"
 REQUIRED_USE="
 ^^ ( clang gcc )
-?? ( size debug )
+size? ( !debug )
+debug? ( !size )
 debug? ( !strip )
 "
+
+# `?? ( size debug )` fails even though it says zero or one
+# Please fix wiki: https://devmanual.gentoo.org/ebuild-writing/variables/index.html
+# For now replacing it with:
+#    size? ( !debug )
+#    debug? ( !size )
 
 RESTRICT="
 debug? ( strip )
