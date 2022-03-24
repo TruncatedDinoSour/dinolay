@@ -12,6 +12,10 @@
         <flag name="strip">Strip output binary</flag>
         <flag name="bash-completion">Install bash completions</flag>
         <flag name="doc">Install extra documentation</flag>
+        <flag name="size">Build for size</flag>
+        <flag name="debug">Build with debug flags</flag>
+        <flag name="group-inherit">Inherit root user groups</flag>
+        <flag name="setenv">Modify environment variables to match of root</flag>
     </use>
     <decription>A simple SUID tool written in C++</decsription>
     <longdescription>

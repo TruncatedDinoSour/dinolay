@@ -25,16 +25,32 @@ bash-completion? ( app-shells/bash-completion )
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-IUSE="gcc strip man bash-completion doc clang"
-REQUIRED_USE="^^ ( clang gcc )"
+IUSE="gcc strip +man bash-completion doc
+      +clang +size debug +group-inherit +setenv"
+REQUIRED_USE="
+^^ ( clang gcc )
+?? ( size debug )
+debug? ( !strip )
+"
 
-DOCS=(README.md TODO.md)
+RESTRICT="
+debug? ( strip )
+strip? ( strip )
+"
+
+DOCS=(README.md TODO.md kos.1 LICENSE)
+
+src_configure() {
+    use gcc && export CXX=g++
+
+    use size && CXXFLAGS+=" -Os"
+    use debug && CXXFLAGS+=" -Og -g"
+    use group-inherit || CXXFLAGS+=" -UHAVE_INITGROUP"
+    use setenv || CXXFLAGS+=" -UHAVE_MODIFYENV"
+}
 
 src_compile() {
-    use gcc && export CXX=g++
     sh ./scripts/build.sh
-
-    use strip && sh ./scripts/strip.sh kos
 }
 
 src_install() {
@@ -45,6 +61,10 @@ src_install() {
     use man && doman kos.1
     use bash-completion && newbashcomp completions/kos.bash ${PN}
     use doc && einstalldocs
+}
+
+pkg_preinst() {
+    use strip && sh ./scripts/strip.sh kos
 }
 
 pkg_postinst() {
