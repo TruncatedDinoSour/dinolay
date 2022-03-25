@@ -26,11 +26,11 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 IUSE="gcc strip +man bash-completion doc
-      +clang +size debug +group-inherit +setenv"
+      +clang +size debug +group-inherit +setenv speed lto"
 REQUIRED_USE="
 ^^ ( clang gcc )
 ?? ( size debug )
-debug? ( !strip )
+debug? ( !strip !speed !lto )
 "
 
 RESTRICT="
@@ -43,8 +43,12 @@ DOCS=(README.md TODO.md kos.1 LICENSE)
 src_configure() {
     use gcc && export CXX=g++
 
-    use size && CXXFLAGS+=" -Os"
+    use size && CXXFLAGS+=" -Os -s"
     use debug && CXXFLAGS+=" -Og -g"
+    use speed && CXXFLAGS+=" -Ofast -ffast-math -Wl,-O3"
+
+    use lto && CXXFLAGS+=" -flto"
+
     use group-inherit || CXXFLAGS+=" -UHAVE_INITGROUP"
     use setenv || CXXFLAGS+=" -UHAVE_MODIFYENV"
 }

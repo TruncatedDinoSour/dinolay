@@ -16,6 +16,8 @@
         <flag name="debug">Build with debug flags</flag>
         <flag name="group-inherit">Inherit root user groups</flag>
         <flag name="setenv">Modify environment variables to match of root</flag>
+        <flag name="speed">Build for speed</flag>
+        <flag name="lto">Enable link-time optimisation</flag>
     </use>
     <decription>A simple SUID tool written in C++</decsription>
     <longdescription>
