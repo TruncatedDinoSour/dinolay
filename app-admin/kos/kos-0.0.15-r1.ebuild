@@ -61,7 +61,11 @@ src_configure() {
 
     use group-inherit || _del_config INITGROUP
     use setenv || _del_config MODIFYENV
-    use flags || _del_config ARG
+
+    if ! use flags; then
+        _del_config ARG
+        sed 's/COMPREPLY=.*$/return # USE=-flags/' -i completions/kos.bash
+    fi
 }
 
 src_compile() {
