@@ -43,6 +43,8 @@ strip? ( strip )
 DOCS=(README.md TODO.md kos.1 LICENSE)
 
 src_configure() {
+    export CXXFLAGS="${CXXFLAGS} -D_KOS_VERSION_=\"$PV\""
+
     use test && bash ./scripts/test/noroot.sh
 
     use gcc && export CXX=g++
