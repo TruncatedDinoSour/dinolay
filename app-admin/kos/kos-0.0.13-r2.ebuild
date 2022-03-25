@@ -38,13 +38,12 @@ debug? ( !strip !speed !lto )
 RESTRICT="
 debug? ( strip )
 strip? ( strip )
+!test? ( test )
 "
 
 DOCS=(README.md TODO.md kos.1 LICENSE)
 
 src_test() {
-    use test || return
-
     bash ./scripts/test/root.sh
     bash ./scripts/test/noroot.sh
 }
