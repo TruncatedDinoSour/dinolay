@@ -38,17 +38,13 @@ debug? ( !strip !speed !lto )
 RESTRICT="
 debug? ( strip )
 strip? ( strip )
-!test? ( test )
 "
 
 DOCS=(README.md TODO.md kos.1 LICENSE)
 
-src_test() {
-    bash ./scripts/test/root.sh
-    bash ./scripts/test/noroot.sh
-}
-
 src_configure() {
+    use test && bash ./scripts/test/noroot.sh
+
     use gcc && export CXX=g++
 
     use size && CXXFLAGS+=" -Os -s"
