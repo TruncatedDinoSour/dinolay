@@ -18,6 +18,7 @@
         <flag name="setenv">Modify environment variables to match of root</flag>
         <flag name="speed">Build for speed</flag>
         <flag name="lto">Enable link-time optimisation</flag>
+        <flag name="test">Test kos</flag>
     </use>
     <decription>A simple SUID tool written in C++</decsription>
     <longdescription>

@@ -21,12 +21,14 @@ man? ( sys-apps/man-db )
 gcc? ( sys-devel/gcc )
 clang? ( sys-devel/clang )
 bash-completion? ( app-shells/bash-completion )
+test? ( sys-devel/gcc sys-devel/clang sys-apps/coreutils sys-apps/net-tools app-shells/bash )
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
 IUSE="gcc strip +man bash-completion doc
-      +clang +size debug +group-inherit +setenv speed lto"
+      +clang +size debug +group-inherit
+      +setenv speed lto test"
 REQUIRED_USE="
 ^^ ( clang gcc )
 ?? ( size debug )
@@ -39,6 +41,13 @@ strip? ( strip )
 "
 
 DOCS=(README.md TODO.md kos.1 LICENSE)
+
+src_test() {
+    use test || return
+
+    bash ./scripts/test/root.sh
+    bash ./scripts/test/noroot.sh
+}
 
 src_configure() {
     use gcc && export CXX=g++

@@ -4,7 +4,7 @@ set -e
 
 export FZF_DEFAULT_OPTS="--layout=reverse --height=20 --no-mouse -i"
 export FZF_TMUX_HEIGHT=20
-export ACTIONS=("u update" "c create" "m manifest" "r remove" "f fix" "U utility" "o other")
+export ACTIONS=("u update" "c create" "m manifest" "r remove" "f fix" "t features" "U utility" "o other")
 
 main() {
     local atom
