@@ -28,7 +28,7 @@ BDEPEND=""
 
 IUSE="gcc strip +man bash-completion doc
       +clang +size debug +group-inherit
-      +setenv speed lto test"
+      +setenv speed lto test +flags"
 REQUIRED_USE="
 ^^ ( clang gcc )
 ?? ( size debug )
@@ -41,6 +41,10 @@ strip? ( strip )
 "
 
 DOCS=(README.md TODO.md kos.1 LICENSE)
+
+_del_config() {
+    sed "/HAVE_$1/d" -i src/config.h
+}
 
 src_configure() {
     export CXXFLAGS="${CXXFLAGS} -D_KOS_VERSION_=\"$PV\""
@@ -55,8 +59,9 @@ src_configure() {
 
     use lto && CXXFLAGS+=" -flto"
 
-    use group-inherit || CXXFLAGS+=" -UHAVE_INITGROUP"
-    use setenv || CXXFLAGS+=" -UHAVE_MODIFYENV"
+    use group-inherit || _del_config INITGROUP
+    use setenv || _del_config MODIFYENV
+    use flags || _del_config ARG
 }
 
 src_compile() {
