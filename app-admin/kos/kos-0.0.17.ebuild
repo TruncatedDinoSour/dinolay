@@ -30,12 +30,12 @@ IUSE="gcc strip +man bash-completion doc
       +clang +size debug +group-inherit
       +setenv speed lto test +flags
       unsafe-group-validation unsafe-password-validation
-      +safe hardened"
+      +safe hardened unsafe-password-echo"
 REQUIRED_USE="
 ^^ ( clang gcc )
 ?? ( size debug )
 debug? ( !strip !speed !lto )
-safe? ( !unsafe-group-validation !unsafe-password-validation )
+safe? ( !unsafe-group-validation !unsafe-password-validation !unsafe-password-echo )
 hardened? ( safe lto speed )
 "
 
@@ -80,6 +80,7 @@ src_configure() {
 
     use unsafe-password-validation &&  _del_config VALIDATEPASS
     use unsafe-group-validation && _del_config VALIDATEGRP
+    use unsafe-password-echo && _del_config NOECHO
 }
 
 src_compile() {
@@ -110,12 +111,15 @@ pkg_postinst() {
     elog 'And to add yourself to the group:'
     elog '    # usermod -aG kos some_system_user'
 
-    if use unsafe-group-validation || use unsafe-password-validation; then
+    if use unsafe-group-validation ||
+        use unsafe-password-validation ||
+        use unsafe-password-echo; then
         echo
         eerror '!! Unsafe USE flags detected: '
 
         use unsafe-group-validation && ilog 'unsafe-group-validation: this flag makes that any user can run kos without being in the kos group'
         use unsafe-password-validation && ilog 'unsafe-password-validation: this flag makes that any user can run kos without needing to know the password'
+        use unsafe-password-echo && ilog 'unsafe-password-echo: this flag makes that the password can be echoed instead of being hidden'
 
         eerror 'please make sure that you actually want that behaviour'
         eerror 'else disable that/those USE flag(s) and recompile kos'
