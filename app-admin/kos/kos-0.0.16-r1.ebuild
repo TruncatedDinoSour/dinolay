@@ -58,7 +58,7 @@ src_configure() {
     export CXXFLAGS="${CXXFLAGS} -D_KOS_VERSION_=\"$PV\""
 
     use hardened && CXXFLAGS+=" -fstack-protector-strong -fstack-protector -fPIE -pie -D_FORTIFY_SOURCE=2 \
-        -Wno-unused-result -Wno-unused-command-line-argument -fpie,-Wl,-z,relro,now"
+        -Wno-unused-result -Wno-unused-command-line-argument -Wl,-z,relro,now"
 
     use test && bash ./scripts/test/noroot.sh
 
