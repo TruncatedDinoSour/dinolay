@@ -30,12 +30,13 @@ IUSE="gcc strip +man bash-completion doc
       +clang +size debug +group-inherit
       +setenv speed lto test +flags
       unsafe-group-validation unsafe-password-validation
-      +safe"
+      +safe hardened"
 REQUIRED_USE="
 ^^ ( clang gcc )
 ?? ( size debug )
 debug? ( !strip !speed !lto )
 safe? ( !unsafe-group-validation !unsafe-password-validation )
+hardened? ( safe lto speed )
 "
 
 RESTRICT="
@@ -55,6 +56,9 @@ ilog() {
 
 src_configure() {
     export CXXFLAGS="${CXXFLAGS} -D_KOS_VERSION_=\"$PV\""
+
+    use hardened && CXXFLAGS+=" -fstack-protector-strong -fstack-protector -fPIE -pie -D_FORTIFY_SOURCE=2 \
+        -Wno-unused-result -Wno-unused-command-line-argument -fpie,-Wl,-z,relro,now"
 
     use test && bash ./scripts/test/noroot.sh
 
