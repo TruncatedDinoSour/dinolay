@@ -20,6 +20,9 @@
         <flag name="lto">Enable link-time optimisation</flag>
         <flag name="test">Test kos</flag>
         <flag name="flags">Add flag suppport</flag>
+        <flag name="unsafe-group-validation">Don't validate groups of a user !!UNSAFE!!</flag>
+        <flag name="unsafe-password-validation">Don't validate password of a user !!UNSAFE!!</flag>
+        <flag name="safe">Disallow unsafe USE flags</flag>
     </use>
     <decription>A simple SUID tool written in C++</decsription>
     <longdescription>

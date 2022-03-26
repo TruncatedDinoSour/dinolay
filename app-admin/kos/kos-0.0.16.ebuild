@@ -28,11 +28,14 @@ BDEPEND=""
 
 IUSE="gcc strip +man bash-completion doc
       +clang +size debug +group-inherit
-      +setenv speed lto test +flags"
+      +setenv speed lto test +flags
+      unsafe-group-validation unsafe-password-validation
+      +safe"
 REQUIRED_USE="
 ^^ ( clang gcc )
 ?? ( size debug )
 debug? ( !strip !speed !lto )
+safe? ( !unsafe-group-validation !unsafe-password-validation )
 "
 
 RESTRICT="
@@ -44,6 +47,10 @@ DOCS=(README.md TODO.md kos.1 LICENSE)
 
 _del_config() {
     sed "/HAVE_$1/d" -i src/config.h
+}
+
+ilog() {
+    ${2:-ewarn} "    $1"
 }
 
 src_configure() {
@@ -66,6 +73,9 @@ src_configure() {
         _del_config ARG
         sed 's/COMPREPLY=.*$/return # USE=-flags/' -i completions/kos.bash
     fi
+
+    use unsafe-password-validation &&  _del_config VALIDATEPASS
+    use unsafe-group-validation && _del_config VALIDATEGRP
 }
 
 src_compile() {
@@ -87,12 +97,25 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-    ewarn 'Make sure to add yourself and other members to the'
-    ewarn '`kos` group to be able to use kos, it might not exist'
-    ewarn 'so you might need to create it:'
-    ewarn '    $ su'
-    ewarn '    # groupadd kos'
-    ewarn
-    ewarn 'And to add yourself to the group:'
-    ewarn '    # usermod -aG kos some_system_user'
+    elog 'Make sure to add yourself and other members to the'
+    elog '`kos` group to be able to use kos, it might not exist'
+    elog 'so you might need to create it:'
+    elog '    $ su'
+    elog '    # groupadd kos'
+    elog
+    elog 'And to add yourself to the group:'
+    elog '    # usermod -aG kos some_system_user'
+
+    if use unsafe-group-validation || use unsafe-password-validation; then
+        echo
+        eerror '!! Unsafe USE flags detected: '
+
+        use unsafe-group-validation && ilog 'unsafe-group-validation: this flag makes that any user can run kos without being in the kos group'
+        use unsafe-password-validation && ilog 'unsafe-password-validation: this flag makes that any user can run kos without needing to know the password'
+
+        eerror 'please make sure that you actually want that behaviour'
+        eerror 'else disable that/those USE flag(s) and recompile kos'
+
+        ilog 'I suggest you enable `safe` USE flag to prevent this from happening again' eerror
+    fi
 }
