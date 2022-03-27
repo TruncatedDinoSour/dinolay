@@ -131,5 +131,5 @@ pkg_postinst() {
         ilog 'I suggest you enable `safe` USE flag to prevent this from happening again' eerror
     fi
 
-    use test && ! use valgrind && echo && ewarn 'USE=test enabled, but no valgrind enabled which is highly recomended'
+    use test && ! use valgrind && (echo && ewarn 'USE=test enabled, but no valgrind enabled which is highly recomended')
 }
