@@ -22,6 +22,7 @@ gcc? ( sys-devel/gcc )
 clang? ( sys-devel/clang )
 bash-completion? ( app-shells/bash-completion )
 test? ( sys-devel/gcc sys-devel/clang sys-apps/coreutils sys-apps/net-tools app-shells/bash )
+valgrind? ( dev-util/valgrind app-shells/bash )
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
@@ -30,7 +31,7 @@ IUSE="gcc strip +man bash-completion doc
       +clang +size debug +group-inherit
       +setenv speed lto test +flags
       unsafe-group-validation unsafe-password-validation
-      +safe hardened unsafe-password-echo"
+      +safe hardened unsafe-password-echo valgrind quiet"
 REQUIRED_USE="
 ^^ ( clang gcc )
 ?? ( size debug )
@@ -61,6 +62,7 @@ src_configure() {
         -Wno-unused-result -Wno-unused-command-line-argument"
 
     use test && bash ./scripts/test/noroot.sh
+    use valgrind && bash ./scripts/test/valgrind.sh
 
     use gcc && export CXX=g++
 
@@ -77,6 +79,8 @@ src_configure() {
         _del_config ARG
         sed 's/COMPREPLY=.*$/return # USE=-flags/' -i completions/kos.bash
     fi
+
+    use quiet && _del_config LOGGING
 
     use unsafe-password-validation &&  _del_config VALIDATEPASS
     use unsafe-group-validation && _del_config VALIDATEGRP
@@ -126,4 +130,6 @@ pkg_postinst() {
 
         ilog 'I suggest you enable `safe` USE flag to prevent this from happening again' eerror
     fi
+
+    use test && ! use valgrind && echo && ewarn 'USE=test enabled, but no valgrind enabled which is highly recomended'
 }

@@ -25,6 +25,8 @@
         <flag name="safe">Disallow unsafe USE flags</flag>
         <flag name="hardened">Harden output binary for security</flag>
         <flag name="unsafe-password-echo">Echo password insted of hiding it !!UNSAFE!!</flag>
+        <flag name="valgrind">Enable valgring memory checks</flag>
+        <flag name="quiet">Disable logging of kos</flag>
     </use>
     <decription>A simple SUID tool written in C++</decsription>
     <longdescription>
