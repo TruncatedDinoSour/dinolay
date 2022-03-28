@@ -61,8 +61,8 @@ src_configure() {
     use hardened && CXXFLAGS+=" -fstack-protector-strong -fstack-protector -fPIE -pie -D_FORTIFY_SOURCE=2 \
         -Wno-unused-result -Wno-unused-command-line-argument"
 
-    use test && bash ./scripts/test/noroot.sh
-    use valgrind && bash ./scripts/test/valgrind.sh
+    (use test && bash ./scripts/test/noroot.sh) || die 'Tests failed'
+    (use valgrind && bash ./scripts/test/valgrind.sh) || die 'Valgrind tests failed'
 
     use gcc && export CXX=g++
 
@@ -88,7 +88,7 @@ src_configure() {
 }
 
 src_compile() {
-    sh ./scripts/build.sh
+    sh ./scripts/build.sh || die 'Building failed'
 }
 
 src_install() {
@@ -102,7 +102,7 @@ src_install() {
 }
 
 pkg_preinst() {
-    use strip && sh ./scripts/strip.sh kos
+    (use strip && sh ./scripts/strip.sh kos) || die 'Stripping failed'
 }
 
 pkg_postinst() {
