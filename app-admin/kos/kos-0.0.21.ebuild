@@ -32,7 +32,7 @@ IUSE="gcc strip +man bash-completion doc
       +setenv speed lto test +flags
       unsafe-group-validation unsafe-password-validation
       +safe hardened unsafe-password-echo valgrind quiet
-      infinite-ask no-bypass-root-auth stable no-pipe"
+      infinite-ask no-bypass-root-auth stable +no-pipe"
 REQUIRED_USE="
 ^^ ( clang gcc )
 ?? ( size debug )
