@@ -31,13 +31,15 @@ IUSE="gcc strip +man bash-completion doc
       +clang +size debug +group-inherit
       +setenv speed lto test +flags
       unsafe-group-validation unsafe-password-validation
-      +safe hardened unsafe-password-echo valgrind quiet"
+      +safe hardened unsafe-password-echo valgrind quiet
+      infinite-ask no-bypass-root-auth stable"
 REQUIRED_USE="
 ^^ ( clang gcc )
 ?? ( size debug )
 debug? ( !strip !speed !lto )
 safe? ( !unsafe-group-validation !unsafe-password-validation !unsafe-password-echo )
 hardened? ( safe lto speed )
+stable? ( !infinite-ask )
 "
 
 RESTRICT="
@@ -49,6 +51,10 @@ DOCS=(README.md TODO.md kos.1 LICENSE)
 
 _del_config() {
     sed "/HAVE_$1/d" -i src/config.h
+}
+
+_set_config() {
+    sed "s/$1.*/$1=$2;/" -i src/config.h
 }
 
 ilog() {
@@ -85,6 +91,9 @@ src_configure() {
     use unsafe-password-validation &&  _del_config VALIDATEPASS
     use unsafe-group-validation && _del_config VALIDATEGRP
     use unsafe-password-echo && _del_config NOECHO
+
+    use infinite-ask && _set_config INFINITE_ASK 1
+    use no-bypass-root-auth && _set_config SKIP_ROOT_AUTH 0
 }
 
 src_compile() {
