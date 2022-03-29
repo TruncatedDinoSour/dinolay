@@ -39,7 +39,7 @@ REQUIRED_USE="
 debug? ( !strip !speed !lto )
 safe? ( !unsafe-group-validation !unsafe-password-validation !unsafe-password-echo )
 hardened? ( safe lto speed )
-stable? ( !no-pipe )
+stable? ( !no-bypass-root-auth !no-pipe )
 "
 
 RESTRICT="
