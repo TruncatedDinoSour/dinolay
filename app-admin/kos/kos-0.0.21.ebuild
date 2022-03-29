@@ -32,14 +32,14 @@ IUSE="gcc strip +man bash-completion doc
       +setenv speed lto test +flags
       unsafe-group-validation unsafe-password-validation
       +safe hardened unsafe-password-echo valgrind quiet
-      infinite-ask no-bypass-root-auth stable"
+      infinite-ask no-bypass-root-auth stable no-pipe"
 REQUIRED_USE="
 ^^ ( clang gcc )
 ?? ( size debug )
 debug? ( !strip !speed !lto )
 safe? ( !unsafe-group-validation !unsafe-password-validation !unsafe-password-echo )
 hardened? ( safe lto speed )
-stable? ( !infinite-ask )
+stable? ( !no-pipe )
 "
 
 RESTRICT="
@@ -94,6 +94,8 @@ src_configure() {
 
     use infinite-ask && _set_config INFINITE_ASK 1
     use no-bypass-root-auth && _set_config SKIP_ROOT_AUTH 0
+
+    use no-pipe && _del_config PIPE
 }
 
 src_compile() {

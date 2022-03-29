@@ -27,9 +27,10 @@
         <flag name="unsafe-password-echo">Echo password insted of hiding it !!UNSAFE!!</flag>
         <flag name="valgrind">Enable valgring memory checks</flag>
         <flag name="quiet">Disable logging of kos</flag>
-        <flag name="infinite-ask">Ask for password infinitely !!BREAKAGE!!</flag>
+        <flag name="infinite-ask">Ask for password infinitely</flag>
         <flag name="no-bypass-root-auth">Validate authentication for root</flag>
         <flag name="stable">Make sure no unstability causing USE flags are used</flag>
+        <flag name="no-pipe">Disable piping support !!BREAKAGE!!</flag>
     </use>
     <decription>A simple SUID tool written in C++</decsription>
     <longdescription>
