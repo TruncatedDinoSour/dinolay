@@ -9,7 +9,7 @@
         <flag name="man">Install man pages</flag>
         <flag name="doc">Install extra documentation</flag>
     </use>
-    <decription>Tools for getting, inspecting and validating files and their information</decsription>
+    <decription>Tools for getting, inspecting and validating files and their information</decription>
     <longdescription>
         Tools for getting, inspecting and validating files and their information
     </longdescription>

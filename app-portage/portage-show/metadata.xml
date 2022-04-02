@@ -5,7 +5,7 @@
         <email>ari.web.xyz@gmail.com</email>
         <name>Ari Archer</name>
     </maintainer>
-    <decription>Show installed, orphaned and total packages in a small shellscript fetch tool</decsription>
+    <decription>Show installed, orphaned and total packages in a small shellscript fetch tool</decription>
     <longdescription>
         Show installed, orphaned and total packages in a small shellscript fetch tool
     </longdescription>

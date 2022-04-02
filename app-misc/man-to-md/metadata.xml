@@ -8,7 +8,7 @@
     <use>
         <flag name="man">Install a man page</flag>
     </use>
-    <decription>Converts nroff man pages to Markdown</decsription>
+    <decription>Converts nroff man pages to Markdown</decription>
     <longdescription>
         Converts nroff man pages to Markdown
     </longdescription>

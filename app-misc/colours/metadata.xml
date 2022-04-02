@@ -5,7 +5,7 @@
         <email>ari.web.xyz@gmail.com</email>
         <name>Ari Archer</name>
     </maintainer>
-    <decription>A (fetch?) tool to display the colours of your terminal emulator written in bash</decsription>
+    <decription>A (fetch?) tool to display the colours of your terminal emulator written in bash</decription>
     <longdescription>
         A (fetch?) tool to display the colours of your terminal emulator written in bash
     </longdescription>

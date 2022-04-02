@@ -32,7 +32,7 @@
         <flag name="stable">Make sure no unstability causing USE flags are used</flag>
         <flag name="no-pipe">Disable piping support !!BREAKAGE!!</flag>
     </use>
-    <decription>A simple SUID tool written in C++</decsription>
+    <decription>A simple SUID tool written in C++</decription>
     <longdescription>
         A simple SUID tool written in C++
     </longdescription>

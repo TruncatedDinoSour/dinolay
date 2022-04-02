@@ -8,7 +8,7 @@
     <upstream>
         <remote-id type="pypi">configparser</remote-id>
     </upstream>
-    <decription>backport of configparser from Python 3</decsription>
+    <decription>backport of configparser from Python 3</decription>
     <longdescription>
         backport of configparser from Python 3
     </longdescription>

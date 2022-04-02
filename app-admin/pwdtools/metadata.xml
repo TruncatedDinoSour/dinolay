@@ -9,7 +9,7 @@
         <flag name="man">Install man pages</flag>
         <flag name="doc">Install extra documentation</flag>
     </use>
-    <decription>Password tools for generating, checking and rating password</decsription>
+    <decription>Password tools for generating, checking and rating password</decription>
     <longdescription>
         Password tools for generating, checking and rating password
     </longdescription>

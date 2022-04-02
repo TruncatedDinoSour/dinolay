@@ -8,7 +8,7 @@
     <use>
         <flag name="man">Install the manual page and documentation</flag>
     </use>
-    <decription>An easy R package manager written in bash</decsription>
+    <decription>An easy R package manager written in bash</decription>
     <longdescription>
         An easy R package manager written in bash
     </longdescription>

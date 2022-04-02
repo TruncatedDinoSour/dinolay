@@ -8,7 +8,7 @@
     <upstream>
         <remote-id type="pypi">password-strength</remote-id>
     </upstream>
-    <decription>Password strength and validation</decsription>
+    <decription>Password strength and validation</decription>
     <longdescription>
         Password strength and validation
     </longdescription>

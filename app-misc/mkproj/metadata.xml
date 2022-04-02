@@ -8,7 +8,7 @@
     <use>
         <flag name="man">Install the manual page and documentation</flag>
     </use>
-    <decription>Make and use templates for projects</decsription>
+    <decription>Make and use templates for projects</decription>
     <longdescription>
         Make and use templates for projects
     </longdescription>

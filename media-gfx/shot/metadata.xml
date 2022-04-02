@@ -5,7 +5,7 @@
         <email>ari.web.xyz@gmail.com</email>
         <name>Ari Archer</name>
     </maintainer>
-    <decription>A dead-simple shellscript around scrot and mpv for taking screenshots</decsription>
+    <decription>A dead-simple shellscript around scrot and mpv for taking screenshots</decription>
     <longdescription>
         A dead-simple shellscript around scrot and mpv for taking screenshots
     </longdescription>

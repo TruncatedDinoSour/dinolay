@@ -5,7 +5,7 @@
         <email>ari.web.xyz@gmail.com</email>
         <name>Ari Archer</name>
     </maintainer>
-    <decription>A pretty system information tool written in POSIX sh</decsription>
+    <decription>A pretty system information tool written in POSIX sh</decription>
     <longdescription>
         A pretty system information tool written in POSIX sh
     </longdescription>

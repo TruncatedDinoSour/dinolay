@@ -15,7 +15,7 @@
         <flag name="aggresive-pre-strip">Aggresively strip the binary after compiling</flag>
         <flag name="fonts">Include fonts as a dependency</flag>
     </use>
-    <decription>Yet another fetch ...</decsription>
+    <decription>Yet another fetch ...</decription>
     <longdescription>
         Yet another fetch ...
     </longdescription>

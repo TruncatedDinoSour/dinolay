@@ -5,7 +5,7 @@
         <email>ari.web.xyz@gmail.com</email>
         <name>Ari Archer</name>
     </maintainer>
-    <decription>SearX in the CLI</decsription>
+    <decription>SearX in the CLI</decription>
     <use>
         <flag name="man">Install man page</flag>
         <flag name="doc">Install extra documentation</flag>

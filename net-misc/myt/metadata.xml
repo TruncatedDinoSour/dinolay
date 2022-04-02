@@ -9,7 +9,7 @@
         <flag name="man">Install man page</flag>
         <flag name="test">Test source code</flag>
     </use>
-    <decription>tool for watching videos on youtube with no spyware and MPV and yt-dlp</decsription>
+    <decription>tool for watching videos on youtube with no spyware and MPV and yt-dlp</decription>
     <longdescription>
         tool for watching videos on youtube with no spyware and MPV and yt-dlp
     </longdescription>

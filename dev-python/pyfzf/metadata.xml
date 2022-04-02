@@ -8,7 +8,7 @@
     <upstream>
         <remote-id type="pypi">pyfzf</remote-id>
     </upstream>
-    <decription>A python wrapper for fzf</decsription>
+    <decription>A python wrapper for fzf</decription>
     <longdescription>
         A python wrapper for fzf
     </longdescription>
