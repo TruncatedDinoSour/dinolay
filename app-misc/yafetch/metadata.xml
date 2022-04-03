@@ -14,6 +14,7 @@
         <flag name="errors">Enable pedantic flags and error on all warnings</flag>
         <flag name="aggresive-pre-strip">Aggresively strip the binary after compiling</flag>
         <flag name="fonts">Include fonts as a dependency</flag>
+        <flag name="test">Test yafetch</flag>
     </use>
     <decription>Yet another fetch ...</decription>
     <longdescription>

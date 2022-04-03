@@ -2,6 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
+LUA_COMPAT=(lua5.4)
 
 DESCRIPTION="Yet another fetch ..."
 HOMEPAGE="https://github.com/yrwq/yafetch"
@@ -19,10 +20,23 @@ sys-apps/coreutils
 clang? ( sys-devel/clang )
 !clang? ( sys-devel/gcc )
 fonts? ( media-fonts/nerd-fonts )
+test? (
+    sys-apps/coreutils
+    dev-util/valgrind
+    sys-devel/clang
+    dev-lang/lua:5.4
+    sys-devel/binutils
+    app-shells/bash
+    sys-devel/gcc
+)
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
-IUSE="config clang hardened lto optimised errors +aggressive-pre-strip +fonts"
+IUSE="config clang hardened lto optimised errors +aggressive-pre-strip +fonts test"
+
+src_test() {
+    use test && bash ./scripts/tests.sh
+}
 
 src_configure() {
     local config_flags='--use-warnings'
