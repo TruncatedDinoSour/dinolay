@@ -34,11 +34,9 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 IUSE="config clang hardened lto optimised errors +aggressive-pre-strip +fonts test"
 
-src_test() {
-    use test && bash ./scripts/tests.sh
-}
-
 src_configure() {
+    use test && bash ./scripts/tests.sh
+
     local config_flags='--use-warnings'
 
     use config && config_flags+=" --use-config"
