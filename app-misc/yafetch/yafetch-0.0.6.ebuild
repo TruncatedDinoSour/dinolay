@@ -18,7 +18,7 @@ dev-util/pkgconf
 sys-devel/make
 sys-apps/coreutils
 clang? ( sys-devel/clang )
-!clang? ( sys-devel/gcc )
+gcc? ( sys-devel/gcc )
 fonts? ( media-fonts/nerd-fonts )
 test? (
     sys-apps/coreutils
@@ -32,7 +32,16 @@ test? (
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
-IUSE="config clang hardened lto optimised errors +aggressive-pre-strip +fonts test"
+IUSE="config clang gcc hardened lto optimised errors \
+    +aggressive-pre-strip +fonts test \
+    debug debug-log"
+
+REQUIRED_USE="
+^^ ( clang gcc )
+debug? ( !hardened !aggressive-pre-strip !lto !optimised )
+"
+
+RESTRICT="debug? ( strip )"
 
 src_configure() {
     use test && bash ./scripts/tests.sh
@@ -41,14 +50,17 @@ src_configure() {
 
     use config && config_flags+=" --use-config"
     use clang && config_flags+=" --use-clang"
+    use gcc && config_flags+=" --use-gcc"
     use hardened && config_flags+=" --use-harden"
     use lto && config_flags+=" --use-lto"
     use optimised && config_flags+=" --use-optimise"
     use errors && config_flags+=" --use-pedantic --use-werror"
     use aggressive-pre-strip && config_flags+=" --use-strip --use-extreme-strip"
+    use debug && config_flags+=" --use-debug"
+    use debug-log && config_flags+=" --use-prog-debug"
 
     chmod a+rx ./configure
-    ./configure $config_flags || die './config failed'
+    ./configure $config_flags || (elog "./configure $config_flags"; die './configure failed')
 }
 
 src_compile() {
