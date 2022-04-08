@@ -18,13 +18,14 @@ dev-python/pyfzf
 dev-python/pyperclip
 sys-apps/coreutils
 dev-python/plumbum
+dev-python/zxcvbn
 man? ( sys-apps/man-db )
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
 IUSE="+man doc"
 
-DOCS=(README.md)
+DOCS=(README.md CONTRIBUTING.md requirements.txt)
 
 src_install() {
     chmod a+rx ./setup.sh
