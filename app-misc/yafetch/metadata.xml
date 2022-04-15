@@ -18,6 +18,7 @@
         <flag name="test">Test yafetch</flag>
         <flag name="debug">Add debug symbols</flag>
         <flag name="debug-log">Add debug logging</flag>
+        <flag name="march">Use -march=native flag</flag>
     </use>
     <decription>Yet another fetch ...</decription>
     <longdescription>

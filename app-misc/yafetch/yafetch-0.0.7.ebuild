@@ -34,7 +34,7 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 IUSE="config clang gcc hardened lto optimised errors \
     +aggressive-pre-strip +fonts test \
-    debug debug-log"
+    debug debug-log +march"
 
 REQUIRED_USE="
 ^^ ( clang gcc )
@@ -58,6 +58,7 @@ src_configure() {
     use aggressive-pre-strip && config_flags+=" --use-strip --use-extreme-strip"
     use debug && config_flags+=" --use-debug"
     use debug-log && config_flags+=" --use-prog-debug"
+    use march && config_flags+=" --use-march"
 
     chmod a+rx ./configure
     ./configure $config_flags || (elog "./configure $config_flags"; die './configure failed')
