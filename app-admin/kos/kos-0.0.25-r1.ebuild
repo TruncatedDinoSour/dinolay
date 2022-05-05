@@ -27,7 +27,7 @@ valgrind? ( dev-util/valgrind app-shells/bash )
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-IUSE="gcc strip +man bash-completion doc
+IUSE="gcc +strip +man bash-completion doc
       +clang +size debug +group-inherit
       +setenv speed lto test +flags
       unsafe-group-validation unsafe-password-validation
@@ -38,7 +38,7 @@ REQUIRED_USE="
 ?? ( size debug )
 debug? ( !strip !speed !lto )
 safe? ( !unsafe-group-validation !unsafe-password-validation !unsafe-password-echo )
-hardened? ( safe lto speed )
+hardened? ( safe lto speed strip )
 stable? ( !no-bypass-root-auth !no-pipe )
 "
 
@@ -64,7 +64,8 @@ ilog() {
 src_configure() {
     export CXXFLAGS="${CXXFLAGS} -D_KOS_VERSION_=\"$PV\""
 
-    use hardened && CXXFLAGS+=" -fstack-protector-strong -fstack-protector -fPIE -pie -D_FORTIFY_SOURCE=2 \
+    use hardened && CXXFLAGS+="  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -fstack-protector-all
+        -fstack-protector-strong -fPIE -pie
         -Wno-unused-result -Wno-unused-command-line-argument"
 
     use test && bash ./scripts/test/noroot.sh
