@@ -38,7 +38,7 @@ REQUIRED_USE="
 ?? ( size debug )
 debug? ( !strip !speed !lto )
 safe? ( !unsafe-group-validation !unsafe-password-validation !unsafe-password-echo )
-hardened? ( safe lto speed strip !size !lto )
+hardened? ( safe speed strip !size !lto )
 stable? ( !no-bypass-root-auth !no-pipe )
 "
 
