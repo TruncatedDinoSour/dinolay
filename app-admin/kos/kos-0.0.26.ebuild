@@ -38,7 +38,7 @@ REQUIRED_USE="
 ?? ( size debug )
 debug? ( !strip !speed !lto )
 safe? ( !unsafe-group-validation !unsafe-password-validation !unsafe-password-echo )
-hardened? ( safe lto speed strip )
+hardened? ( safe lto speed strip !size !lto )
 stable? ( !no-bypass-root-auth !no-pipe )
 "
 
@@ -64,9 +64,14 @@ ilog() {
 src_configure() {
     export CXXFLAGS="${CXXFLAGS} -D_KOS_VERSION_=\"$PV\""
 
-    use hardened && CXXFLAGS+="  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -fstack-protector-all
+    if use hardened; then
+        CXXFLAGS+="  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -fstack-protector-all
         -fstack-protector-strong -fPIE -pie
-        -Wno-unused-result -Wno-unused-command-line-argument"
+        -Wno-unused-result -Wno-unused-command-line-argument
+        -O2"
+
+        export LDFLAGS="$LDFLAGS -Wl,-z,relro,-z,now"
+    fi
 
     use test && bash ./scripts/test/noroot.sh
     use valgrind && bash ./scripts/test/valgrind.sh
@@ -75,7 +80,7 @@ src_configure() {
 
     use size && CXXFLAGS+=" -Os -s"
     use debug && CXXFLAGS+=" -Og -g"
-    use speed && CXXFLAGS+=" -Ofast -ffast-math -Wl,-O3"
+    use speed && CXXFLAGS+=" -O2"
 
     use lto && CXXFLAGS+=" -flto"
 
@@ -144,4 +149,5 @@ pkg_postinst() {
     fi
 
     use test && ! use valgrind && (echo && ewarn 'USE=test enabled, but no valgrind enabled which is highly recomended')
+    use debug && use hardened && ewarn 'Hardening with debug enabled which disables Fortify'
 }
