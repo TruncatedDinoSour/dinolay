@@ -54,7 +54,6 @@ gcc? (
 RESTRICT="
 debug? ( strip )
 strip? ( strip )
-hardened? ( strip )
 "
 
 DOCS=(README.md TODO.md kos.1 LICENSE)
