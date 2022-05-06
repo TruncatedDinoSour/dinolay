@@ -106,6 +106,7 @@ src_configure() {
 
 src_compile() {
     sh ./scripts/build.sh || die 'Building failed'
+    use strip && (sh ./scripts/strip.sh kos || die 'Stripping failed')
 }
 
 src_install() {
@@ -116,10 +117,6 @@ src_install() {
     use man && doman kos.1
     use bash-completion && newbashcomp completions/kos.bash ${PN}
     use doc && einstalldocs
-}
-
-pkg_preinst() {
-    use strip && sh ./scripts/strip.sh kos
 }
 
 pkg_postinst() {
