@@ -43,7 +43,7 @@ debug? ( !strip !speed !lto )
 safe? ( !unsafe-group-validation !unsafe-password-validation !unsafe-password-echo )
 hardened? ( safe no-pipe !speed !strip !size !lto )
 stable? ( !no-bypass-root-auth !no-pipe )
-vtable-harden-gcc ( gcc hardened )
+vtable-harden-gcc? ( gcc hardened )
 gcc? (
     hardened? (
         ?? ( branch-harden-gcc fcf-harden-gcc )
