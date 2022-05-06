@@ -18,11 +18,12 @@ DEPEND="
 >=dev-util/pkgconf-1.8.0-r1
 acct-group/kos
 man? ( sys-apps/man-db )
-gcc? ( sys-devel/gcc )
+gcc? ( sys-devel/gcc[cxx] )
 clang? ( sys-devel/clang )
 bash-completion? ( app-shells/bash-completion )
 test? ( sys-devel/gcc sys-devel/clang sys-apps/coreutils sys-apps/net-tools app-shells/bash )
 valgrind? ( dev-util/valgrind app-shells/bash )
+vtable-harden-gcc? ( sys-devel/gcc[vtv] )
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
@@ -32,19 +33,28 @@ IUSE="gcc +strip +man bash-completion doc
       +setenv speed lto test +flags
       unsafe-group-validation unsafe-password-validation
       +safe hardened unsafe-password-echo valgrind quiet
-      infinite-ask no-bypass-root-auth stable +no-pipe"
+      infinite-ask no-bypass-root-auth stable +no-pipe
+      vtable-harden-gcc branch-harden-gcc fcf-harden-gcc"
 REQUIRED_USE="
 ^^ ( clang gcc )
 ?? ( size debug )
+clang? ( !vtable-harden-gcc !branch-harden-gcc !fcf-harden-gcc )
 debug? ( !strip !speed !lto )
 safe? ( !unsafe-group-validation !unsafe-password-validation !unsafe-password-echo )
-hardened? ( safe speed strip !size !lto )
+hardened? ( safe no-pipe !speed !strip !size !lto )
 stable? ( !no-bypass-root-auth !no-pipe )
+vtable-harden-gcc ( gcc hardened )
+gcc? (
+    hardened? (
+        ?? ( branch-harden-gcc fcf-harden-gcc )
+    )
+)
 "
 
 RESTRICT="
 debug? ( strip )
 strip? ( strip )
+hardened? ( strip )
 "
 
 DOCS=(README.md TODO.md kos.1 LICENSE)
@@ -65,12 +75,24 @@ src_configure() {
     export CXXFLAGS="${CXXFLAGS} -D_KOS_VERSION_=\"$PV\""
 
     if use hardened; then
-        CXXFLAGS+="  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -fstack-protector-all
+        CXXFLAGS+=" -D_FORTIFY_SOURCE=2 -fstack-protector-all
         -fstack-protector-strong -fPIE -pie
         -Wno-unused-result -Wno-unused-command-line-argument
-        -O2"
+        -O2 -Werror=format-security -Wconversion -Wsign-conversion
+        --param ssp-buffer-size=4 -fstack-clash-protection -ftrapv -g0"
 
-        export LDFLAGS="$LDFLAGS -Wl,-z,relro,-z,now"
+        use clang && CXXFLAGS+=" -arch x86_64 -mharden-sls=all -fcf-protection=full"
+
+        if use gcc; then
+            if use branch-harden-gcc; then
+                CXXFLAGS+=" -mindirect-branch=thunk -mfunction-return=thunk"
+            elif use fcf-harden-gcc; then
+                CXXFLAGS+=" -fcf-protection=full"
+            fi
+        fi
+        use vtable-harden-gcc && CXXFLAGS+=" -fvtable-verify=std"
+
+        export LDFLAGS="$LDFLAGS -Wl,-z,relro,-z,now,-z,noexecstack"
     fi
 
     use test && bash ./scripts/test/noroot.sh
@@ -147,4 +169,8 @@ pkg_postinst() {
 
     use test && ! use valgrind && (echo && ewarn 'USE=test enabled, but no valgrind enabled which is highly recomended')
     use debug && use hardened && ewarn 'Hardening with debug enabled which disables Fortify'
+
+    if use hardened; then
+        use gcc && ! use vtable-harden-gcc && ewarn 'While using GCC USE=vtable-harden-gcc is suggested'
+    fi
 }
