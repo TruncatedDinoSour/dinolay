@@ -75,6 +75,8 @@ src_configure() {
     export CXXFLAGS="${CXXFLAGS} -D_KOS_VERSION_=\"$PV\""
 
     if use hardened; then
+        export LDFLAGS="$LDFLAGS -Wl,-z,relro,-z,now,-z,noexecstack"
+
         CXXFLAGS+=" -D_FORTIFY_SOURCE=2 -fstack-protector-all
         -fstack-protector-strong -fPIE -pie
         -Wno-unused-result -Wno-unused-command-line-argument
@@ -90,9 +92,8 @@ src_configure() {
                 CXXFLAGS+=" -fcf-protection=full"
             fi
         fi
-        use vtable-harden-gcc && CXXFLAGS+=" -fvtable-verify=std"
 
-        export LDFLAGS="$LDFLAGS -Wl,-z,relro,-z,now,-z,noexecstack"
+        use vtable-harden-gcc && CXXFLAGS+=" -fvtable-verify=std"
     fi
 
     use test && bash ./scripts/test/noroot.sh
