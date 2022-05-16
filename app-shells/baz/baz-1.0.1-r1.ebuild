@@ -23,7 +23,7 @@ bash-completion? ( app-shells/bash-completion )
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-IUSE="readline bash-completion doc"
+IUSE="readline +bash-completion doc"
 
 DOCS=(README.md PLUGINS.md doc/BAZ_ENV.md doc/PLUGIN_FOLDER_STRUCTURE.md)
 
@@ -33,7 +33,7 @@ src_compile() {
 
 set -e
 
-log() { echo "[GENTOO] $1"; }
+log() { echo "[GENTOO] \$1"; }
 
 main() {
     log 'Setting up baz'
