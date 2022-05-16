@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+    <maintainer type="person">
+        <email>ari.web.xyz@gmail.com</email>
+        <name>Ari Archer</name>
+    </maintainer>
+    <use>
+        <flag name="readline">Add support for readline via app-misc/rlwrap</flag>
+        <flag name="bash-completion">Install bash completion</flag>
+        <flag name="doc">Install extra documentation</flag>
+    </use>
+    <decription>A lightweight plugin manager for GNU bash</decription>
+    <longdescription>A lightweight plugin manager for GNU bash</longdescription>
+</pkgmetadata>
+
