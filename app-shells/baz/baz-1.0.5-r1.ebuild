@@ -51,7 +51,7 @@ main() {
     log 'Done!'
 }
 
-main "$@"
+main
 EOF
 }
 
