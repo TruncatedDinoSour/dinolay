@@ -41,13 +41,13 @@ main() {
     cd /tmp
 
     log 'Getting loader template'
-    cp /usr/share/baz/baz_loader.sht .
+    cp /usr/share/baz/loader.sht .
 
     log 'Installing/setting up baz'
     baz setup
 
     log 'Removing template'
-    rm -f -- baz_loader.sht
+    rm -f -- loader.sht
     log 'Done!'
 }
 
@@ -57,7 +57,7 @@ EOF
 
 src_install() {
     insinto /usr/share/baz
-    doins baz_loader.sht
+    doins loader.sht
 
     dobin baz_setup
     dobin baz
