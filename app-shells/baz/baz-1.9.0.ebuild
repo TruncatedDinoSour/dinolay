@@ -25,7 +25,7 @@ BDEPEND=""
 
 IUSE="readline +bash-completion doc"
 
-DOCS=(README.md PLUGINS.md doc/BAZ_ENV.md doc/PLUGIN_FOLDER_STRUCTURE.md)
+DOCS=(README.md PLUGINS.md doc/BAZ_ENV.md doc/PLUGIN_FOLDER_STRUCTURE.md doc/SANITIZATION.md doc/CONFIGURATION_FILES.md)
 
 src_compile() {
     tee baz_setup <<EOF
