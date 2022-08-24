@@ -7,7 +7,7 @@ DESCRIPTION="Get some bitches"
 HOMEPAGE="https://ari-web.xyz/"
 SRC_URI="https://files.ari-web.xyz/files/bin.tar.xz -> ${P}.tar.xz"
 
-LICENSE="GPL3"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
