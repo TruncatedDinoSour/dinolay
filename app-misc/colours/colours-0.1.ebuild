@@ -5,7 +5,7 @@ EAPI=8
 
 DESCRIPTION="A (fetch?) tool to display the colours of your terminal emulator written in bash"
 HOMEPAGE="https://ari-web.xyz/gh/colours"
-SRC_URI="https://github.com/TruncatedDinosour/colours/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://ari-web.xyz/gh/colours/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="ArAr2"
 SLOT="0"

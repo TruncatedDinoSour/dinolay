@@ -5,7 +5,7 @@ EAPI=8
 
 DESCRIPTION="A simple wrapper around qemu to make virtual machines"
 HOMEPAGE="https://ari-web.xyz/gh/mkqemuvm"
-SRC_URI="https://github.com/TruncatedDinosour/mkqemuvm/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://ari-web.xyz/gh/mkqemuvm/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="ArAr2"
 SLOT="0"

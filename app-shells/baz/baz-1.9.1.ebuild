@@ -7,7 +7,7 @@ inherit bash-completion-r1
 
 DESCRIPTION="A lightweight plugin manager for GNU bash"
 HOMEPAGE="https://ari-web.xyz/gh/baz"
-SRC_URI="https://github.com/TruncatedDinosour/baz/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://ari-web.xyz/gh/baz/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="WTFPL-2"
 SLOT="0"

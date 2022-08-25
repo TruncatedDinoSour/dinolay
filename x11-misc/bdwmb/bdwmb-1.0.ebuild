@@ -5,7 +5,7 @@ EAPI=8
 
 DESCRIPTION="A simple, modular bash/shell script for configuring your DWM bar."
 HOMEPAGE="https://ari-web.xyz/gh/bdwmb"
-SRC_URI="https://github.com/TruncatedDinosour/bdwmb/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://ari-web.xyz/gh/bdwmb/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="ArAr2"
 SLOT="0"

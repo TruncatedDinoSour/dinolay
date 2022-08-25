@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python3_{3..10} )
 
 DESCRIPTION="Make and use templates for projects"
 HOMEPAGE="https://ari-web.xyz/gh/mkproj"
-SRC_URI="https://github.com/TruncatedDinosour/mkproj/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://ari-web.xyz/gh/mkproj/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="ArAr2"
 SLOT="0"

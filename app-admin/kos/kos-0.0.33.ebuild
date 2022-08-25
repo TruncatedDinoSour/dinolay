@@ -7,9 +7,9 @@ inherit bash-completion-r1
 
 DESCRIPTION="A simple SUID tool written in C++"
 HOMEPAGE="https://ari-web.xyz/gh/kos"
-SRC_URI="https://github.com/TruncatedDinosour/kos/archive/refs/tags/v$PV.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://ari-web.xyz/gh/kos/archive/refs/tags/v$PV.tar.gz -> ${P}.tar.gz"
 
-LICENSE="ArAr2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 

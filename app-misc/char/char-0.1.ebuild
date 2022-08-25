@@ -5,7 +5,7 @@ EAPI=8
 
 DESCRIPTION="Manage, make and use char-sets"
 HOMEPAGE="https://ari-web.xyz/gh/char"
-SRC_URI="https://github.com/TruncatedDinosour/char/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://ari-web.xyz/gh/char/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="ArAr2"
 SLOT="0"

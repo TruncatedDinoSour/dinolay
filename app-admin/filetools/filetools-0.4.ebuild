@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python3_{8..10} )
 
 DESCRIPTION="Tools for getting, inspecting and validating files and their information"
 HOMEPAGE="https://ari-web.xyz/gh/filetools"
-SRC_URI="https://github.com/TruncatedDinosour/filetools/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://ari-web.xyz/gh/filetools/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="ArAr2"
 SLOT="0"

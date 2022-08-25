@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python3_{9..10} )
 
 DESCRIPTION="Password tools for generating, checking and rating passwords"
 HOMEPAGE="https://ari-web.xyz/gh/pwdtools"
-SRC_URI="https://github.com/TruncatedDinosour/pwdtools/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://ari-web.xyz/gh/pwdtools/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="ArAr2"
 SLOT="0"
