@@ -61,7 +61,7 @@ hardened? ( strip )
 DOCS=(README.md TODO.md kos.1 LICENSE)
 
 _del_config() {
-    sed "/HAVE_$1/d" -i src/config.h
+    sed "/#define HAVE_$1/d" -i src/config.h
 }
 
 _set_config() {
