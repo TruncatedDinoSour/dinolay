@@ -34,7 +34,8 @@ IUSE="gcc +strip +man bash-completion doc
       unsafe-group-validation unsafe-password-validation
       +safe hardened unsafe-password-echo valgrind quiet
       infinite-ask no-bypass-root-auth stable +no-pipe
-      vtable-harden-gcc branch-harden-gcc fcf-harden-gcc"
+      vtable-harden-gcc branch-harden-gcc fcf-harden-gcc
+      +no-remember-auth"
 REQUIRED_USE="
 ^^ ( clang gcc )
 ?? ( size debug )
@@ -125,6 +126,8 @@ src_configure() {
     use no-bypass-root-auth && _set_config SKIP_ROOT_AUTH 0
 
     use no-pipe && _del_config PIPE
+
+    use no-remember-auth && _del_config REMEMBERAUTH
 }
 
 src_compile() {

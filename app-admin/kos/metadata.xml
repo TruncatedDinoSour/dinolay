@@ -34,6 +34,7 @@
         <flag name="vtable-harden-gcc">Adds -fvtable-verify=std hardening flag to GCC (not supported on all configurations)</flag>
         <flag name="branch-harden-gcc">Adds -mindirect-branch -mfunction-return hardening flags to GCC</flag>
         <flag name="fcf-harden-gcc">Adds -fcf-protection=full hardening flag to GCC</flag>
+        <flag name="no-remember-auth">Disables remembering of authentication</flag>
     </use>
     <decription>A simple SUID tool written in C++</decription>
     <longdescription>
