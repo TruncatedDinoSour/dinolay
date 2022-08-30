@@ -36,7 +36,7 @@ IUSE="gcc +strip +man bash-completion doc
       +safe hardened unsafe-password-echo valgrind quiet
       infinite-ask no-bypass-root-auth stable +no-pipe
       vtable-harden-gcc branch-harden-gcc fcf-harden-gcc
-      +no-remember-auth"
+      +no-remember-auth short-grace-time"
 REQUIRED_USE="
 ^^ ( clang gcc )
 ?? ( size debug )
@@ -51,6 +51,7 @@ gcc? (
         ?? ( branch-harden-gcc fcf-harden-gcc )
     )
 )
+short-grace-time? ( !no-remember-auth )
 "
 
 RESTRICT="
@@ -62,10 +63,12 @@ hardened? ( strip )
 DOCS=(README.md TODO.md kos.1 LICENSE)
 
 _del_config() {
+    echo "DEL_CONFIG: Disabling feature: $1"
     sed "/#define HAVE_$1/d" -i src/config.h
 }
 
 _set_config() {
+    echo "SET_CONFIG: Changing feature: $1=$2"
     sed "s/$1.*/$1=$2;/" -i src/config.h
 }
 
@@ -129,6 +132,7 @@ src_configure() {
     use no-pipe && _del_config PIPE
 
     use no-remember-auth && _del_config REMEMBERAUTH
+    use short-grace-time && _set_config GRACE_TIME 60
 }
 
 src_compile() {

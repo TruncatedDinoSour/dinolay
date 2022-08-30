@@ -35,6 +35,7 @@
         <flag name="branch-harden-gcc">Adds -mindirect-branch -mfunction-return hardening flags to GCC</flag>
         <flag name="fcf-harden-gcc">Adds -fcf-protection=full hardening flag to GCC</flag>
         <flag name="no-remember-auth">Disables remembering of authentication</flag>
+        <flag name="short-grace-time">Make the grace period for remembering auth 1min rather than default 5min</flag>
     </use>
     <decription>A simple SUID tool written in C++</decription>
     <longdescription>
