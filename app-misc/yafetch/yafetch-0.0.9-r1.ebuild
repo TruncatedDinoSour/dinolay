@@ -14,12 +14,15 @@ KEYWORDS="~amd64 ~x86"
 
 DEPEND="
 dev-lang/lua:5.4
+fonts? ( media-fonts/nerd-fonts )
+"
+RDEPEND="${DEPEND}"
+BDEPEND="
+gcc? ( sys-devel/gcc )
+clang? ( sys-devel/clang )
 dev-util/pkgconf
 sys-devel/make
 sys-apps/coreutils
-clang? ( sys-devel/clang )
-gcc? ( sys-devel/gcc )
-fonts? ( media-fonts/nerd-fonts )
 test? (
     sys-apps/coreutils
     dev-util/valgrind
@@ -30,8 +33,6 @@ test? (
     sys-devel/gcc
 )
 "
-RDEPEND="${DEPEND}"
-BDEPEND=""
 IUSE="config clang gcc hardened lto optimised errors \
     +aggressive-pre-strip +fonts test \
     debug debug-log +march"

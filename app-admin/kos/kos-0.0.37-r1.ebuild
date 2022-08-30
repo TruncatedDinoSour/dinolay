@@ -15,18 +15,19 @@ KEYWORDS="~amd64"
 
 DEPEND="
 >=sys-libs/libxcrypt-4.4.27
->=dev-util/pkgconf-1.8.0-r1
 acct-group/kos
 man? ( sys-apps/man-db )
-gcc? ( sys-devel/gcc[cxx] )
-clang? ( sys-devel/clang )
 bash-completion? ( app-shells/bash-completion )
-test? ( sys-devel/gcc sys-devel/clang sys-apps/coreutils sys-apps/net-tools app-shells/bash )
-valgrind? ( dev-util/valgrind app-shells/bash )
-vtable-harden-gcc? ( sys-devel/gcc[vtv] )
 "
 RDEPEND="${DEPEND}"
-BDEPEND=""
+BDEPEND="
+gcc? ( sys-devel/gcc[cxx] )
+vtable-harden-gcc? ( sys-devel/gcc[vtv] )
+clang? ( sys-devel/clang )
+>=dev-util/pkgconf-1.8.0-r1
+valgrind? ( dev-util/valgrind app-shells/bash )
+test? ( sys-devel/gcc sys-devel/clang sys-apps/coreutils sys-apps/net-tools app-shells/bash )
+"
 
 IUSE="gcc +strip +man bash-completion doc
       +clang +size debug +group-inherit
