@@ -126,7 +126,8 @@ src_configure() {
     use unsafe-group-validation && _del_config VALIDATEGRP
     use unsafe-password-echo && _del_config NOECHO
 
-    use infinite-ask && _set_config INFINITE_ASK 1
+    use infinite-ask || _del_config INFINITE_ASK
+
     use no-bypass-root-auth && _set_config SKIP_ROOT_AUTH 0
 
     use no-pipe && _del_config PIPE
@@ -137,7 +138,10 @@ src_configure() {
 
 src_compile() {
     sh ./scripts/build.sh || die 'Building failed'
-    use strip && (sh ./scripts/strip.sh kos || die 'Stripping failed')
+
+    if use strip; then
+        sh ./scripts/strip.sh kos || die 'Stripping failed'
+    fi
 }
 
 src_install() {
@@ -146,7 +150,7 @@ src_install() {
     fperms 4711 /usr/bin/kos
 
     use man && doman kos.1
-    use bash-completion && newbashcomp completions/kos.bash ${PN}
+    use bash-completion && newbashcomp completions/kos.bash "${PN}"
     use doc && einstalldocs
 }
 
