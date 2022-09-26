@@ -8,7 +8,7 @@ DESCRIPTION="Password tools for generating, checking and rating passwords"
 HOMEPAGE="https://ari-web.xyz/gh/pwdtools"
 SRC_URI="https://ari-web.xyz/gh/pwdtools/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="ArAr2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
@@ -19,6 +19,7 @@ dev-python/pyperclip
 sys-apps/coreutils
 dev-python/plumbum
 dev-python/zxcvbn
+dev-python/cryptography
 man? ( sys-apps/man-db )
 "
 RDEPEND="${DEPEND}"
