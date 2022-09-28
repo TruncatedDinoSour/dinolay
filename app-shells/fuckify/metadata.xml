@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+    <maintainer type="person">
+        <email>ari.web.xyz@gmail.com</email>
+        <name>Ari Archer</name>
+    </maintainer>
+    <decription>Fuckify your bash commands to the moon and beyond</decription>
+    <longdescription>Fuckify your bash commands to the moon and beyond</longdescription>
+</pkgmetadata>
+
