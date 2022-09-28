@@ -29,8 +29,8 @@ IUSE="+man doc"
 DOCS=(README.md CONTRIBUTING.md doc/extra/md/pdb.md)
 
 src_install() {
-    use man && I_MAN=true
-    use doc && I_DEVMAN=true
+    use man && export I_MAN=true
+    use doc && export I_DEVMAN=true
 
     DESTDIR="${D}/" PREFIX="${EPREFIX}/usr" sh ./setup.sh || die 'Installing failed'
 
