@@ -26,11 +26,13 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 IUSE="+man doc"
 
-DOCS=(README.md CONTRIBUTING.md requirements.txt)
+DOCS=(README.md CONTRIBUTING.md doc/extra/md/pdb.md)
 
 src_install() {
-    chmod a+rx ./setup.sh
-    DESTDIR="${D}/" PREFIX="${EPREFIX}/usr" ./setup.sh || die 'Installing failed'
+    use man && I_MAN=true
+    use doc && I_DEVMAN=true
+
+    DESTDIR="${D}/" PREFIX="${EPREFIX}/usr" sh ./setup.sh || die 'Installing failed'
 
     use doc && einstalldocs
 }
