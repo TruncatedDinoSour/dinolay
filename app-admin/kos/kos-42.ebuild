@@ -31,12 +31,12 @@ test? ( sys-devel/gcc sys-devel/clang sys-apps/coreutils sys-apps/net-tools app-
 
 IUSE="gcc +strip +man bash-completion doc
       +clang +size debug +group-inherit
-      +setenv speed lto test +flags
+      +setenv speed lto test
       unsafe-group-validation unsafe-password-validation
       +safe hardened unsafe-password-echo valgrind quiet
       infinite-ask no-bypass-root-auth stable +no-pipe
       vtable-harden-gcc branch-harden-gcc fcf-harden-gcc
-      +no-remember-auth short-grace-time"
+      +no-remember-auth short-grace-time +effective-id"
 REQUIRED_USE="
 ^^ ( clang gcc )
 ?? ( size debug )
@@ -77,7 +77,7 @@ ilog() {
 }
 
 src_configure() {
-    export CXXFLAGS="${CXXFLAGS} -D_KOS_VERSION_=\"$PV\""
+    export CXXFLAGS="${CXXFLAGS}"
 
     if use hardened; then
         export LDFLAGS="$LDFLAGS -Wl,-z,relro,-z,now,-z,noexecstack"
@@ -115,11 +115,6 @@ src_configure() {
     use group-inherit || _del_config INITGROUP
     use setenv || _del_config MODIFYENV
 
-    if ! use flags; then
-        _del_config ARG
-        sed 's/COMPREPLY=.*$/return # USE=-flags/' -i completions/kos.bash
-    fi
-
     use quiet && _del_config LOGGING
 
     use unsafe-password-validation &&  _del_config VALIDATEPASS
@@ -134,6 +129,8 @@ src_configure() {
 
     use no-remember-auth && _del_config REMEMBERAUTH
     use short-grace-time && _set_config GRACE_TIME 60
+
+    use effective-id || _del_config EFFECTIVE_ID
 }
 
 src_compile() {
@@ -147,7 +144,7 @@ src_compile() {
 src_install() {
     insinto /usr/bin
     doins kos
-    fperms 4711 /usr/bin/kos
+    fperms 4111 /usr/bin/kos
 
     use man && doman kos.1
     use bash-completion && newbashcomp completions/kos.bash "${PN}"
