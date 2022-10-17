@@ -36,6 +36,8 @@
         <flag name="no-remember-auth">Disables remembering of authentication</flag>
         <flag name="short-grace-time">Make the grace period for remembering auth 1min rather than default 5min</flag>
         <flag name="effective-id">Enable support for seteuid and setegid</flag>
+        <flag name="safe-remember-auth">Make rememberauth feature safe</flag>
+        <flag name="rememberauth-mkdir">Make the rememberauth dir if it doesn't exist</flag>
     </use>
     <decription>A simple SUID tool written in C++</decription>
     <longdescription>

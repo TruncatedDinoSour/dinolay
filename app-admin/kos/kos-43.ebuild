@@ -36,13 +36,20 @@ IUSE="gcc +strip +man bash-completion doc
       +safe hardened unsafe-password-echo valgrind quiet
       infinite-ask no-bypass-root-auth stable +no-pipe
       vtable-harden-gcc branch-harden-gcc fcf-harden-gcc
-      +no-remember-auth short-grace-time +effective-id"
+      +no-remember-auth short-grace-time +effective-id
+      +safe-remember-auth rememberauth-mkdir"
 REQUIRED_USE="
 ^^ ( clang gcc )
 ?? ( size debug )
 clang? ( !vtable-harden-gcc !branch-harden-gcc !fcf-harden-gcc )
 debug? ( !strip !speed !lto )
-safe? ( !unsafe-group-validation !unsafe-password-validation !unsafe-password-echo )
+safe? (
+    !unsafe-group-validation
+    !unsafe-password-validation
+    !unsafe-password-echo
+
+    !no-remember-auth? ( safe-remember-auth )
+)
 hardened? ( safe no-pipe !speed !strip !size !lto )
 stable? ( !no-bypass-root-auth !no-pipe )
 vtable-harden-gcc? ( gcc hardened )
@@ -52,6 +59,8 @@ gcc? (
     )
 )
 short-grace-time? ( !no-remember-auth )
+safe-remember-auth? ( !no-remember-auth )
+rememberauth-mkdir? ( !no-remember-auth )
 "
 
 RESTRICT="
@@ -131,6 +140,9 @@ src_configure() {
     use short-grace-time && _set_config GRACE_TIME 60
 
     use effective-id || _del_config EFFECTIVE_ID
+
+    use safe-remember-auth || _del_config SAFE_REMEMBERAUTH
+    use rememberauth-mkdir || _del_config REMEMBERAUTH_AUTODIR
 }
 
 src_compile() {
@@ -182,5 +194,13 @@ pkg_postinst() {
 
     if use hardened; then
         use gcc && ! use vtable-harden-gcc && ewarn 'While using GCC USE=vtable-harden-gcc is suggested'
+    fi
+
+    if ! use no-remember-auth; then
+        if [ ! -d '/var/db' ]; then
+            echo
+            ewarn '/var/db does not exist for /var/db/kos, please run:'
+            ilog "su -c 'mkdir -p /var/db'" ewarn
+        fi
     fi
 }
