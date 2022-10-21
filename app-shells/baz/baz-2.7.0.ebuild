@@ -9,7 +9,7 @@ DESCRIPTION="A lightweight plugin manager for GNU bash"
 HOMEPAGE="https://ari-web.xyz/gh/baz"
 SRC_URI="https://ari-web.xyz/gh/baz/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="WTFPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
@@ -19,16 +19,44 @@ dev-vcs/git
 app-shells/bash
 readline? ( app-misc/rlwrap )
 bash-completion? ( app-shells/bash-completion )
+gcc? ( sys-devel/gcc[cxx] )
+clang? ( sys-devel/clang )
 "
+REQUIRED_USE="
+baz-cat? (
+    ^^ ( clang gcc )
+)
+baz-cat-flush? ( baz-cat )
+"
+
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-IUSE="readline +bash-completion doc"
+IUSE="readline +bash-completion doc gcc +clang +baz-cat baz-cat-flush"
 
 DOCS=(README.md PLUGINS.md doc/BAZ_ENV.md doc/PLUGIN_FOLDER_STRUCTURE.md doc/SANITIZATION.md doc/CONFIGURATION_FILES.md)
 
 src_compile() {
-    tee baz_setup <<EOF
+    export BAZ_CAT='cat'
+
+    if use baz-cat; then
+        export BAZ_CAT='baz-cat'
+        export CXXFLAGS=''
+
+        if use gcc; then
+            export CXX='g++'
+        elif use clang; then
+            export CXX='clang++'
+        else
+            die 'Failed to set CXX'
+        fi
+
+        use baz-cat-flush && export CXXFLAGS='-DMANUAL_FLUSH'
+
+        sh ./scripts/baz-cat-build.sh
+    fi
+
+    tee baz-setup <<EOF
 #!/usr/bin/env sh
 
 set -e
@@ -37,6 +65,8 @@ log() { echo "[GENTOO] \$1"; }
 
 main() {
     log 'Setting up baz'
+    export BAZ_CAT='$BAZ_CAT'
+
     log 'Entering /tmp'
     cd /tmp
 
@@ -59,8 +89,10 @@ src_install() {
     insinto /usr/share/baz
     doins loader.sht
 
-    dobin baz_setup
+    dobin baz-setup
     dobin baz
+
+    use baz-cat && dobin baz-cat
 
     use bash-completion && newbashcomp completions/baz.bash ${PN}
     use doc && einstalldocs
@@ -68,8 +100,13 @@ src_install() {
 
 pkg_postinst() {
     eerror 'After installation do this to set up baz completely:'
-    eerror '    $ baz_setup'
+    eerror '    $ baz-setup'
     echo
     eerror 'If you uninstall baz, after uninstalling the bin remember to:'
     eerror '    $ rm -rf ~/.local/share/baz'
+
+    if ! use baz-cat; then
+        echo
+        ewarn 'USE=baz-cat is recommended for performance'
+    fi
 }
