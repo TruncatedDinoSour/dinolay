@@ -9,9 +9,15 @@
         <flag name="readline">Add support for readline via app-misc/rlwrap</flag>
         <flag name="bash-completion">Install bash completion</flag>
         <flag name="doc">Install extra documentation</flag>
+
         <flag name="gcc">Use gcc for compilation of C code</flag>
         <flag name="clang">Use clang for compilation of C code</flag>
-        <flag name="baz-cat">Use optimised-for-baz cat</flag>
+        <flag name="fasm">Use fasm for compilation of assembly code</flag>
+
+        <flag name="asm">Use optimised-for-baz cat (FASM assembly version)</flag>
+        <flag name="c">Use optimised-for-baz cat (C89 version)</flag>
+        <flag name="cxx">Use optimised-for-baz cat (C++98 version)</flag>
+
         <flag name="baz-cat-flush">Manual stdout flush with baz-cat</flag>
     </use>
     <decription>A lightweight plugin manager for GNU bash</decription>

@@ -19,20 +19,31 @@ dev-vcs/git
 app-shells/bash
 readline? ( app-misc/rlwrap )
 bash-completion? ( app-shells/bash-completion )
-gcc? ( sys-devel/gcc )
-clang? ( sys-devel/clang )
+
+asm? ( dev-lang/fasm )
+c? (
+    clang? ( sys-devel/clang )
+    gcc? ( sys-devel/gcc )
+)
+cxx? (
+    clang? ( sys-devel/clang )
+    gcc? ( sys-devel/gcc[cxx] )
+)
 "
 REQUIRED_USE="
 baz-cat? (
-    ^^ ( clang gcc )
+    ^^ ( asm c cxx )
 )
+c? ( ^^ ( clang gcc ) )
+cxx? ( ^^ ( clang gcc ) )
+asm? ( !baz-cat-flush )
 baz-cat-flush? ( baz-cat )
 "
 
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-IUSE="readline +bash-completion doc gcc +clang +baz-cat baz-cat-flush"
+IUSE="readline +bash-completion doc c cxx +asm gcc clang +baz-cat baz-cat-flush"
 
 DOCS=(README.md PLUGINS.md doc/BAZ_ENV.md doc/PLUGIN_FOLDER_STRUCTURE.md doc/SANITIZATION.md doc/CONFIGURATION_FILES.md)
 
@@ -40,20 +51,37 @@ src_compile() {
     export BAZ_CAT='cat'
 
     if use baz-cat; then
-        export BAZ_CAT='baz-cat'
-        export CFLAGS=''
+        export BAZ_CAT='baz-cat' CFLAGS='' CXXFLAGS='' BAZ_CAT_TYPE='' AC='fasm'
 
-        if use gcc; then
-            export CC='gcc'
-        elif use clang; then
-            export CC='clang'
+        if use c; then
+            if use gcc; then
+                export CC='gcc'
+            elif use clang; then
+                export CC='clang'
+            else
+                die 'Failed to set CC'
+            fi
+
+            export BAZ_CAT_TYPE='c'
+            use baz-cat-flush && export CFLAGS='-DMANUAL_FLUSH'
+        elif use cxx; then
+            if use gcc; then
+                export CXX='g++'
+            elif use clang; then
+                export CXX='clang++'
+            else
+                die 'Failed to set CXX'
+            fi
+
+            export BAZ_CAT_TYPE='cpp'
+            use baz-cat-flush && export CXXFLAGS='-DMANUAL_FLUSH'
+        elif use asm; then
+            export BAZ_CAT_TYPE='asm'
         else
-            die 'Failed to set CC'
+            die 'Failed compiling baz-cat -- Unknown compilation type'
         fi
 
-        use baz-cat-flush && export CFLAGS='-DMANUAL_FLUSH'
-
-        sh ./scripts/baz-cat-build.sh
+        sh ./scripts/baz-cat-build.sh "$BAZ_CAT_TYPE"
     fi
 
     tee baz-setup <<EOF
