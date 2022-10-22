@@ -19,7 +19,7 @@ dev-vcs/git
 app-shells/bash
 readline? ( app-misc/rlwrap )
 bash-completion? ( app-shells/bash-completion )
-gcc? ( sys-devel/gcc[cxx] )
+gcc? ( sys-devel/gcc )
 clang? ( sys-devel/clang )
 "
 REQUIRED_USE="
@@ -41,17 +41,17 @@ src_compile() {
 
     if use baz-cat; then
         export BAZ_CAT='baz-cat'
-        export CXXFLAGS=''
+        export CFLAGS=''
 
         if use gcc; then
-            export CXX='g++'
+            export CC='gcc'
         elif use clang; then
-            export CXX='clang++'
+            export CC='clang'
         else
-            die 'Failed to set CXX'
+            die 'Failed to set CC'
         fi
 
-        use baz-cat-flush && export CXXFLAGS='-DMANUAL_FLUSH'
+        use baz-cat-flush && export CFLAGS='-DMANUAL_FLUSH'
 
         sh ./scripts/baz-cat-build.sh
     fi
