@@ -43,7 +43,7 @@ baz-cat-flush? ( baz-cat )
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-IUSE="readline +bash-completion doc c cxx +asm gcc clang +baz-cat baz-cat-flush"
+IUSE="readline +bash-completion doc c cxx +asm gcc clang +baz-cat baz-cat-flush logging"
 
 DOCS=(README.md PLUGINS.md doc/BAZ_ENV.md doc/PLUGIN_FOLDER_STRUCTURE.md doc/SANITIZATION.md doc/CONFIGURATION_FILES.md)
 
@@ -84,6 +84,9 @@ src_compile() {
         sh ./scripts/baz-cat-build.sh "$BAZ_CAT_TYPE"
     fi
 
+    logging_export='# USE="-logging"'
+    use logging && logging_export='export BAZ_LOGGING_ENABLED=true'
+
     tee baz-setup <<EOF
 #!/usr/bin/env sh
 
@@ -94,6 +97,7 @@ log() { echo "[GENTOO] \$1"; }
 main() {
     log 'Setting up baz'
     export BAZ_CAT='$BAZ_CAT'
+    $logging_export
 
     log 'Entering /tmp'
     cd /tmp

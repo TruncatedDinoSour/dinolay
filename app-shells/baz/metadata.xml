@@ -19,6 +19,8 @@
         <flag name="cxx">Use optimised-for-baz cat (C++98 version)</flag>
 
         <flag name="baz-cat-flush">Manual stdout flush with baz-cat</flag>
+
+        <flag name="logging">Enable logging support in the loader</flag>
     </use>
     <decription>A lightweight plugin manager for GNU bash</decription>
     <longdescription>A lightweight plugin manager for GNU bash</longdescription>
