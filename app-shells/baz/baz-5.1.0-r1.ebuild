@@ -44,7 +44,6 @@ log() { echo "[GENTOO] \$1"; }
 
 main() {
     log 'Setting up baz'
-    export BAZ_CAT='$BAZ_CAT'
     $logging_export
     $ok_export
 
