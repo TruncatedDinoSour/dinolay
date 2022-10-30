@@ -7,7 +7,7 @@ DESCRIPTION="A simple, modular bash/shell script for configuring your DWM bar."
 HOMEPAGE="https://ari-web.xyz/gh/bdwmb"
 SRC_URI="https://ari-web.xyz/gh/bdwmb/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="ArAr2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
@@ -22,6 +22,7 @@ IUSE="config"
 
 src_install() {
     emake -j1 full DESTDIR="${D}" PREFIX="${EPREFIX}/usr" CONF="${EPREFIX}/usr/share/bdwmb" || die "Installation failed"
+
     if use config; then
         emake -j1 config DESTDIR="${D}" CONF="${EPREFIX}/usr/share/bdwmb" || die "Installing configuration failed"
     fi
@@ -33,4 +34,3 @@ pkg_postinst() {
         elog "reemerge the package and take it from /usr/share/bdwmb/config.sh"
     fi
 }
-
