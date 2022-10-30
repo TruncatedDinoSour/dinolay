@@ -7,7 +7,7 @@ DESCRIPTION="A dead-simple shellscript around scrot and mpv for taking screensho
 HOMEPAGE="https://ari-web.xyz/gh/shot"
 SRC_URI="https://ari-web.xyz/gh/shot/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="ArAr2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 

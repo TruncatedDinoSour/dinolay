@@ -8,7 +8,7 @@ DESCRIPTION="Tools for getting, inspecting and validating files and their inform
 HOMEPAGE="https://ari-web.xyz/gh/filetools"
 SRC_URI="https://ari-web.xyz/gh/filetools/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="ArAr2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 

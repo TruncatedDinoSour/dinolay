@@ -8,7 +8,7 @@ DESCRIPTION="Make and use templates for projects"
 HOMEPAGE="https://ari-web.xyz/gh/mkproj"
 SRC_URI="https://ari-web.xyz/gh/mkproj/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="ArAr2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
