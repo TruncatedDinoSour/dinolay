@@ -77,9 +77,11 @@ src_install() {
 }
 
 pkg_postinst() {
-    eerror 'After installation do this to set up baz completely:'
-    eerror '    $ baz-setup'
-    echo
-    eerror 'If you uninstall baz, after uninstalling the bin remember to:'
-    eerror '    $ rm -rf ~/.local/share/baz'
+    ewarn 'After installation do this to set up baz completely:'
+    ewarn '    $ baz-setup'
+}
+
+pkg_postrm() {
+    ewarn 'To fully uninstall baz run:'
+    ewarn '    $ rm -rf ~/.local/share/baz'
 }
