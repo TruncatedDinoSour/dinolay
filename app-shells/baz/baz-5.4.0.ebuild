@@ -26,7 +26,7 @@ BDEPEND=""
 
 IUSE="readline +bash-completion doc logging ok"
 
-DOCS=(README.md PLUGINS.md doc/BAZ_ENV.md doc/PLUGIN_FOLDER_STRUCTURE.md doc/SANITIZATION.md doc/CONFIGURATION_FILES.md)
+DOCS=(README.md PLUGINS.md doc/BAZ_ENV.md doc/PLUGIN_FOLDER_STRUCTURE.md doc/SANITIZATION.md doc/CONFIGURATION_FILES.md doc/LOADER.md)
 
 src_compile() {
     logging_export='# USE="-logging"'
