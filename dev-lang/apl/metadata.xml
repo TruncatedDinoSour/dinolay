@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+    <maintainer type="person">
+        <email>ari.web.xyz@gmail.com</email>
+        <name>Ari Archer</name>
+    </maintainer>
+    <decription>GNU APL is a free implementation of APL.</decription>
+    <longdescription>
+        GNU APL is a free implementation of APL.
+    </longdescription>
+    <use>
+        <flag name="nls">Adds Native Language Support (using gettext - GNU locale utilities)</flag>
+        <flag name="lapack">Adds support for the virtual/lapack numerical library</flag>
+        <flag name="readline">Enables support for libreadline, a GNU line-editing library that almost everyone wants</flag>
+        <flag name="extras">Install extra scripts</flag>
+        <flag name="doc">Adds extra documentation</flag>
+        <flag name="vim-syntax">Pulls in related vim syntax scripts</flag>
+    </use>
+</pkgmetadata>
+
