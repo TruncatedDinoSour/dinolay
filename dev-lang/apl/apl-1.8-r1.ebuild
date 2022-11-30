@@ -12,7 +12,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="nls lapack readline extras doc vim-syntax"
+IUSE="nls lapack readline vim-syntax"
 
 DEPEND="nls? ( sys-devel/gettext )
 lapack? ( virtual/lapack )
@@ -48,19 +48,4 @@ src_install() {
         doins support-files/apl.vim
     fi
     # emacs mode at https://github.com/lokedhs/gnu-apl-mode
-}
-
-pkg_postinst() {
-    # documentation gets installed automatically by the Makefile in /usr/share/doc/apl
-    if ! use doc; then
-        # TODO /usr/share/doc is brittle; change
-        rm -r /usr/share/doc/apl/* || die
-    fi
-
-    if ! use extras; then
-        # installed automatically by GNU APL's Makefile is APserver, AP100, and AP210
-        rm /usr/bin/APserver || die
-        rm /usr/bin/AP100 || die
-        rm /usr/bin/AP210 || die
-    fi
 }
