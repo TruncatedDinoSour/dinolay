@@ -46,7 +46,7 @@ src_install() {
 
     if use vim; then
         insinto /usr/share/vim/vimfiles/ftdetect
-        doins vim-k/syntax/* vim-c/syntax/*
+        doins vim-k/ftdetect/* vim-c/ftdetect/*
 
         insinto /usr/share/vim/vimfiles/ftplugin
         doins vim-k/ftplugin/* vim-c/ftplugin/*
@@ -62,6 +62,6 @@ src_install() {
 
     if use headers; then
         insinto /usr/include/k
-        doins *.c *h
+        doins *.c *.h
     fi
 }
