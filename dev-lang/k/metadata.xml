@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+    <maintainer type="person">
+        <email>ari.web.xyz@gmail.com</email>
+        <name>Ari Archer</name>
+    </maintainer>
+    <decription>A simple and fast vector programming language</decription>
+    <longdescription>
+        A simple and fast vector programming language
+    </longdescription>
+    <use>
+        <flag name="test">Enable testing of the K interpreter</flag>
+        <flag name="clang">Compile with clang rather than gcc</flag>
+        <flag name="vim">Install vim related scripts</flag>
+        <flag name="repl">Install krepl REPL</flag>
+        <flag name="libs">Install useful K libraries</flag>
+        <flag name="headers">Install development headers for K</flag>
+    </use>
+</pkgmetadata>
+
