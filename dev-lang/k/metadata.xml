@@ -12,7 +12,9 @@
     <use>
         <flag name="test">Enable testing of the K interpreter</flag>
         <flag name="clang">Compile with clang rather than gcc</flag>
-        <flag name="vim">Install vim related scripts</flag>
+        <flag name="vim-syntax">Install vim syntax related scripts</flag>
+        <flag name="vim-ft">Install vim filetype related scripts</flag>
+        <flag name="vim-ftp">Install vim filetype plugin related scripts</flag>
         <flag name="repl">Install krepl REPL</flag>
         <flag name="libs">Install useful K libraries</flag>
         <flag name="headers">Install development headers for K</flag>

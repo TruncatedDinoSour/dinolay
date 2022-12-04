@@ -20,10 +20,13 @@ BDEPEND="
 clang? ( sys-devel/clang )
 !clang? ( sys-devel/gcc )
 sys-devel/make
-vim? ( || ( app-editors/vim app-editors/gvim ) )
+
+vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
+vim-ft? ( || ( app-editors/vim app-editors/gvim ) )
+vim-ftp? ( || ( app-editors/vim app-editors/gvim ) )
 "
 
-IUSE="test clang vim +repl +libs headers"
+IUSE="test clang +vim-syntax vim-ft vim-ftp +repl +libs headers"
 
 src_compile() {
     use clang && export CC=clang
@@ -44,15 +47,19 @@ src_install() {
     dobin k
     use repl && dobin krepl
 
-    if use vim; then
-        insinto /usr/share/vim/vimfiles/ftdetect
-        doins vim-k/ftdetect/* vim-c/ftdetect/*
-
-        insinto /usr/share/vim/vimfiles/ftplugin
-        doins vim-k/ftplugin/* vim-c/ftplugin/*
-
+    if use vim-syntax; then
         insinto /usr/share/vim/vimfiles/syntax
         doins vim-k/syntax/* vim-c/syntax/*
+    fi
+
+    if use vim-ft; then
+        insinto /usr/share/vim/vimfiles/ftdetect
+        doins vim-k/ftdetect/* vim-c/ftdetect/*
+    fi
+
+    if use vim-ftp; then
+        insinto /usr/share/vim/vimfiles/ftplugin
+        doins vim-k/ftplugin/* vim-c/ftplugin/*
     fi
 
     if use libs; then
