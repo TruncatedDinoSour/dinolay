@@ -10,7 +10,7 @@ HOMEPAGE="https://codeberg.org/ngn/k"
 
 EGIT_REPO_URI="https://codeberg.org/ngn/k.git"
 
-LICENSE="agpl-3"
+LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
