@@ -47,15 +47,15 @@ main() {
     local s="\$HOME/.config/baz/genoo-cflags.env"
 
     log 'note : for custom build flags set up the CC, CFLAGS, STRIP and STRIPFLAGS env vars manually, https://ari-web.xyz/gh/baz#setup'
-    log "you can put them in $s"
+    log "you can put them in \$s"
     sleep 2
 
     log 'setup will begin soon'
     sleep 2
 
-    if [ -f "$s" ]; then
-        log "sourcing $s"
-        . "$s"
+    if [ -f "\$s" ]; then
+        log "sourcing \$s"
+        . "\$s"
     fi
 
     log 'setting up baz'
