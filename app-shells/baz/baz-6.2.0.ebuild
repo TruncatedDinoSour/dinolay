@@ -89,6 +89,8 @@ EOF
 src_install() {
     insinto /usr/share/baz
     doins loader.sht
+
+    insinto /usr/share/baz
     doins loader/
 
     dobin baz-setup
