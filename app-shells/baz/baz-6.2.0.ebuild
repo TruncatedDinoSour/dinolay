@@ -90,8 +90,11 @@ src_install() {
     insinto /usr/share/baz
     doins loader.sht
 
-    insinto /usr/share/baz
-    doins loader/
+    mkdir -p "${D}/${EPREFIX}/usr/share/baz/loader"
+
+    for f in loader/*; do
+        install -Dm644 "$f" "${D}/${EPREFIX}/usr/share/baz/loader"
+    done
 
     dobin baz-setup
     dobin baz
