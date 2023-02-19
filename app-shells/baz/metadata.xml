@@ -11,6 +11,7 @@
         <flag name="doc">Install extra documentation</flag>
         <flag name="logging">Enable logging support in the loader</flag>
         <flag name="ok">Always ensure that the loader exists with code 0</flag>
+        <flag name="nocc">never use the C loader</flag>
     </use>
     <decription>A lightweight plugin manager for GNU bash</decription>
     <longdescription>A lightweight plugin manager for GNU bash</longdescription>

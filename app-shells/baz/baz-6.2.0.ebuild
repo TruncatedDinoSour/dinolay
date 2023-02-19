@@ -5,7 +5,7 @@ EAPI=8
 
 inherit bash-completion-r1
 
-DESCRIPTION="A lightweight plugin manager for GNU bash"
+DESCRIPTION="a fast, easy, simple and lightweight plugin manager for GNU bash"
 HOMEPAGE="https://ari-web.xyz/gh/baz"
 SRC_URI="https://ari-web.xyz/gh/baz/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 
@@ -14,7 +14,6 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 DEPEND="
-sys-apps/coreutils
 dev-vcs/git
 app-shells/bash
 readline? ( app-misc/rlwrap )
@@ -24,16 +23,18 @@ bash-completion? ( app-shells/bash-completion )
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-IUSE="readline +bash-completion doc logging ok"
+IUSE="readline +bash-completion doc logging ok nocc"
 
 DOCS=(README.md PLUGINS.md doc/BAZ_ENV.md doc/PLUGIN_FOLDER_STRUCTURE.md doc/SANITIZATION.md doc/CONFIGURATION_FILES.md doc/LOADER.md)
 
 src_compile() {
     logging_export='# USE="-logging"'
     ok_export='# USE="-ok"'
+    nocc_export='# USE="-nocc"'
 
     use logging && logging_export='export BAZ_LOGGING_ENABLED=true'
     use ok && ok_export='export BAZ_ENSURE_OK=true'
+    use nocc && nocc_export='export BAZ_NO_CC=true'
 
     tee baz-setup <<EOF
 #!/usr/bin/env sh
@@ -43,22 +44,42 @@ set -e
 log() { echo "[GENTOO] \$1"; }
 
 main() {
-    log 'Setting up baz'
+    local s="\$HOME/.config/baz/genoo-cflags.env"
+
+    log 'note : for custom build flags set up the CC, CFLAGS, STRIP and STRIPFLAGS env vars manually, https://ari-web.xyz/gh/baz#setup'
+    log "you can put them in $s"
+    sleep 2
+
+    log 'setup will begin soon'
+    sleep 2
+
+    if [ -f "$s" ]; then
+        log "sourcing $s"
+        . "$s"
+    fi
+
+    log 'setting up baz'
     $logging_export
     $ok_export
+    $nocc_export
 
-    log 'Entering /tmp'
-    cd /tmp
+    log 'initial cleanup'
+    rm -rf -- baz/
 
-    log 'Getting loader template'
-    cp /usr/share/baz/loader.sht .
+    log 'entering tmp dir'
+    cd "${TMPDIR:-/tmp/}"
 
-    log 'Installing/setting up baz'
+    log 'getting loader templates'
+    cp -r /usr/share/baz/ .
+    cd baz/
+
+    log 'installing / setting up baz'
     baz setup
 
-    log 'Removing template'
-    rm -f -- loader.sht
-    log 'Done!'
+    log 'removing templates from tmp'
+    cd ..
+    rm -rf -- baz/
+    log 'done !'
 }
 
 main
@@ -68,6 +89,7 @@ EOF
 src_install() {
     insinto /usr/share/baz
     doins loader.sht
+    doins loader/
 
     dobin baz-setup
     dobin baz
@@ -77,11 +99,11 @@ src_install() {
 }
 
 pkg_postinst() {
-    ewarn 'After installation do this to set up baz completely:'
+    ewarn 'after installation do this to set up baz completely :'
     ewarn '    $ baz-setup'
 }
 
 pkg_postrm() {
-    ewarn 'To fully uninstall baz run:'
+    ewarn 'if youre uninstalling baz completely from your system, to fully uninstall baz run :'
     ewarn '    $ rm -rf ~/.local/share/baz'
 }
