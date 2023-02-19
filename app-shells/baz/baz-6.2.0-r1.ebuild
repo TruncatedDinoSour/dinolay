@@ -67,7 +67,7 @@ main() {
     rm -rf -- baz/
 
     log 'entering tmp dir'
-    cd "${TMPDIR:-/tmp/}"
+    cd "\${TMPDIR:-/tmp/}"
 
     log 'getting loader templates'
     cp -r /usr/share/baz/ .
