@@ -63,11 +63,11 @@ main() {
     $ok_export
     $nocc_export
 
-    log 'initial cleanup'
-    rm -rf -- baz/
-
     log 'entering tmp dir'
     cd "\${TMPDIR:-/tmp/}"
+
+    log 'initial cleanup'
+    rm -rf -- baz/
 
     log 'getting loader templates'
     cp -r /usr/share/baz/ .
