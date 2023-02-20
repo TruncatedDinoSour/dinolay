@@ -67,7 +67,7 @@ main() {
     cd "\${TMPDIR:-/tmp/}"
 
     log 'initial cleanup'
-    rm -rf -- baz/
+    rm -rf -- baz
 
     log 'getting loader templates'
     cp -r /usr/share/baz/ .
