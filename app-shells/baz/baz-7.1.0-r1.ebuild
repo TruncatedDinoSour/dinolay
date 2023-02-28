@@ -38,7 +38,7 @@ src_compile() {
     use ok && ok_export='export BAZ_ENSURE_OK=true'
     use nocc && nocc_export='export BAZ_NO_CC=true'
     use mem-custom && local_cflags="$local_cflags -D MEM_CUSTOM"
-    use mem-custom-brk && local_cflags="$local_cflags -D MEM_CUSTOM_BRK"
+    use mem-custom-brk && local_cflags="$local_cflags -D MEM_BRK"
 
     tee baz-setup <<EOF
 #!/usr/bin/env sh
