@@ -12,6 +12,8 @@
         <flag name="logging">Enable logging support in the loader</flag>
         <flag name="ok">Always ensure that the loader exists with code 0</flag>
         <flag name="nocc">never use the C loader</flag>
+        <flag name="mem-custom">use custom malloc(), free() and realloc() functions</flag>
+        <flag name="mem-custom-brk">use custom brk() syscall family instead of mmap() family for custom memory management</flag>
     </use>
     <decription>A lightweight plugin manager for GNU bash</decription>
     <longdescription>A lightweight plugin manager for GNU bash</longdescription>
