@@ -1,6 +1,10 @@
 # Copyright 2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# since baz v7.3.0 you can have load as a generic binary for all users,
+# i chose to leave it out because i want every user to have a unique binary
+# with their own cflags instead of having a systemwide one
+
 EAPI=8
 
 inherit bash-completion-r1
