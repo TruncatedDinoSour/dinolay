@@ -23,8 +23,7 @@ bash-completion? ( app-shells/bash-completion )
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-IUSE="readline +bash-completion doc logging ok nocc mem-custom mem-custom-brk"
-REQUIRED_USE="mem-custom-brk? ( mem-custom )"
+IUSE="readline +bash-completion doc logging ok nocc mem-custom"
 
 DOCS=(README.md PLUGINS.md doc/BAZ_ENV.md doc/PLUGIN_FOLDER_STRUCTURE.md doc/SANITIZATION.md doc/CONFIGURATION_FILES.md doc/LOADER.md)
 
@@ -38,7 +37,6 @@ src_compile() {
     use ok && ok_export='export BAZ_ENSURE_OK=true'
     use nocc && nocc_export='export BAZ_NO_CC=true'
     use mem-custom && local_cflags="$local_cflags -D MEM_CUSTOM"
-    use mem-custom-brk && local_cflags="$local_cflags -D MEM_BRK -D _XOPEN_SOURCE=500"
 
     tee baz-setup <<EOF
 #!/usr/bin/env sh
