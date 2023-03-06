@@ -12,9 +12,9 @@
         <flag name="logging">Enable logging support in the loader</flag>
         <flag name="ok">Always ensure that the loader exists with code 0</flag>
         <flag name="nocc">never use the C loader</flag>
-        <flag name="mem-custom">use custom malloc(), free() and realloc() functions</flag>
+        <flag name="alloca">allow usage of the alloca function instead of malloc when appropriate</flag>
     </use>
-    <decription>A lightweight plugin manager for GNU bash</decription>
-    <longdescription>A lightweight plugin manager for GNU bash</longdescription>
+    <decription>a fast, easy, simple and lightweight plugin manager for GNU bash</decription>
+    <longdescription>a fast, easy, simple and lightweight plugin manager for GNU bash</longdescription>
 </pkgmetadata>
 

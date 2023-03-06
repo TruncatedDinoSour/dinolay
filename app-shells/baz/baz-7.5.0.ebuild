@@ -27,7 +27,7 @@ bash-completion? ( app-shells/bash-completion )
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-IUSE="readline +bash-completion doc logging ok nocc mem-custom"
+IUSE="readline +bash-completion doc logging ok nocc +alloca"
 
 DOCS=(README.md PLUGINS.md doc/BAZ_ENV.md doc/PLUGIN_FOLDER_STRUCTURE.md doc/SANITIZATION.md doc/CONFIGURATION_FILES.md doc/LOADER.md)
 
@@ -40,7 +40,7 @@ src_compile() {
     use logging && logging_export='export BAZ_LOGGING_ENABLED=true'
     use ok && ok_export='export BAZ_ENSURE_OK=true'
     use nocc && nocc_export='export BAZ_NO_CC=true'
-    use mem-custom && local_cflags="$local_cflags -D MEM_CUSTOM"
+    use alloca && local_cflags="$local_cflags -D ALLOW_ALLOCA"
 
     tee baz-setup <<EOF
 #!/usr/bin/env sh
