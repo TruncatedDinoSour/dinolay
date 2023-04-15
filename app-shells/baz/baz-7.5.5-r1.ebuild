@@ -29,7 +29,7 @@ BDEPEND=""
 
 IUSE="readline +bash-completion doc logging ok nocc"
 
-DOCS=(README.md PLUGINS.md doc/BAZ_ENV.md doc/PLUGIN_FOLDER_STRUCTURE.md doc/SANITIZATION.md doc/CONFIGURATION_FILES.md doc/LOADER.md)
+DOCS=(README.md PLUGINS.md doc/BAZ_ENV.md doc/PLUGIN_FOLDER_STRUCTURE.md doc/SANITIZATION.md doc/CONFIGURATION_FILES.md doc/LOADER.md loader/README.md)
 
 src_compile() {
     logging_export='# USE="-logging"'
@@ -99,6 +99,8 @@ src_install() {
     for f in loader/*; do
         install -Dm644 "$f" "${D}/${EPREFIX}/usr/share/baz/loader"
     done
+
+    rm -f -- "${D}/${EPREFIX}/usr/share/baz/loader/README.md"
 
     dobin baz-setup
     dobin baz
